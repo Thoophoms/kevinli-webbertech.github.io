@@ -1,4 +1,4 @@
-# Github Integration with EKS and Nexus 
+# Lab3: Github Integration with EKS and Nexus 
 
 This is a guide to set up a **CI/CD pipeline with GitHub Actions** to deploy applications to a **Kubernetes** cluster using **Nexus** as your Docker image registry.
 
