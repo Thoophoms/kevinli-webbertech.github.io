@@ -1,0 +1,52 @@
+pipeline {
+    agent any // Specifies that the pipeline can run on any available agent
+
+    options {
+      skipStagesAfterUnstable()
+    }
+
+    tools {
+        maven '3.9.11'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'github-token',
+                    url: 'https://github.com/kevinli-webbertech/gs-spring-boot-private.git'
+            }
+        }
+
+         stage('Test') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+
+        stage('Build and Package') {
+            steps {
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            }
+        }
+    }
+
+
+    post {
+        always {
+            echo 'Pipeline finished.'
+        }
+        success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}
