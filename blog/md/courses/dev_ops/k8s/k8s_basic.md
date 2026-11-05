@@ -65,15 +65,15 @@ minikube start --driver=docker --cpus=2 --memory=4096
 
 These are alternative startup examples, not steps that must all be run.
 
-| Option | Purpose |
-| --- | --- |
-| `--driver=docker` | Run Kubernetes nodes as Docker containers. Available drivers depend on your operating system. |
-| `--cpus=2` | Allocate CPUs; leave enough resources for the host. |
-| `--memory=4096` | Allocate memory in MB. |
-| `--disk-size=30g` | Set the disk size for a VM-based driver. |
-| `--nodes=2` | Create a multi-node cluster for scheduling practice; requires more host resources. |
-| `--kubernetes-version=<version>` | Select a supported Kubernetes version, replacing `<version>` with a release such as `vX.Y.Z`. |
-| `-p <profile>` | Select a named Minikube cluster, useful for separate labs. |
+| Option | Purpose | Possible values |
+| --- | --- | --- |
+| `--driver=docker` | Run Kubernetes nodes as Docker containers. Available drivers depend on your operating system. | `docker`, `virtualbox`, `kvm2` (Linux), `qemu`, `podman`, `ssh`, `none` (Linux), `hyperv` (Windows), `vmwareworkstation` (Windows), `parallels` (macOS), `vmwarefusion` (macOS), `vfkit` (macOS) |
+| `--cpus=2` | Allocate CPUs; leave enough resources for the host. | Any positive integer, e.g. `2`, `4`; or `max` to use all available CPUs. |
+| `--memory=4096` | Allocate memory in MB. | A number in MB, e.g. `4096`; a size with units, e.g. `4g`, `8g`; or `max` to use all available memory. |
+| `--disk-size=30g` | Set the disk size for a VM-based driver. | A size with units, e.g. `20g`, `30g`, `50g`. |
+| `--nodes=2` | Create a multi-node cluster for scheduling practice; requires more host resources. | Any positive integer, e.g. `1`, `2`, `3`. |
+| `--kubernetes-version=<version>` | Select a supported Kubernetes version, replacing `<version>` with a release such as `vX.Y.Z`. | A specific version, e.g. `v1.28.3`; or `stable`, `latest`, `newest`. |
+| `-p <profile>` | Select a named Minikube cluster, useful for separate labs. | Any profile name, e.g. `minikube` (default), `k8s-lab`. |
 
 For example, `minikube start -p k8s-lab --driver=docker --nodes=2` creates a separate lab cluster. Use `-p k8s-lab` with subsequent Minikube commands for that cluster.
 
@@ -154,6 +154,8 @@ kubectl get pods -n k8s-lab
 ```
 
 `-n k8s-lab` applies only to that command. Alternatively, `kubectl config set-context --current --namespace=k8s-lab` changes the current context's default namespace persistently. Run `kubectl config set-context --current --namespace=default` before following the main tutorial below.
+
+For a more complete walkthrough of creating/configuring namespaces and creating a Deployment scoped to a specific namespace, see [K8s Namespace & Deployment](k8s_namespace_deployment.md).
 
 ## Deployment
 
