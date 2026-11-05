@@ -75,6 +75,13 @@ body {
 	background: var(--accent-soft);
 }
 
+#left_sidebar a.current-page {
+	color: var(--accent);
+	background: var(--accent-soft);
+	font-weight: 600;
+	box-shadow: inset 3px 0 0 var(--accent);
+}
+
 #left_sidebar hr {
 	border: 0;
 	border-top: 1px solid var(--divider);

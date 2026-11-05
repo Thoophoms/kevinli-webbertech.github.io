@@ -1307,12 +1307,53 @@
 	buildClassCardsFromCourses();
 
 	// Course viewer: open a course page in the right-column iframe
-	function openCourseInViewer(href) {
+	function normalizeUrl(href) {
+		try {
+			var u = new URL(href, document.baseURI);
+			return u.origin + u.pathname.replace(/\/+$/, "");
+		} catch (err) {
+			return href;
+		}
+	}
+
+	function clearSidebarHighlight() {
+		document.querySelectorAll("#sidebar_content a.current-page").forEach(function(a) {
+			a.classList.remove("current-page");
+		});
+	}
+
+	// Highlight the sidebar link for the open page and expand its parent menus
+	function highlightSidebarLink(href, preferredLink) {
+		clearSidebarHighlight();
+		if (!href) return;
+		var target = preferredLink;
+		if (!target) {
+			var wanted = normalizeUrl(href);
+			target = Array.from(document.querySelectorAll("#sidebar_content a[href]")).find(function(a) {
+				return normalizeUrl(a.getAttribute("href")) === wanted;
+			});
+		}
+		if (!target) return;
+		target.classList.add("current-page");
+		var node = target.parentElement;
+		while (node && node.id !== "sidebar_content") {
+			if (node.classList && node.classList.contains("nested")) {
+				node.classList.add("active");
+				var caret = node.parentElement && node.parentElement.querySelector(":scope > .caret");
+				if (caret) caret.classList.add("caret-down");
+			}
+			node = node.parentElement;
+		}
+		target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+	}
+
+	function openCourseInViewer(href, sourceLink) {
 		var cardsSection = document.getElementById("class-cards-section");
 		var viewerSection = document.getElementById("course-viewer-section");
 		var frame = document.getElementById("course-frame");
 		if (!viewerSection || !frame) return;
 		frame.src = href;
+		highlightSidebarLink(href, sourceLink);
 		if (cardsSection) cardsSection.style.display = "none";
 		viewerSection.style.display = "block";
 	}
@@ -1323,7 +1364,18 @@
 		var frame = document.getElementById("course-frame");
 		viewerSection.style.display = "none";
 		frame.src = "";
+		clearSidebarHighlight();
 		if (cardsSection) cardsSection.style.display = "";
+	});
+
+	// Keep the highlight in sync when the user navigates inside the course frame
+	document.getElementById("course-frame").addEventListener("load", function() {
+		try {
+			var current = this.contentWindow.location.href;
+			if (current && current !== "about:blank") highlightSidebarLink(current);
+		} catch (err) {
+			// cross-origin page: cannot read its URL
+		}
 	});
 
 	// Intercept all sidebar course links and load them in the viewer
@@ -1333,7 +1385,7 @@
 		var href = link.getAttribute("href");
 		if (!href || href.indexOf("blog/html/courses/") === -1) return;
 		e.preventDefault();
-		openCourseInViewer(href);
+		openCourseInViewer(href, link);
 	});
 </script>
 
