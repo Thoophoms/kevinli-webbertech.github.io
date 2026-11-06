@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>market watcher</title>
+	<meta charset="UTF-8">
+	<title>Market Indicators | Kevin Li</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/index.css">
-	<script type="text/javascript">
-	function load_indicator_menu() {
-		document.getElementById("indicator").style.visibility="hidden";
-		//alert("testing");
-	}
-	</script>
+	<link rel="stylesheet" href="../css/index.css?v=shared-typography-2">
+	<link rel="stylesheet" href="../css/indicator.css?v=1">
 </head>
 
-<body>
+<body class="indicator-page">
  <div class="row">
   <div class="column left" id= "left_sidebar">
-    <h2>Kevin's Blog</h2>
+    <h2>Market Indicators</h2>
     <div id="indicator">
 		<ul>
 			<li><a href="#indices">Indices</a></li>
@@ -23,13 +19,13 @@
 			<li><a href="#personal_finance">Personal Finance</a></li>
 			<li><a href="#housing_sales">Housing Sales</a></li>
 			<li><a href="#car_sales">Car Sales</a></li>
-			<li><a href="#retails">Housing Sales</a></li>
+			<li><a href="#retails">Retail Sales</a></li>
 			<li><a href="#housing_supply">Housing Supply</a></li>
 			<li><a href="#PMI_Durable_Goods">PMI Durable Goods</a></li>
-			<li><a href="#WEI_GDP_Growth">WEI GDP Growth</a></li>
+			<li><a href="#WEI-GDP-Growth">WEI GDP Growth</a></li>
 			<li><a href="#Copper-Gold_vs_PPI">Copper-Gold vs PPI</a></li>
 			<li><a href="#Oil-Gold_vs_CPI">Oil-Gold vs CPI</a></li>
-			<li><a href="#IMPE">Inflation Moneytary Policy Expectation</a></li>
+			<li><a href="#IMPE">Inflation &amp; Monetary Policy</a></li>
 			<li><a href="#interest_rates">US Rates</a></li>
 			<li><a href="#credit_spread_vix">Credit-Spread-VIX-and-SP500</a></li>
 		</ul>
@@ -41,7 +37,7 @@
        <nav id="nav_menu">
 		    <ul> 
 		    	<li><a href="../index.html">home</a></li>
-		  		<li><a href="indicator.html" onclick="load_indicator_menu()">indicator</a></li>
+                <li><a href="indicator.html" aria-current="page">indicator</a></li>
 				<li><a href="news.html">news</a></li>
 		    	<li><a href="philosophy.html">philosophy</a></li>
 		    	<li><a href="trading_course.html">trading course<span class="hot-badge">HOT</span></a></li>
@@ -51,7 +47,8 @@
 	   </nav>
   
 	  <div class="content grid-container">
-			<section class="grid-flow" id="market_data">
+            <header class="indicator-intro"><p>MARKET RESEARCH</p><h1>Market Indicators</h1><p>Explore market indices, economic activity, inflation, and interest rates. Select a topic in the sidebar to jump to its charts.</p></header>
+			<section class="grid-flow" id="market_overview">
 			<div id="indices">
 				<h2>Major indices and indicators</h2>
 					<!-- TradingView Widget BEGIN -->
@@ -59,7 +56,7 @@
 						<div class="tradingview-widget-container__widget"></div>					
 						<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
 							{
-							  "colorTheme": "Flight",
+							  "colorTheme": "light",
 							  "dateRange": "12M",
 							  "showChart": true,
 							  "locale": "en",
@@ -67,7 +64,7 @@
 							  "isTransparent": false,
 							  "showSymbolLogo": true,
 							  "showFloatingTooltip": false,
-							  "width": "400",
+							  "width": "100%",
 							  "height": "550",
 							  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
 							  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
@@ -199,7 +196,7 @@
 						<div class="tradingview-widget-container__widget"></div>
 						<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
 							 {
-							  "width": 900,
+							  "width": "100%",
 							  "height": 550,
 							  "symbolsGroups": [
 							    {
@@ -383,7 +380,7 @@
 							],
 							
 							"chartOnly": false,
-							"width": 550,
+							"width": "100%",
 							"height": 400,
 							"locale": "en",
 							"colorTheme": "light",
@@ -436,7 +433,7 @@
 						[ "FRED:ICSA|1D"]
 					],
 					"chartOnly": false,
-					"width": 550,
+					"width": "100%",
 					"height": 400,
 					"locale": "en",
 					"colorTheme": "light",
@@ -488,7 +485,7 @@
 							["ECONOMICS:USDPI|1D"]
 						],
 						"chartOnly": false,
-						"width": 550,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -547,7 +544,7 @@
 								["FRED:SPCS20RSA|1D"]
 							  ],
 							"chartOnly": false,
-							"width": 650,
+							"width": "100%",
 							"height": 400,
 							"locale": "en",
 							"colorTheme": "light",
@@ -608,7 +605,7 @@
 						    ["FRED:CUSR0000SETA02|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -668,7 +665,7 @@
 							["FRED:ECOMSA|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -729,7 +726,7 @@
 							["FRED:SPCS20RSA|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -789,7 +786,7 @@
 							["ECONOMICS:USNMPMI|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -848,7 +845,7 @@
 							["ECONOMICS:USGDPYY|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -906,7 +903,7 @@
 							["ECONOMICS:USBCOI|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -965,7 +962,7 @@
 							["ECONOMICS:USCPCEPIAC|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -1026,7 +1023,7 @@
 							["TVC:US10Y|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -1072,7 +1069,7 @@
 			</div>
 		</section>
 		
-		<section class="grid-flow" id="us_rates">
+		<section class="grid-flow" id="interest_rates">
 			<div id="us_rates">
 				<h2>US Rates</h2>
 				 <!-- TradingView Widget BEGIN -->
@@ -1091,7 +1088,7 @@
 							["ECONOMICS:USGDPYY|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -1150,7 +1147,7 @@
 							["TVC:VIX|1D"]
 						  ],
 						"chartOnly": false,
-						"width": 650,
+						"width": "100%",
 						"height": 400,
 						"locale": "en",
 						"colorTheme": "light",
@@ -1195,7 +1192,7 @@
 			</div>
 		</section>
 		
-		<section class="grid-flow" id="us_rates">
+		<section class="grid-flow" id="additional_rates">
 		   <!--- <iframe src="https://www.tradingview.com/markets/world-economy/countries/united-states/?category=txs"> -->
 		</section>
 		

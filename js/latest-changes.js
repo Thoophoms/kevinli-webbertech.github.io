@@ -17,10 +17,15 @@
       list.append(item);
     });
   }
+  const popupSessionKey = 'latest-changes-popup-shown';
+  function hasShownPopup() {
+    try { return window.sessionStorage.getItem(popupSessionKey) === '1'; }
+    catch (_) { return false; }
+  }
   async function init() {
     const noticeList = document.getElementById('latest-git-changes');
     let popupList;
-    if (window.self === window.top && !noticeList) {
+    if (window.self === window.top && !noticeList && !hasShownPopup()) {
       const dialog = document.createElement('dialog');
       dialog.className = 'latest-changes-dialog';
       dialog.setAttribute('aria-labelledby', 'latest-changes-title');
@@ -38,7 +43,10 @@
       dialog.append(title, popupList, form);
       document.body.append(dialog);
       dialog.showModal();
+      try { window.sessionStorage.setItem(popupSessionKey, '1'); }
+      catch (_) { /* Storage may be disabled by browser settings. */ }
     }
+    if (!noticeList && !popupList) return;
     function update(commits) {
       [noticeList, popupList].filter(Boolean).forEach(list => render(list, commits));
     }

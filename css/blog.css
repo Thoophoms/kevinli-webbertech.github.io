@@ -11,7 +11,7 @@
 body {
 	background: var(--blog-bg);
 	color: var(--ink);
-	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-family: Arial, "Helvetica Neue", sans-serif;
 }
 
 #left_sidebar {

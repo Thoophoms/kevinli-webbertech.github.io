@@ -1,5 +1,10 @@
 [
   {
+    "sha": "e5c52202",
+    "date": "2026-11-06T14:06:03-05:00",
+    "message": "Use formal navigation fonts and refresh cached styles"
+  },
+  {
     "sha": "0bc061a8",
     "date": "2026-11-06T13:54:57-05:00",
     "message": "Fix sidebar Notices iframe height override"
@@ -18,10 +23,5 @@
     "sha": "f834e95d",
     "date": "2026-11-06T12:38:08-05:00",
     "message": "Show 14 featured classes and latest commit notices with confirmation popup"
-  },
-  {
-    "sha": "b127d6fb",
-    "date": "2026-11-06T12:28:29-05:00",
-    "message": "Increase Notices area height"
   }
 ]
