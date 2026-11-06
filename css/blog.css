@@ -114,11 +114,6 @@ body {
 }
 
 #nav_menu li a {
-	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-	font-size: 0.95rem;
-	font-weight: 600;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
 	color: #243447;
 }
 

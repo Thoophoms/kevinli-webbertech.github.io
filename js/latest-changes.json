@@ -1,5 +1,10 @@
 [
   {
+    "sha": "0bc061a8",
+    "date": "2026-11-06T13:54:57-05:00",
+    "message": "Fix sidebar Notices iframe height override"
+  },
+  {
     "sha": "b992b989",
     "date": "2026-11-06T13:19:24-05:00",
     "message": "Retry GitHub Pages deployment"
@@ -18,10 +23,5 @@
     "sha": "b127d6fb",
     "date": "2026-11-06T12:28:29-05:00",
     "message": "Increase Notices area height"
-  },
-  {
-    "sha": "4ed69b9b",
-    "date": "2026-11-05T18:02:07-05:00",
-    "message": "new changes"
   }
 ]
