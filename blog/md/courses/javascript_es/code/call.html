@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript functions</h1>
+<p id="demo"></p>
+
+<script>
+
+const person = {
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+ 
+  
+// This will return "John Doe":
+let fullNameOfP= person.fullName.call(person1);
+
+document.write(fullNameOfP+"<br><br><br><br><br>");
+
+const personWithParam = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person2 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+document.write(personWithParam.fullName.call(person2, "Oslo", "Norway"));
+
+</script>
+</body>
+</html>

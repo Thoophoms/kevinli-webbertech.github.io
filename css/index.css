@@ -1,12 +1,17 @@
 * {
   font-family: "Oswald",sans-serif;
+  box-sizing: border-box;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+/* Keep media (and embedded widgets) from overflowing small screens */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -30,6 +35,10 @@
   background-color: #fff;
 }
 
+.sidebar_content {
+  margin-bottom: 50px; /* Space from the bottom */
+}
+
 .right {
   float:right;
   width: 80%;
@@ -37,21 +46,20 @@
   overflow: scroll;  
   overflow-x: hidden;
   overflow-y: auto;
+  margin-left: 150px;
 }
 
 .content {
   background-color: #fff;
   margin-right: 100px;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 80px;
 }
-
 
 .footer {
   margin: auto auto;
   text-align: center;
 }
-
 
 /* Clear floats after the columns */
 .row:after {
@@ -70,19 +78,36 @@
   margin-left:50px;
 }
 
-/* not being used 
-.grid-item {
-  text-align: center;
+/* Macro Overview charts: flex-wrap so charts sit side by side on wide screens and stack on mobile */
+.fred-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-section #description {
-  padding-left: 50px;
-} */
+.fred-charts .grid-flow {
+  display: contents;
+}
+
+.fred-charts .grid-flow > div {
+  flex: 1 1 calc(50% - 16px);
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+.fred-charts iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 670 / 525;
+  border: 0;
+  overflow: hidden;
+}
 
 #nav_menu  ul{
   position: fixed;
   list-style-type: none;
-  margin-left: 100px;
+  margin-left: 150px;
   padding: 0;
   overflow: hidden;
   background-color: e9f2f9;
@@ -105,6 +130,29 @@ section #description {
   background-color: rgb(222, 221, 218);
 }
 
+.hot-badge {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.trading-lock-icon {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.trading-sidebar-locked {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
+
 .footer {
 	 margin-top: 10px;
 	 width: 800px; 
@@ -119,12 +167,85 @@ section #description {
 }
 
 .one_column {
-	margin-left: 50px;
+  margin-left: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .text_indent ul li {
 	 text-indent: 50px;
+}
+
+/* ============================================================
+   Responsive layout — stack the columns and relax fixed
+   positioning/margins on tablets and phones
+   ============================================================ */
+@media screen and (max-width: 900px) {
+  .column,
+  .column.left,
+  .column.right {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .left {
+    position: static;
+    height: auto;
+    padding: 12px;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+
+  #nav_menu ul {
+    position: static;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #nav_menu li {
+    float: none;
+  }
+
+  #nav_menu li a {
+    padding: 10px 12px;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .grid-flow {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
+  .one_column {
+    margin: 20px 10px;
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text_indent ul li {
+    text-indent: 0;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-flow {
+    grid-template-columns: 1fr;
+  }
 }
  

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .invalid {
+            border-color: red;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            // Prevent form submission by default
+            event.preventDefault();
+
+            // Clear previous errors
+            const errorMessages = document.querySelectorAll(".error");
+            errorMessages.forEach(error => error.remove());
+
+            const inputs = document.querySelectorAll("input, select");
+            inputs.forEach(input => input.classList.remove("invalid"));
+
+            let isValid = true;
+
+            // Validate first name
+            const firstName = document.getElementById("first-name");
+            if (!firstName.value.trim()) {
+                displayError(firstName, "First name is required.");
+                isValid = false;
+            }
+
+            // Validate last name
+            const lastName = document.getElementById("last-name");
+            if (!lastName.value.trim()) {
+                displayError(lastName, "Last name is required.");
+                isValid = false;
+            }
+
+            // Validate date of birth
+            const dob = document.getElementById("dob");
+            if (!dob.value) {
+                displayError(dob, "Date of birth is required.");
+                isValid = false;
+            }
+
+            // Validate gender
+            const gender = document.getElementById("gender");
+            if (!gender.value) {
+                displayError(gender, "Please select a gender.");
+                isValid = false;
+            }
+
+            // Submit the form if valid
+            if (isValid) {
+                alert("Form submitted successfully!");
+                event.target.submit();
+            }
+        }
+
+        function displayError(inputElement, errorMessage) {
+            // Add the "invalid" class for styling
+            inputElement.classList.add("invalid");
+
+            // Create an error message element
+            const errorElement = document.createElement("div");
+            errorElement.className = "error";
+            errorElement.innerText = errorMessage;
+
+            // Insert the error message after the input field
+            inputElement.parentNode.insertBefore(errorElement, inputElement.nextSibling);
+        }
+    </script>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    <form action="/submit" method="post" onsubmit="validateForm(event);">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name"><br><br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">--Select Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

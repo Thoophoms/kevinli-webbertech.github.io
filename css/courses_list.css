@@ -1,0 +1,211 @@
+/* ============================================================
+   courses_list.css  –  Card-based course catalogue styles
+   ============================================================ */
+
+/* Hero banner */
+.courses-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  text-align: center;
+  padding: 64px 24px 52px;
+  margin-bottom: 48px;
+}
+
+.courses-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.courses-hero p {
+  font-size: 1.05rem;
+  opacity: .8;
+  margin: 0;
+}
+
+/* Wrapper */
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* ── Filter bar ── */
+.dropdown-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.dropdown-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.category-dropdown {
+  padding: 9px 40px 9px 14px;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230f3460' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  color: #1a1a2e;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  min-width: 220px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-dropdown:focus {
+  outline: none;
+  border-color: #e63946;
+  box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.18);
+}
+
+.category-dropdown:hover {
+  border-color: #e63946;
+}
+
+/* Stats */
+.stats-bar {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #777;
+  font-size: 0.88rem;
+}
+
+/* ── Cards grid ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .courses-hero h1 { font-size: 1.7rem; }
+}
+
+/* ── Single card ── */
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Thumbnail */
+.card-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .card-thumbnail img {
+  transform: scale(1.04);
+}
+
+/* Body */
+.card-body {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Category badge */
+.card-category {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Per-category badge colours */
+.card-category[data-cat="Introduction to IT"]   { background: #dbeafe; color: #1d4ed8; }
+.card-category[data-cat="Data Structures"]       { background: #dcfce7; color: #15803d; }
+.card-category[data-cat="Springboot"]            { background: #ffedd5; color: #c2410c; }
+.card-category[data-cat="Advanced Database"]     { background: #ede9fe; color: #6d28d9; }
+.card-category[data-cat="DevOps"]                { background: #fee2e2; color: #b91c1c; }
+
+.card-category[data-cat="Git"]                   { background: #fef9c3; color: #854d0e; }
+
+/* Title */
+.card-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+/* Description */
+.card-description {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+/* Watch button */
+.card-watch-btn {
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s ease;
+  align-self: flex-start;
+}
+
+.card-watch-btn:hover {
+  background: #c1121f;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Empty state */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.05rem;
+}

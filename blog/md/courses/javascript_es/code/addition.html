@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Addition Function</title>
+  <script>
+    // JavaScript function to add two numbers
+    function addNumbers(a, b) {
+      return a + b;
+    }
+
+    // Function to handle form submission
+    function handleAddition(event) {
+      event.preventDefault(); // Prevent form reload
+      const num1 = parseFloat(document.getElementById('number1').value);
+      const num2 = parseFloat(document.getElementById('number2').value);
+      const result = addNumbers(num1, num2);
+      document.getElementById('result').textContent = `The sum is: ${result}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Test Addition Function</h1>
+  <form onsubmit="handleAddition(event)">
+    <label for="number1">Enter first number:</label>
+    <input type="number" id="number1" required><br><br>
+
+    <label for="number2">Enter second number:</label>
+    <input type="number" id="number2" required><br><br>
+
+    <button type="submit">Add Numbers</button>
+  </form>
+
+  <h2 id="result"></h2>
+</body>
+</html>

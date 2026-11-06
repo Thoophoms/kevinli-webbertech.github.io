@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+
+<p id="demo"></p>
+
+<script>
+
+
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+
+const fruits = ["orange", "apple", "kiwi"];
+
+// this is the index
+for (let f in fruits) {
+    document.write(f + "<br>");
+}
+
+
+document.write("<h2>examples of loop in</h2>");
+
+// to show element in an array you can do this,
+
+
+for (let f in fruits) {
+    document.write(fruits[f] + "<br>");
+}
+
+document.write("<h2>examples of loop of</h2>");
+
+// if you don't want to use the index, and just use it as other programming like python or java, 
+// then you can still do this,
+
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+}
+document.write(text);
+
+document.write("<h2>This is another example not using += operator</h2>");
+text="";
+for (let x of cars) {
+  text = text + x + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+}
+document.write(text);
+
+
+document.write("<h2>Object array examples</h2>");
+// objects array
+
+const students = [
+  {"first_name": "Kevin", "last_name": "li", "age": 10},
+  {"first_name": "Tom", "last_name": "Jr", "age": 12},
+  {"first_name": "Jake", "last_name": "Blake", "age": 22},
+];
+
+
+for (let s of students) {
+    document.write(JSON.stringify(s) + "<br/>");
+}
+
+
+</script>
+
+</body>
+</html>

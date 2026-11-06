@@ -1,0 +1,23 @@
+.modal {
+    position: fixed; /* Keeps the modal in the same place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the screen */
+    height: 100%; /* Full height of the screen */
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    display: flex; /* Flexbox to center the modal box */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Makes sure it appears above everything else */
+}
+
+.modal.hidden {
+    display: none; /* Hides the modal */
+}
+
+.modal-content {
+    background: white; /* White modal box */
+    padding: 20px; /* Spacing inside the box */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Centers text in the modal */
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://kevinli-webbertech.github.io/css/index.css">
+    </head>
+
+<body>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+    <script src="https://kevinli-webbertech.github.io/js/breadcrumb.js" defer></script>
+
+<!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+<!-- Load the element definition -->
+<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+<script> 
+    function saveAsPDF() { 
+      window.print(); 
+    } 
+</script>
+
+<div class="column content">
+    <!-- Simply set the `src` attribute to your MD file and win -->
+    <zero-md src="../../../md/howto/IT/mac_howto.md"></zero-md>
+    <button onclick="saveAsPDF()">Save as PDF</button> 
+</div>
+
+</body>
+</html>

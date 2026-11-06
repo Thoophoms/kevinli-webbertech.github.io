@@ -6,78 +6,875 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tree.css" />
+	<link rel="stylesheet" href="css/blog.css" />
+
+	<!---The followings are needed for authentication -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha256.js"></script>
+	<script src="https://kevinli-webbertech.github.io/dist/js/bundle.min.js"></script>
+
+	<!-- <script src="js/content_locker.js"></script> -->
+  <link rel="stylesheet" href="css/latest-changes.css">
+  <script src="js/latest-changes.js" defer></script>
 </head>
 
 <body>
  <div class="row">
   <div class="column left" id= "left_sidebar">
-    <h2>Kevin's Blog</h2>
-    <div id="sidebar">
+	 <h2>Kevin's Courses</h2>
+    <div class="sidebar_content" id="sidebar_content">
 		<ul id="myUL">
 			<li><span class="caret">HowTo</span>
-               <ul class="nested">
-					<li><a href="blog/html/ref/docker/mac_docker.html">Mac docker issue</a></li>
-					<li><a href="blog/html/ref/docker/windows_docker_issues.html">Windows docker issue</a></li>
-					<li><a href="blog/html/ref/db/mysql_driver.html">MySQL Driver issue with Python</a></li>
-					<li><a href="blog/html/ref/db/cassandra.html">Cassandra Connection with Python</a></li>
-					<li><a href="blog/html/learning_resources.html">Python, Docker and Linux learning Resource</a></li>
-					<li><a href="https://www.youtube.com/playlist?list=PLsZezxKI7Eu62BBJMznr0Q8Vw2i5YylqV">Advanced Database(youtube)</a></li>
-					<li><a href="https://www.youtube.com/playlist?list=PLsZezxKI7Eu7qVtc-nIhHLY64fS716H2U">SQL Programming(youtube)</a></li>
-			 		<li><a href="blog/html/howto/visualStudioCode.html">Visual Studo Code</a></li>
-					<li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a></li>
-					<li><a href="blog/html/howto/video_editing.html">Video Editing</a></li>
-				    <li><a href="blog/html/howto/markdown.html">Github.io markdown issue</a></li>
+        <ul class="nested">
+					<ol>
+						<li><a href="blog/html/learning_resources.html">Python, Docker and Linux learning Resource</a></li>
+						<li><a href="blog/html/ref/database/mysql_driver.html">MySQL Driver issue with Python</a></li>
+						<li><a href="https://www.youtube.com/playlist?list=PLsZezxKI7Eu62BBJMznr0Q8Vw2i5YylqV">Advanced Database(youtube)</a></li>
+						<li><a href="https://www.youtube.com/playlist?list=PLsZezxKI7Eu7qVtc-nIhHLY64fS716H2U">SQL Programming(youtube)</a></li>
+						<li><a href="blog/html/howto/visualStudioCode.html">Visual Studo Code</a></li>
+						<li><a href="https://www.markdownguide.org/cheat-sheet/">Markdown Cheatsheet</a></li>
+						<li><a href="blog/html/howto/video_editing.html">Video Editing</a></li>
+						<li><a href="blog/html/howto/markdown.html">Github.io markdown issue</a></li>
+						<li><a href="blog/html/howto/IT/mac_howto.html">Mac OS Howto</a></li>
+					</ol>
 				</ul>
-			</li>	
+			</li>
 		</ul>
 		<hr/>
 		<ul id="myUL">
 			<li><span class="caret">Courses</span>
 				<ul class="nested">
-					<li><span class="caret">Spingboot</span>
+					<li><span class="caret">Database Systems</span>
 						<ul class="nested">
-							<li><a href="blog/html/course/springboot/springboot_1.html">Springboot Intro</a></li>
-							<li><a href="blog/html/course/springboot/springboot_2.html">Springboot Data Access</a></li>
-							<li><a href="blog/html/course/springboot/springboot_3.html">Springboot Kubernetes Deployment</a></li>
-							<li><a href="blog/html/course/springboot/springboot_4.html">Springboot MVC Web</a></li>
-							<li><a href="blog/html/course/springboot/mid_term.html">Midterm Project</a></li>
-							<li><a href="blog/html/course/springboot/springboot_5.html">Springboot JPA</a></li>
-							<li><a href="blog/html/course/springboot/springboot_6.html">Springboot Lombok</a></li>
-
+							<ol>
+								<li><a href="blog/html/courses/database/syllabus.html">Syllabus Database</a></li>
+								<li><a href="blog/html/courses/database/Intro_DBMS.html">Database Introduction</a></li>
+								<li><a href="blog/html/courses/database/homework/homework1.html">homework #1</a></li>
+								<li><a href="blog/html/courses/database/relational_model.html">Relational Model</a></li>
+								<li><a href="blog/html/courses/database/homework/homework2.html">homework #2</a></li>
+								<li><a href="blog/html/courses/database/ER_diagram.html">ER Diagram</a></li>
+								<li><a href="blog/html/courses/database/homework/homework3.html">homework #3</a></li>
+								<li><a href="blog/html/courses/database/relational_normalization.html">Normalization</a></li>
+								<li><a href="blog/html/courses/database/homework/homework4.html">homework #4</a></li>
+								<li><a href="blog/html/courses/database/sql_programming_1.html">SQL Programming 1</a></li>
+								<li><a href="blog/html/courses/database/sql_programming_2.html">SQL Programming 2</a></li>
+								<li><a href="blog/html/courses/database/homework/homework5.html">homework #5</a></li>
+								<li><a href="blog/html/courses/database/sql_programming_3.html">SQL Programming 3</a></li>
+								<li><a href="blog/html/courses/database/homework/homework6.html">homework #6</a></li>
+								<li><a href="blog/html/courses/database/sql_programming_4.html">SQL Programming 4</a></li>
+								<li><a href="blog/html/courses/database/mongodb_1.html">Learn NoSQL - Mongo Programming 1</a></li>
+								<li><a href="blog/html/courses/database/homework/homework7.html">homework #7</a></li>
+								<li><a href="blog/html/courses/database/mongodb_2.html">Learn NoSQL - Mongo Programming 2</a></li>
+								<li><a href="blog/html/courses/database/homework/homework8.html">homework #8</a></li>
+								<li><a href="blog/html/courses/database/mongodb_3.html">Learn NoSQL - Mongo Programming 3</a></li>
+								<li><a href="https://kevinli-webbertech.github.io/blog/html/courses/advanced_database/homework/homework9.html">homework #9</a></li>
+								<li><a href="blog/html/courses/database/mongodb_4.html">Learn NoSQL - Mongo Programming 4</a></li>
+								<li><a href="blog/html/courses/database/python_data_programming_1.html">Python Programming with Databases</a></li>
+								<li><a href="blog/html/courses/database/python_data_programming_2.html">Python Programming with CSV</a></li>
+								<li><a href="blog/html/courses/database/homework/final.html">Final Project</a></li>
+							</ol>
 						</ul>
 					</li>
-					
-					<li><span class="caret">Spreadsheet</span>
+					<li><span class="caret">Database Systems II</span>
 						<ul class="nested">
-							<li><a href="blog/html/course/excel/excel_1.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_2.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_3.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_4.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_5.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_6.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_7.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_8.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_9.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_10.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_11.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_12.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_13.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_14.html">coming</a></li>
-							<li><a href="blog/html/course/excel/excel_15.html">coming</a></li>
+							<ol>
+								<li><a href="blog/html/courses/databaseII/syllabus.html">Syllabus Database</a></li>
+								<li><a href="blog/html/courses/databaseII/relational_basics.html">Relational Database</a></li>
+								<li><a href="blog/html/courses/databaseII/homework1.html">Homework 1</a></li>
+								<li><a href="blog/html/courses/databaseII/sql_programming1.html">SQL Programming 1</a></li>
+								<li><a href="blog/html/courses/databaseII/sql_programming2.html">SQL Programming 2</a></li>
+								<li><a href="blog/html/courses/databaseII/homework2.html">Homework 2</a></li>
+								<li><a href="blog/html/courses/database/mongodb_1.html">Learn NoSQL - Mongo Programming 1</a></li>
+	   						    <li><a href="blog/html/courses/database/mongodb_2.html">Learn NoSQL - Mongo Programming 2</a></li>
+                                <li><a href="blog/html/courses/databaseII/homework/homework3.html">Homework3</a></li>
+								<li><a href="blog/html/courses/database/mongodb_3.html">Learn NoSQL - Mongo Programming 3</a></li>
+							    <li><a href="blog/html/courses/database/mongodb_4.html">Learn NoSQL - Mongo Programming 4</a></li>
+								<li><a href="blog/html/courses/database/python_data_programming_1.html">Python Programming with Databases</a></li>
+								<li><a href="blog/html/courses/database/python_data_programming_2.html">Python Programming with CSV</a></li>
+								<li><a href="blog/html/courses/database/homework/final.html">Final Project</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Advanced Database</span>
+						<ul class="nested">
+						   <ol>
+								<li><a href="blog/html/courses/advanced_database/syllabus.html">Advanced Database Syllabus</a></li>
+								<li><a href="blog/html/courses/database/Intro_DBMS.html">Database System Introduction</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework1.html">homework #1</a></li>
+								<li><a href="blog/html/courses/advanced_database/SQL_Programming.html">SQL Programming- Handson</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework2.html">homework #2</a></li>
+								<li><a href="blog/html/courses/database/relational_model.html">Relational Model</a></li>
+								<li><a href="blog/html/courses/database/relational_normalization.html">Normalization</a></li>
+								<li><a href="blog/html/courses/database/ER_diagram.html">ER Diagram</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework3.html">homework #3</a></li>
+								<li><a href="blog/html/courses/advanced_database/cassandra_introduction.html">Cassandra Introduction</a></li>
+								<li><a href="blog/html/courses/advanced_database/cassandra_programming.html">Cassandra Programming</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework4.html">homework #4</a></li>
+								<li><a href="blog/html/courses/advanced_database/xml.html">XML</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework5.html">homework #5</a></li>
+								<li><a href="blog/html/courses/advanced_database/web_development.html">Web Development</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/mid-term.html">Midterm Project</a></li>
+								<li><a href="blog/html/courses/advanced_database/microservice.html">Microservice</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework7.html">homework #6</a></li>
+								<li><a href="blog/html/courses/advanced_database/orm.html">ORM Programming</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework6.html">homework #7</a></li>
+								<li><a href="blog/html/courses/advanced_database/database_storage.html">Database Internal-Storage</a></li>
+								<li><a href="blog/html/courses/advanced_database/database_internals_btree.html">Database Internal-BTree</a></li>
+								<li><a href="blog/html/courses/advanced_database/transaction_recovery.html">Transaction Recovery</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework8.html">homework #8</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework9.html">homework #9</a></li>
+								<li><a href="blog/html/courses/database/mongodb_1.html">Learn NoSQL - Mongo Programming 1</a></li>
+								<li><a href="blog/html/courses/database/mongodb_2.html">Learn NoSQL - Mongo Programming 2</a></li>
+								<li><a href="blog/html/courses/database/mongodb_3.html">Learn NoSQL - Mongo Programming 3</a></li>
+								<li><a href="blog/html/courses/database/mongodb_4.html">Learn NoSQL - Mongo Programming 4</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework10.html">homework #10</a></li>
+								<li><a href="blog/html/courses/big_data/hadoop/Intro_hadoop.html">Introduction to Hadoop</a></li>
+								<li><a href="blog/html/courses/big_data/hadoop/Installation.html">Hadoop Docker Image</a></li>
+								<li><a href="blog/html/courses/big_data/hadoop/hadoop_lab.html">Hadoop Lab</a></li>
+								<li><a href="blog/html/courses/advanced_database/homework/homework11.html">homework #11</a></li>
+								<li><a href="blog/md/courses/advanced_database/homework/final.pdf">final project</a></li>
+						   </ol>
 						</ul>
 					</li>
 					<li><span class="caret">Big Data</span>
 						<ul class="nested">
-							<li><a href="blog/html/course/big_data/big_data_1.html">Coming</a></li>
-							<li><a href="blog/html/course/big_data/big_data_2.html">Coming</a></li>
-							<li><a href="blog/html/course/big_data/big_data_3.html">Coming</a></li>
-							<li><a href="blog/html/course/big_data/big_data_4.html">Coming</a></li>
+							<ol>
+								<li><a href="blog/html/courses/big_data/big_data_analytics_syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/big_data/big_data_analytics_intro.html">Big Data Intro</a></li>
+								<li><a href="blog/html/courses/big_data/big_data_platforms.html">Big Data Platforms</a></li>
+								<li><a href="blog/html/courses/big_data/homework/homework1.html">homework 1</a></li>
+								<li><a href="blog/html/courses/big_data/numpy/numpy.html">NumPy</a></li>
+								<li><a href="blog/html/courses/big_data/homework/homework2.html">homework 2</a></li>
+								<li><a href="blog/html/courses/big_data/pandas/pandas1.html">Pandas Basics</a></li>
+								<li><a href="blog/html/courses/big_data/pandas/pandas2.html">Pandas Advanced Operations</a></li>
+								<li><a href="blog/html/courses/big_data/pandas/pandas3.html">Time Series</a></li>
+								<li><a href="blog/html/courses/big_data/homework/homework3.html">homework 3</a></li>
+								<li><a href="blog/html/courses/big_data/hadoop/Installation.html">Hadoop Docker Image</a></li>
+								<li><a href="blog/html/courses/big_data/hadoop/hadoop_lab.html">Hadoop Lab</a></li>
+								<li><a href="blog/html/courses/big_data/spark/Spark_Intro.html">Spark Introduction</a></li>
+								<li><a href="blog/html/courses/big_data/spark/PySpark_Application.html">Spark Programming</a></li>
+								<li><a href="blog/html/courses/big_data/homework/mid_term.html">Midterm Project</a></li>
+								<li><a href="blog/html/courses/big_data/spark/RDD.html">RDD Programming</a></li>
+								<li><a href="blog/html/courses/big_data/spark/Spark_SQL.html">Spark SQL</a></li>
+								<li><a href="blog/html/courses/big_data/spark/Spark_ML.html">Spark ML</a></li>
+								<li><a href="blog/html/courses/big_data/spark/Spark_classic_ml.html">Spark ML Cont</a></li>
+								<li><a href="blog/html/courses/big_data/homework/homework4.html">Homework 4</a></li>
+								<li><a href="blog/html/courses/machine_learning/ml_intro.html">Machine Learning Intro</a></li>
+								<li><a href="blog/html/courses/machine_learning/mathematics_nn.html">Mathematics and NN</a></li>
+								<li><a href="blog/html/courses/machine_learning/nn.html">Neural Network</a></li>
+								<li><a href="blog/html/courses/machine_learning/classic_ml_intro.html">Classic ML Intro</a></li>
+								<li><a href="blog/html/courses/machine_learning/scikit-learn.html">Scikit-Learn Intro</a></li>
+								<li><a href="blog/html/courses/machine_learning/HyperparametersAndModelValidation.html"> Hyperparameters and Model Validation</a></li>
+								<li><a href="blog/html/courses/big_data/ml/MachineLearningExample.html"> Machine Learning Application</a></li>
+								<li><a href="blog/html/courses/big_data/ml/HuggingFace.html"> Hugging Face Platform</a></li>
+								<li><a href="blog/html/courses/big_data/ml/LLM.html"> LLM Example</a></li>
+								<li><a href="blog/html/courses/big_data/homework/final_project.html">Final Project</a></li>
+							</ol>
+						</ul>
+					</li>
+
+				<!---Data Visualization---->
+					<li><span class="caret">Data Visualization</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/data_visualization/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/data_visualization/data_visualization_intro.html">Intro to Data Visualization</a></li>
+								<li><a href="blog/html/courses/data_visualization/mathplotlib/mathplotlib_1.html">Matplotlib - Part I</a></li>
+								<li><a href="blog/html/courses/data_visualization/mathplotlib/mathplotlib_2.html">Matplotlib - Part II</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework2.html">Homework 2</a></li>
+								<li><a href="blog/html/courses/data_visualization/mathplotlib/mathplotlib_3.html">Matplotlib - Part III</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework3.html">Homework 3</a></li>
+								<li><a href="blog/html/courses/data_visualization/mathplotlib/mathplotlib_4.html">Matplotlib - Part IV</a></li>
+								<li><a href="blog/html/courses/data_visualization/mathplotlib/mathplotlib_5.html">Matplotlib - Part V</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework4.html">Homework 4</a></li>
+								<li><a href="blog/html/courses/data_visualization/seaborn/seaborn.html">Intro to Seaborn</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/midterm.html">Midterm</a></li>
+								<li><a href="blog/html/courses/data_visualization/d3/d3_1.html">D3 library - Part I</a></li>
+								<li><a href="blog/html/courses/data_visualization/d3/d3_2.html">D3 library - Part II</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework5.html">Homework 5</a></li>
+								<li><a href="blog/html/courses/data_visualization/d3/d3_3.html">D3 library - Part III</a></li>
+								<li><a href="blog/html/courses/data_visualization/d3/d3_4.html">D3 library - Part IV</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework6.html">Homework 6</a></li>
+								<li><a href="blog/html/courses/data_visualization/echarts/echarts_1.html">Web Visualization with ECharts - Part I</a></li>
+								<li><a href="blog/html/courses/data_visualization/echarts/echarts_2.html">Web Visualization with ECharts - Part II</a></li>
+								<li><a href="blog/html/courses/data_visualization/homework/homework7.html">homework7</a></li>
+   							<li><a href="blog/html/courses/data_visualization/homework/final.html">Final</a></li>
+								<li><a href="blog/html/courses/data_visualization/echarts/echarts_3.html">Web Visualization with ECharts - Part III</a></li>
+								<li><a href="blog/html/courses/data_visualization/echarts/echarts_4.html">Web Visualization with ECharts - Part IV</a></li>
+								<li><a href="blog/html/courses/data_visualization/intro_tableau.html">Intro to Tableau</a></li>
+								<li><a href="blog/html/courses/data_visualization/intro_power_bi.html">Intro to PowerBI</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Computer Architecture</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/computer_architecture/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/computer_architecture/signed_unsigned_number.html">Signed And UnsignedNumber Lab</a></li>
+								<li><a href="blog/html/courses/computer_architecture/virtualization.html">virtualization</a></li>
+								<li><a href="blog/html/courses/computer_architecture/cpu_virtualization.html">CPU Virtualization</a></li>
+								<li><a href="blog/html/courses/computer_architecture/cloud.html">Computer Cloud</a></li>
+								<li><a href="blog/html/courses/computer_architecture/quantum_computer.html">Quantum Computer</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Computer Forensic</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/computer_forensic/syllabus.html">syllabus</a></li>
+								<li><span class="caret">Computer Forensic Introduction</span>
+									<ul class="nested">
+											<li><a href="blog/html/courses/computer_forensic/introduction/intro.html">Forensic Overview</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/history.html">Forensic History</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/areas.html">Forensic Areas</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/types.html">Forensic Types</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/tools">Forensic Tools</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/trend.html">Forensic Trend</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/cybersecurityAndForensic.html">Cyber and Forensic</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/challenges.html">Forensic Challenges</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/anti-forensic.html">Anti Forensic</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/legal.html">Legal</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/compliance.html">Compliance</a></li>
+											<li><a href="blog/html/courses/computer_forensic/introduction/certification.html">Certification</a></li>
+								  </ul>
+								</li>
+								<li><a href="blog/html/courses/computer_forensic/homework/homework1.html">homework1</a></li>
+								<li><span class="caret">Computer Forensics Process</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/computer_forensic/introduction/acquiring_data.html">Acquiring Data</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/dd.html">dd command</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/lab-hexedit.html">In-class lab - hexedit</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/lab-dd.html">In-class lab - dd</a></li>
+										<li><a href="blog/html/courses/computer_forensic/introduction/persisting_data.html">Persisting Data</a></li>
+										<li><a href="blog/html/courses/computer_forensic/introduction/analyzingAndReport.html">Analyze and Report</a></li>
+								  </ul>
+								</li>
+                				<li><a href="blog/html/courses/computer_forensic/homework/homework2.html">homework2</a></li>
+								<li><span class="caret">Filesystem Forensics</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/file_system_forensic.html">File system forensic</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/linux_tools.html">Linux Tools</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/mac_tools.html">Mac Tools</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/windows_tools.html">Windows Tools</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/Steganography_1.html">Steganography I</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/Steganography_2.html">Steganography II</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/lab_stegonography_1.html">Steganography Lab 1</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/lab_stegonography_2.html">Steganography Lab 2</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/LIEF.html">LIEF</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/sleuth.html">Sleuth</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/Plaso.html">Plaso</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/trivy_scanner.html">Trivy Scan</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/grype_scanner.html">Grype Scan</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/nikto_scanner.html">Nikto Scan</a></li>
+										<li><a href="blog/html/courses/computer_forensic/file_system_forensic/codeql_scan.html">CodeQL Scan</a></li>
+									</ul>
+								</li>
+								<li><a href="blog/html/courses/computer_forensic/homework/homework3.html">homework3</a></li>
+								<li><span class="caret">OS Forensic</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/computer_forensic/linux_security/kali_linux.html">Kali Linux Intro</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/cracking_password.html">Cracking password</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/lab-john_the_ripper.html">lab-john the ripper</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/lab-hashcat.html">lab- hashcat</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/linux_security.html">Linux security</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/SELinux.html">SELinux</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/Logcheck.html">Logcheck</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/logcheck_logfiltering.html">Logcheck Log Filtering</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/Logcheck_fail2ban_integration.html">Logcheck and fail2ban integration</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/logcheck_fail2ban_real_monitoring.html">Logcheck fail2ban real monitoring</a></li>
+									  <li><a href="blog/html/courses/computer_forensic/linux_security/syslog.html">Syslog</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/volatility_memory_forensic_1.html">Memory Forensic I</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/volatility_memory_forensic_2.html">Memory Forensic II</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/volatility_memory_forensic_3.html">Memory Forensic III</a></li>
+										<li><a href="blog/html/courses/computer_forensic/linux_security/penetration_testing.html">Penetration Testing</a></li>
+								  </ul>
+								</li>
+								<li><a href="blog/html/courses/computer_forensic/homework/homework4.html">homework4</a></li>
+								<li><a href="blog/html/courses/computer_forensic/homework/midterm.html">midterm</a></li>
+								<li><a href="blog/html/courses/computer_forensic/homework/homework5.html">homework5</a></li>
+								<li><span class="caret">Network Forensics</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/computer_network_basics.html">Network Basics</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/OSI.html">OSI</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/tcp_ip.html">TCP IP</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/ipv4_public_private.html">public and private IPv4</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/ipv4_subnetting.html">IPv4 subnetting</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/nat.html">NAT</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/network_forensic_tools.html">network_forensic_tools</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/router.html">router</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/port_scanning.html">Lab - Port Scanning</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/lab_wireshark.html">Lab - Wireshark</a></li>
+										<li><a href="blog/html/courses/computer_forensic/network_forensic/lab_vpn_setup.html">Lab - VPN setup</a></li>
+									</ul>
+								</li>
+								<li><a href="blog/html/courses/computer_forensic/homework/homework6.html">homework6</a></li>
+								<li><span class="caret">Cybersecurity</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/cybersecurity/syllabus.html">Syllabus</a></li>
+										<li><a href="blog/html/courses/cybersecurity/public_private_key.html">public and private key</a></li>
+										<li><span class="caret">Cyber Algorithms</span>
+											<ul class="nested">
+												<li><a href="blog/html/courses/cybersecurity/encryption_algorithm.html">Encryption Algorithm</a></li>
+												<li><a href="blog/html/courses/cybersecurity/RSA.html">RSA</a></li>
+												<li><a href="blog/html/courses/cybersecurity/ECC.html">ECC</a></li>
+												<li><a href="blog/html/courses/cybersecurity/EIGamal.html">EIGamal</a></li>
+												<li><a href="blog/html/courses/cybersecurity/ECDH.html">ECDH</a></li>
+												<li><a href="blog/html/courses/cybersecurity/AES.html">AES</a></li>
+												<li><a href="blog/html/courses/cybersecurity/SHA-1.html">SHA-1</a></li>
+												<li><a href="blog/html/courses/cybersecurity/SHA-2.html">SHA-2</a></li>
+												<li><a href="blog/html/courses/cybersecurity/SHA-3.html">SHA-3</a></li>
+												<li><a href="blog/html/courses/cybersecurity/SHA-256.html">SHA-256</a></li>
+												<li><a href="blog/html/courses/cybersecurity/MD5.html">MD5</a></li>
+												<li><a href="blog/html/courses/cybersecurity/argon2.html">argon2</a></li>
+ 												<li><a href="blog/html/courses/cybersecurity/bcrypt.html">bcrypt</a></li>
+												<li><a href="blog/html/courses/cybersecurity/scrypt.html">scrypt</a></li>
+												<li><a href="blog/html/courses/cybersecurity/blake3.html">blake3</a></li>
+												<li><a href="blog/html/courses/cybersecurity/security_application.html">security application</a></li>
+												<li><a href="blog/html/courses/cybersecurity/security_algorithm_summary.html">security algorithm summary</a></li>
+											</ul>
+										</li>
+										<li><a href="blog/html/courses/cybersecurity/openssh.html">openssh</a></li>
+										<li><a href="blog/html/courses/cybersecurity/ssh_authentication.html">ssh authentication</a></li>
+										<li><a href="blog/html/courses/cybersecurity/ssl_tsl.html">SSL and TLS</a></li>
+										<li><a href="blog/html/courses/cybersecurity/x509.html">x509</a></li>
+										<li><a href="blog/html/courses/cybersecurity/pem.html">PEM</a></li>
+										<li><a href="blog/html/courses/cybersecurity/pgp.html">GPG</a></li>
+										<li><a href="blog/html/courses/cybersecurity/jwt.html">JWT</a></li>
+										<li><a href="blog/html/courses/cybersecurity/mathematics.html">Mathematics</a></li>
+										<li><a href="blog/html/courses/cybersecurity/security_tools.html">Security Tools</a></li>
+										<li><a href="blog/html/courses/cybersecurity/certificate_authority.html">CA</a></li>
+								  </ul>
+								</li>
+								<li><span class="caret">Cloud Forensic</span>
+									<ul class="nested">
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/cloud_forensic.html">Cloud Forensic</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/customized_dashboard_kibana.html">Kibana Dashboard</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/SIEM.html">SIEM</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/wazuh.html">WAZUH</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/integrating_wazuh_with_AWS.html">Integrating wazuh with AWS</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/integrating_wazuh_with_ELK.html">Integrating Wazuh with ELK</a></li>
+										<li><a href="blog/html/courses/computer_forensic/cloud_forensic/automate_detection_with_ml.html">automate detection with ml</a></li>
+								    <li><a href="blog/html/courses/computer_forensic/cloud_forensic/auto-block_attackers_using_Fail2Ban.html">auto block attackers</a></li>
+									</ul>
+								</li>
+								<li><a href="blog/html/courses/computer_forensic/homework/final.html">final</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Java Data Structures</span>
+						<ul class="nested">
+								<li><a href="blog/html/courses/data_structures_java/syllabus.html">syllabus</a></li>
+								<li><a href="blog/html/courses/data_structures_java/linkedlist.html">Linked List</a></li>
+								<li><a href="blog/html/courses/data_structures_java/stack.html">Stack</a></li>
+								<li><a href="blog/html/courses/data_structures_java/queue.html">Queue</a></li>
+								<li><a href="blog/html/courses/data_structures_java/priority_queue.html">Priority Queue</a></li>
+								<li><a href="blog/html/courses/data_structures_java/basic_sorting.html">Sorting</a></li>
+								<li><a href="blog/html/courses/data_structures_java/advanced_sorting.html">Quick Sort and Merge Sort</a></li>
+								<li><a href="blog/html/courses/data_structures_java/binary_tree.html">Binary Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/binary_search_tree.html">Binary Search Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/trie.html">Trie</a></li>
+								<li><a href="blog/html/courses/data_structures_java/huffman_tree.html">Special Topic - Huffman Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/AVL_tree.html">Special Topic- AVL Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/b_tree.html">Special Topic- B Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/RedAndBlack_tree.html">Special Topic- Red and Black Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/mst.html">Graph- Mininum Spanning Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_java/shortest_path_graph.html">Graph- Shortest Path</a></li>
+								<li><a href="blog/html/courses/data_structures_java/amortized_analysis.html">Amortized Analysis</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/leetcode.html">leetcode takeaway</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/backtracking.html">Backtracking</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/sliding_window.html">Sliding Window</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/dynamic_programming.html">Dynamic Programming</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/greedy.html">Greedy Algorithm</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/divide_and_conquer.html">Divide and Conquer Algorithm</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/bfs.html">BFS - Graph</a></li>
+								<li><a href="blog/html/courses/data_structures_java/algorithms/dfs.html">DFS - Graph</a></li>
+						</ul>
+					</li>
+
+					<li><span class="caret">Python Data Structures</span>
+						<ul class="nested">
+								<li><a href="blog/html/courses/data_structures_python/syllabus.html">syllabus</a></li>
+								<li><a href="blog/html/courses/data_structures_python/linkedlist.html">Linked List</a></li>
+								<li><a href="blog/html/courses/data_structures_python/stack.html">Stack</a></li>
+								<li><a href="blog/html/courses/data_structures_python/queue.html">Queue</a></li>
+								<li><a href="blog/html/courses/data_structures_python/priority_queue.html">Priority Queue</a></li>
+								<li><a href="blog/html/courses/data_structures_python/sorting.html">Sorting</a></li>
+								<li><a href="blog/html/courses/data_structures_python/binary_tree.html">Binary Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/binary_search_tree.html">Binary Search Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/trie.html">Trie</a></li>
+								<li><a href="blog/html/courses/data_structures_python/huffman_tree.html">Special Topic - Huffman Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/AVL_tree.html">Special Topic- AVL Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/b_tree.html">Special Topic- B Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/RedAndBlack_tree.html">Special Topic- Red and Black Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/mst.html">Graph- Mininum Spanning Tree</a></li>
+								<li><a href="blog/html/courses/data_structures_python/shortest_path_graph.html">Graph- Shortest Path</a></li>
+						</ul>
+					</li>
+
+					<li><span class="caret">Javascript</span>
+						<ul class="nested">
+								<li><a href="blog/html/courses/javascript_es/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/javascript_es/introduction.html">Javascript Intro</a></li>
+								<li><a href="blog/html/courses/javascript_es/features.html">Javascript Features</a></li>
+                                <li><a href="blog/md/courses/javascript_es/Lab1_Javascript_VS_Copilot.pdf">Javascript Lab1</a></li>
+								<li><a href="blog/html/courses/javascript_es/enablement_placement.html">Enablement and placement</a></li>
+								<li><a href="blog/html/courses/javascript_es/javascript_basics.html">Javascript Basics</a></li>
+								
+								<li><a href="blog/html/courses/javascript_es/Lab3_JS_AnonymousFunction.pdf">Javascript Basics</a></li>
+								<li><a href="blog/html/courses/javascript_es/dom_event.html">Javascript Events</a></li>
+								<li><a href="blog/html/courses/javascript_es/flowcontrol.html">control flow</a></li>
+								<li><a href="blog/html/courses/javascript_es/functions.html">functions</a></li>
+								<li><a href="blog/html/courses/javascript_es/class.html">class</a></li>
+								<li><a href="blog/html/courses/javascript_es/bom.html">browser bom</a></li>
+								<li><a href="blog/html/courses/javascript_es/async.html">async</a></li>
+								<li><a href="blog/html/courses/javascript_es/web_api.html">web api</a></li>
+								<li><a href="blog/html/courses/javascript_es/homework/homework1.html">hw1</a></li>
+						</ul>
+					</li>
+
+					<li><span class="caret">ReactJS</span>
+				    	<ul class="nested">
+							<li><a href="blog/html/courses/javascript_reactjs/syllabus.html">Syllabus</a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_basics.html">reactjs basics </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_router.html">reactjs router </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_RBAC.html">reactjs RBAC </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_logging_monitoring.html">reactjs logging monitoring </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_lazyloading.html">reactjs lazyloading </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_redux.html">reactjs redux </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_backend_authentication.html">reactjs backend authentication </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_authentication1.html">reactjs authentication1 </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_authentication2.html">reactjs authentication2 </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_authentication3.html">reactjs authentication3 </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_authentication4.html">reactjs authentication4 </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_concurrent.html">reactjs concurrent </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_server_component.html">reactjs server component </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_swr.html">reactjs swr </a></li>
+							<li><a href="blog/html/courses/javascript_reactjs/reactjs_reactquery.html">react query </a></li>
+				  		</ul>
+					</li>
+
+					<li><span class="caret">NextJS Framework</span>
+					  <ul class="nested">
+						<li><a href="blog/html/courses/javascript_nextjs/syllabus.html">Syllabus</a></li>
+						<li><a href="blog/html/courses/javascript_nextjs/nextjs_basics.html">nextjs basics</a></li>
+						<li><a href="blog/html/courses/javascript_nextjs/nextjs_drag_n_drop.html">nextjs drag n drop</a></li>
+					  </ul>
+					</li>
+
+					<li><span class="caret">Kotlin</span>
+					  <ul class="nested">
+							<li><a href="blog/html/courses/kotlin/syllabus.html">Syllabus</a></li>
+							<li><a href="blog/html/courses/kotlin/kotlin_basics.html">kotlin basics</a></li>
+							<li><a href="blog/html/courses/kotlin/variable.html">variable</a></li>
+							<li><a href="blog/html/courses/kotlin/kotlin_datatypes.html">datatypes</a></li>
+							<li><a href="blog/html/courses/kotlin/program_control.html">program control</a></li>
+							<li><a href="blog/html/courses/kotlin/scope_functions.html">scope functions</a></li>
+							<li><a href="blog/html/courses/kotlin/function_class.html">function class</a></li>
+							<li><a href="blog/html/courses/kotlin/class_constructor.html">class constructor</a></li>
+							<li><a href="blog/html/courses/kotlin/data_class.html">data class</a></li>
+							<li><a href="blog/html/courses/kotlin/singleton_class.html">singleton class</a></li>
+							<li><a href="blog/html/courses/kotlin/collection.html">collection</a></li>
+							<li><a href="blog/html/courses/kotlin/exception.html">exception</a></li>
+							<li><a href="blog/html/courses/kotlin/functional.html">functional</a></li>
+							<li><a href="blog/html/courses/kotlin/delegation.html">delegation</a></li>
+							<li><a href="blog/html/courses/kotlin/productivity_booster.html">productivity booster</a></li>
+							<li><a href="blog/html/courses/kotlin/springboot.html">springboot</a></li>
+					  </ul>
+					</li>
+
+					<li><span class="caret">IT Foundations</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/IT_Foundations/Syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/information_technology.html">Information Technology</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/upc_qr_sku.html">UPC, QR, and SKU Codes</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/computer_organization_architecture1.html">Computer Organization &amp; Architecture - Part 1</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/computer_organization_architecture2.html">Computer Organization &amp; Architecture - Part 2</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/cloud_computing.html">Cloud Computing</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/ai_agentic_programming.html">AI Agentic Programming</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/langchain_langgraph.html">LangChain and LangGraph</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/autogen.html">AutoGen (Microsoft)</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/crewai.html">CrewAI</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/openai_agents_sdk.html">OpenAI Agents SDK</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/openai_api_key.html">How to Get OpenAI API Key</a></li>
+								<li><a href="blog/md/courses/IT_Foundations/AI_ML.pdf">AI &amp; ML (PDF)</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/ref.html">References</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/homework1.html">Homework 1</a></li>
+								<li><a href="blog/html/courses/IT_Foundations/homework2.html">Homework 2</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Deep Learning</span>
+						<ul class="nested">
+								<li><a href="blog/html/ref/machine_learning/deep_learning_cnn.html">Deep Learning</a></li>
+								<li><a href="blog/html/ref/machine_learning/deep_learning_network.html">Implementation</a></li>
+								<li><a href="blog/html/ref/machine_learning/deep_learning_resource.html">Deep Learning Resources</a></li>
+								<li><a href="blog/html/ref/machine_learning/huggingface.html">HuggingFace</a></li>
+								<li><a href="blog/html/ref/machine_learning/deep_learning_cuda.html">Deep Learning CUDA</a></li>
+								<li><a href="blog/html/ref/machine_learning/deep_learning_vm.html">Deep Learning VM</a></li>
+						</ul>
+					</li>
+					<li><span class="caret">Springboot</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/springboot/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_1.html">Springboot Intro</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_2.html">Springboot Data Access</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_3.html">Springboot Kubernetes Deployment</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_4.html">Springboot MVC Web</a></li>
+								<li><a href="blog/html/courses/springboot/mid_term.html">Midterm Project</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_5.html">Springboot JPA</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_6.html">Springboot Lombok</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_7.html">Springboot Testing</a></li>
+								<li><a href="blog/html/courses/springboot/springboot_8.html">Springboot Security</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Spreadsheet</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/spreadsheet/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_intro.html">Get started with MS Excel</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_formula.html">Formulas</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_function.html">Functions</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_pivotTable_Table.html">PivotTables, Tables</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_charts.html">Charts, PivotCharts</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_multiple_worksheets.html">Multiple worksheets</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_query_order.html">Querying, Ordering</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_text_functions.html">Advanced Functions</a></li>
+								<li><a href="blog/html/courses/spreadsheet/excel_financial_function.html">Financial Functions</a></li>
+								<li><a href="blog/html/courses/spreadsheet/Google_spreadsheet.html">Google Spreadsheet</a></li>
+								<li><a href="blog/html/courses/spreadsheet/Office365.html">Office 365</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Rust</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/rust/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/rust/rust.html">Rust Programming</a></li>
+								<li><a href="blog/html/courses/rust/solana.html">Solana &amp; Blockchain</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">Linux Administration</span>
+						<ul class="nested">
+                                <li><a href="blog/html/courses/linux_administration/syllabus.html">Syllabus</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_distro.html">Linux Distro</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_window_manager.html">Linux Window Manager</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_cmd.html">Linux Cmd</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_filesystem.html">Linux Filesystem</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_accounts.html">Linux Account</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_profiles.html">Linux Profiles</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_permissions.html">Linux Permissions</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_devices.html">Linux Devices</a></li>
+								<li><a href="blog/html/courses/linux_administration/storages.html">Linux Storage</a></li>
+                                <li><a href="blog/html/courses/linux_administration/etc_dir.html">Etc Dir</a></li>
+                                <li><a href="blog/html/courses/linux_administration/ssh.html">SSH</a></li>
+								<li><a href="blog/html/courses/linux_administration/package_software.html">Packages and Software</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_shell_intro.html">Linux Shell Intro</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_shell_programming.html">Linux Shell Programming</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_scripting.html">Linux Scripting</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_network.html">Linux Network</a></li>
+							    <li><a href="blog/html/courses/linux_administration/linux_firewall.html">Linux Firewall</a></li>
+                                <li><a href="blog/html/courses/linux_administration/gcc.html">GCC</a></li>
+								<li><a href="blog/html/courses/linux_administration/gdb.html">GDB</a></li>
+								<li><a href="blog/html/courses/linux_administration/ld.html">LD</a></li>
+								<li><a href="blog/html/courses/linux_administration/linux_debugging_other.html">Other Debugging Util</a></li>
+                                <li><a href="blog/html/courses/linux_administration/SELinux.html">SELinux</a></li>
+                                <li><a href="blog/html/courses/linux_administration/gpu.html">GPU</a></li>
+                                <li><a href="blog/html/courses/linux_administration/ubuntu.html">Ubuntu Tools</a></li>
+                                <li><a href="blog/html/courses/linux_administration/ssh.html">SSH</a></li>
+                                <li><a href="blog/html/courses/linux_administration/linux_tools.html">Linux Tools</a></li>
+                                <li><a href="blog/html/courses/linux_administration/editor_vim.html">Vim Editor</a></li>
+                                <li><a href="blog/html/courses/linux_administration/editor_nano.html">Nano Editor</a></li>
+						</ul>
+					</li>
+
+					<li><span class="caret">DevOps</span>
+						<ul class="nested">
+							<li><a href="blog/html/courses/dev_ops/syllabus.html">Syllabus</a></li>
+
+							<li><span class="caret">Linux Administration</span>
+								<ul class="nested">
+									<ol>
+										<li><a href="blog/html/courses/linux_administration/linux_shell_intro.html">Linux Shell</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_shell_programming.html">Linux Scripting</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_filesystem.html">Linux Filesystem</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_accounts.html">Linux Account</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_profiles.html">Linux Profiles</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_devices.html">Linux Devices</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_permissions.html">Linux Permissions</a></li>
+										<li><a href="blog/html/courses/linux_administration/storages.html">Linux Storage</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_network.html">Linux Network</a></li>
+										<li><a href="blog/html/courses/linux_administration/package_software.html">Packages and Software</a></li>
+										<li><a href="blog/html/courses/linux_administration/gcc.html">GCC</a></li>
+										<li><a href="blog/html/courses/linux_administration/gdb.html">GDB</a></li>
+										<li><a href="blog/html/courses/linux_administration/ld.html">LD</a></li>
+										<li><a href="blog/html/courses/linux_administration/linux_debugging_other.html">Other Debugging Util</a></li>
+                                        <li><span class="caret">Labs</span>
+                                          <ul class="nested">
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/mounting_ntfs_disk.html">Mounting NTFS Disk</a></li>
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/setup_samba_server.html">Setup Samba Server</a></li>
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/mounting_samba_share.html">Mounting Samba Share</a></li>
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/linux_shell_lab1.html">Linux Shell Lab1</a></li>
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/linux_shell_lab2.html">Linux Shell Lab2</a></li>
+                                            <li><a href="blog/html/courses/dev_ops/linux/labs/linux_shell_lab3.html">Linux Shell Lab3</a></li>
+                                          </ul>
+                                        </li>
+ 							        </ol>
+								</ul>
+							</li>
+
+							<li><span class="caret">Docker</span>
+								<ul class="nested">
+									<ol>
+                                        <li><a href="blog/html/courses/dev_ops/docker/intro_container.html">Intro to Container</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/docker/intro_docker.html">Intro to Docker</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/docker/docker_best_practices.html">Docker Best Practices</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/docker/docker_cheatsheet.html">Docker Cheatsheet</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/docker/windows_docker_issues.html">Windows Docker Issues</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/docker/mac_docker_issues.html">Macintosh Docker Issues</a></li>
+                                        <li><span class="caret">Labs</span>
+                                          <ul class="nested">
+                                              <ol>
+												  <li><a href="blog/html/courses/dev_ops/docker/labs/DockerLab1_BuildACustomizedLinuxImage.html">Build Customized Linux Image</a></li>
+												  <li><a href="blog/html/courses/dev_ops/docker/labs/DockerLab2_BuildDockerImageWithLinuxEnvironmentalVariables.html">Build Docker Image with Linux Environmental Variables</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/docker/labs/DockerLab3_WorkingWithDockerizedDatabase.html">Docker Database</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/docker/labs/DockerLab4_PythonAppDeploymentWithDocker.html">Python App Deployment</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/docker/labs/DockerLab5_SpringbootAppDeploymentWithDocker.html">Springboot App Deployment</a></li>
+                                              </ol>
+                                          </ul>
+                                        </li>
+                                    </ol>
+								</ul>
+							</li>
+
+							<li><span class="caret">Podman</span>
+								  <ul class="nested">
+                                      <ol>
+                                        <li><a href="blog/html/courses/dev_ops/podman/podman.html">Intro to Podman</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/podman/podman_installation.html">Podman Installation</a></li>
+                                        <li><span class="caret">Labs</span>
+                                          <ul class="nested">
+                                              <ol>
+                                                  <li><a href="blog/html/courses/dev_ops/podman/labs/podman_inclass_lab1.html">Podman In-Class Lab1</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/podman/labs/podman_inclass_lab2.html">Podman In-Class Lab2</a></li>
+                                              </ol>
+                                          </ul>
+                                        </li>
+                                      </ol>
+								  </ul>
+							</li>
+
+							<li><span class="caret">Jenkins</span>
+							 <ul class="nested">
+								 <ol>
+									<li><a href="blog/html/courses/dev_ops/jenkins/intro_jenkins.html">Intro to Jenkins</a></li>
+								    <li><a href="blog/html/courses/dev_ops/jenkins/Jenkins_Integration_with_github.html">Jenkins Integration with GitHub</a></li>
+								    <li><a href="blog/html/courses/dev_ops/jenkins/jenkins_k8s.html">Jenkins K8s</a></li>
+                                     <li><span class="caret">Labs</span>
+                                          <ul class="nested">
+											<li><a href="blog/html/courses/dev_ops/jenkins/labs/jenkins_kubernetes.html">Jenkins Kubernetes Lab</a></li>
+                                          </ul>
+                                     </li>
+								 </ol>
+  							 </ul>
+							</li>
+
+							<li><span class="caret">GitHub</span>
+								<ul class="nested">
+									<ol>
+                                        <li><a href="blog/html/courses/dev_ops/github/git_intro.html">Git Intro</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/github/git_authentication.html">Git Authentication</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/github/git_commands.html">Git Commands</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/github/git_intellij.html">Git IntelliJ</a></li>
+										<li><a href="blog/html/courses/dev_ops/github/git_pull_request.html">Git Pull Request</a></li>
+									    <li><span class="caret">Labs</span>
+											<ol class="nested">
+												<li><a href="blog/html/courses/dev_ops/github/labs/Git_Basics_Lab1.html">Lab1: Git Branch Usages</a></li>
+												<li><a href="blog/html/courses/dev_ops/github/labs/GitPrivateRepoIntegrationWithJenkin.html">Lab2: Git Private Repo Integration with Jenkins</a></li>
+												<li><a href="blog/html/courses/dev_ops/github/k8s_integration_githubaction.html">Lab3: K8s Integration with GitHub Action</a></li>
+											</ol>
+										</li>
+									</ol>
+								</ul>
+							</li>
+
+							<li><span class="caret">Nexus</span>
+                                  <ul class="nested">
+                                      <ol>
+                                          <li><a href="blog/html/courses/dev_ops/nexus/intro_to_nexus.html">Intro to Nexus</a></li>
+                                          <li><span class="caret">Labs</span>
+                                              <ol class="nested">
+                                                  <li><a href="blog/html/courses/dev_ops/nexus/labs/nexus_lab1_webui_usage.html">Lab1: Nexus Installation and WebUI Usage</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/nexus/labs/nexus_lab2_jenkins_integration.html">Lab2: Jenkins Integration with Nexus</a></li>
+                                                  <li><a href="blog/html/courses/dev_ops/nexus/labs/k8s_integration_nexus.html">K8s Integration with Nexus</a></li>
+                                              </ol>
+                                          </li>
+                                      </ol>
+                                  </ul>
+							</li>
+
+							<li><span class="caret">Kubernetes</span>
+								  <ul class="nested">
+									  <ol>
+										<li><a href="blog/html/courses/dev_ops/k8s/intro_k8s.html">Intro K8s</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_basic.html">K8s Basic</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_portforwarding.html">K8s Portforwarding</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_profile.html">K8s Profile</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_container_runtime.html">K8s Container Runtime</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_cpu_ram_config_pod_spec.html">K8s CPU RAM Config Pod Spec</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_namespace_deployment.html">K8s Namespace &amp; Deployment</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_workload_types.html">K8s Workload Types (Stateless, Stateful, ReplicaSets)</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/k8s/k8s_load_balancer.html">K8s Load Balancer</a></li>
+  										<li><a href="blog/html/courses/dev_ops/k8s/k8s_configmap.html">K8s ConfigMap</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_networking.html">K8s Networking</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_ingress.html">K8s Ingress</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_helmchart.html">K8s Helm Chart</a></li>
+										<li><a href="blog/html/courses/dev_ops/k8s/k8s_security.html">K8s Security</a></li>
+   							            <li><a href="blog/html/courses/dev_ops/k8s/k8s_cheatsheet.html">K8s Cheatsheet</a></li>
+									    <li><span class="caret">Labs</span>
+											<ul class="nested">
+                                                <ol>
+												 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_lab1.html">Lab1-K8s Port Forwarding</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_lab2.html">Lab2-K8s Load Balancer</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_lab3.html">Lab3-K8s YAML Config</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_lab4.html">Lab4-K8s Ingress</a></li>
+												 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_ingress_lab1.html">Lab1-K8s Ingress</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/k8s_ingress_lab2.html">Lab2-K8s Ingress</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/Postgresql_lab5.html">Lab5-PostgreSQL I</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/Postgresql_lab6.html">Lab6-PostgreSQL II</a></li>
+						                         <li><a href="blog/html/courses/dev_ops/k8s/labs/jenkins_k8s_deployment_lab7.html">Lab7-Jenkins Deployment</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/nginx_deployment_lab8.html">Lab8-NGINX Deployment</a></li>
+                                                 <li><a href="blog/html/courses/dev_ops/k8s/labs/helm_integration_CICD_lab9.html">Lab9-Helm Integration</a></li>
+												 <li><a href="blog/html/courses/dev_ops/k8s/labs/spinning_pod_deployment_lab10.html">Lab10-Spinning Pod Deployment</a></li>
+                                                </ol>
+											</ul>
+										</li>
+									  </ol>
+								  </ul>
+							</li>
+
+                            <li><span class="caret">NGINX</span>
+                              <ul class="nested">
+                                <li><a href="blog/html/courses/dev_ops/nginx/nginx.html">Introduction to NGINX</a></li>
+                                <li><a href="blog/html/courses/dev_ops/nginx/nginx_reverse_proxy.html">NGINX Reverse Proxy</a></li>
+                              </ul>
+                            </li>
+
+							<li><span class="caret">AWS</span>
+								<ul class="nested">
+									<ol>
+										<li><a href="blog/html/courses/dev_ops/aws/aws_serverless.html">AWS Serverless Tutorial</a></li>
+                                        <li><a href="blog/html/courses/dev_ops/aws/eks.html">AWS EKS</a></li>
+									</ol>
+								</ul>
+							</li>
+
+							<li><span class="caret">Homework</span>
+								<ul class="nested">
+									<li><a href="blog/html/courses/dev_ops/homework/homework1.html">Homework1</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/homework2.html">Homework2</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/homework3.html">Homework3</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/homework4.html">Homework4</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/homework5.html">Homework5</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/homework6.html">Homework6</a></li>
+                                    <li><a href="blog/html/courses/dev_ops/homework/homework7.html">Homework7</a></li>
+                                    <li><a href="blog/html/courses/dev_ops/homework/homework8.html">Homework8</a></li>
+                                    <li><a href="blog/html/courses/dev_ops/homework/homework9.html">Homework9</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/midterm.html">Midterm</a></li>
+									<li><a href="blog/html/courses/dev_ops/homework/final.html">Final</a></li>
+								</ul>
+							</li>	
+						</ul>
+					</li>
+
+					<li><span class="caret">AI / ML</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/ai_ml/syllabus.html">Syllabus</a></li>
+								<li><a href="blog/html/courses/ai_ml/llm_overview.html">LLM Overview</a></li>
+								<li><a href="blog/html/courses/ai_ml/qwen_small_app_example.html">Qwen Small App Example</a></li>
+								<li><a href="blog/html/courses/ai_ml/learning_trail.html">Learning Trail</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li><span class="caret">ML Ops</span>
+						<ul class="nested">
+							<ol>
+								<li><a href="blog/html/courses/ml_ops/introduction.html">Introduction to MLOps</a></li>
+								<li><a href="blog/html/courses/ml_ops/ml_scan_tools_security.html">ML Scan Tools and Security Perspective</a></li>
+								<li><a href="blog/html/courses/ml_ops/langchain_langgraph.html">LangChain and LangGraph</a></li>
+								<li><a href="blog/html/courses/ml_ops/autogen.html">AutoGen (Microsoft)</a></li>
+								<li><a href="blog/html/courses/ml_ops/crewai.html">CrewAI</a></li>
+							</ol>
+						</ul>
+					</li>
+
+					<li id="trading-courses-sidebar"><span class="caret">Trading Courses</span> <span id="trading-sidebar-lock-icon" class="trading-lock-icon" title="Locked - click to unlock" onclick="toggleTradingUnlockBox()">&#128274;</span>
+						<span id="trading-unlock-box" style="display:none;">
+							<input type="text" id="trading-sidebar-unlock-input" placeholder="code" size="8">
+							<button type="button" onclick="submitTradingUnlock()">Go</button>
+						</span>
+						<ul class="nested">
+							<li><a href="blog/html/courses/Trading_Courses/syllabus.html">Syllabus</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class1_market_basics.html">Class 1 - Market Basics</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class2_reading_charts.html">Class 2 - Reading Charts</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class3_trend_analysis.html">Class 3 - Trend Analysis</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class4_technical_indicators_1.html">Class 4 - Technical Indicators I</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class5_technical_indicators_2.html">Class 5 - Technical Indicators II</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class6_chart_patterns.html">Class 6 - Chart Patterns</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class7_risk_management.html">Class 7 - Risk Management</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class8_trading_psychology.html">Class 8 - Trading Psychology</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class9_backtesting_strategy.html">Class 9 - Backtesting &amp; Strategy</a></li>
+							<li><a href="blog/html/courses/Trading_Courses/class10_live_practice_review.html">Class 10 - Live Practice &amp; Review</a></li>
+							<li><span class="caret">Risk Management Deep Dive</span>
+								<ul class="nested">
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/index.html">Overview</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/position_sizing.html">Position Sizing</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/python_risk_calculator.html">Python Risk Calculator</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/risk_adjusted_return_ratios.html">Risk-Adjusted Return Ratios</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/risk_reward_ratio.html">Risk/Reward Ratio</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/day_trading_rules.html">Day Trading Rules &amp; Discipline</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/fibonacci_retracement_levels.html">Fibonacci Retracement Levels</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/stop_order_strategies.html">Stop Order Strategies</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/kelly_criterion.html">Kelly Criterion</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/expected_utility.html">Expected Utility</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/risk_management/black_scholes_model.html">Black-Scholes Model</a></li>
+								</ul>
+							</li>
+							<li><span class="caret">Homework</span>
+								<ul class="nested">
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework1.html">Homework 1</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework2.html">Homework 2</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework3.html">Homework 3</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework4.html">Homework 4</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework5.html">Homework 5</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework6.html">Homework 6</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework7.html">Homework 7</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework8.html">Homework 8</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework9.html">Homework 9</a></li>
+									<li><a href="blog/html/courses/Trading_Courses/homework/homework10.html">Homework 10</a></li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
 		</ul>
 		<hr/>
+
 		<ul id="myUL">
 			<li><span class="caret">References</span>
                <ul class="nested">
@@ -87,98 +884,128 @@
 								<ul class="nested">
 									<li><span class="caret">Pandas</span>
 										<ul class="nested">
-											<li><a href="blog/html/ref/python/pandas/Pandas_Introduction.html">Intro</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Installation.html">Installation</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_features.html">Pandas_features</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Data_Structures.html">Pandas_Data_Structures</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Functionality.html">Pandas_Functionality</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_DataFrame.html">Pandas_DataFrame</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Concatenation.html">Pandas_Concatenation</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_merging.html">Pandas_merging</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_slicing_indexing.html">Pandas_slicing_indexing</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Reindexing.html">Pandas_Reindexing</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Series.html">Pandas_Series</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Sorting.html">Pandas_Sorting</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_MissingData.html">Pandas_MissingData</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_DateFunctionality.html">Pandas_DateFunctionality</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Iteration.html">Pandas_Iteration</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_textdata.html">Pandas_textdata</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Timedelta.html">Pandas_Timedelta</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Aggregations.html">Pandas_Aggregations</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_CategoricalData.html">Pandas_CategoricalData</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_groupby.html">Pandas_groupby</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_OptionsCustomization.html">Pandas_OptionsCustomization</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_statisticalfunctions.html">Pandas_statisticalfunctions</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_SparseData.html">Pandas_SparseData</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_SQLoperations.html">Pandas_SQLoperations</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Visualization.html">Pandas_Visualization</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_windowfunctions.html">Pandas_windowfunctions</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Panel.html">Pandas_Panel</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_IOtools.html">Pandas_IOtools</a></li>
-											<li><a href="blog/html/ref/python/pandas/Pandas_Caveats_Gotchas.html">Pandas_Caveats_Gotchas</a></li>
-											<li><a href="blog/html/ref/python/pandas/Descriptive_Statistics.html">Descriptive_Statistics</a></li>
+											<ol>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Introduction.html">Intro</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Installation.html">Installation</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_features.html">Pandas_features</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Data_Structures.html">Pandas_Data_Structures</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Functionality.html">Pandas_Functionality</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_DataFrame.html">Pandas_DataFrame</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Concatenation.html">Pandas_Concatenation</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_merging.html">Pandas_merging</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_slicing_indexing.html">Pandas_slicing_indexing</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Reindexing.html">Pandas_Reindexing</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Series.html">Pandas_Series</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Sorting.html">Pandas_Sorting</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_MissingData.html">Pandas_MissingData</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_DateFunctionality.html">Pandas_DateFunctionality</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Iteration.html">Pandas_Iteration</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_textdata.html">Pandas_textdata</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Timedelta.html">Pandas_Timedelta</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Aggregations.html">Pandas_Aggregations</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_CategoricalData.html">Pandas_CategoricalData</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_groupby.html">Pandas_groupby</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_OptionsCustomization.html">Pandas_OptionsCustomization</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_statisticalfunctions.html">Pandas_statisticalfunctions</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_SparseData.html">Pandas_SparseData</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_SQLoperations.html">Pandas_SQLoperations</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Visualization.html">Pandas_Visualization</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_windowfunctions.html">Pandas_windowfunctions</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Panel.html">Pandas_Panel</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_IOTools.html">Pandas_IOtools</a></li>
+												<li><a href="blog/html/ref/python/pandas/Pandas_Caveats_Gotchas.html">Pandas_Caveats_Gotchas</a></li>
+												<li><a href="blog/html/ref/python/pandas/Descriptive_Statistics.html">Descriptive_Statistics</a></li>
+											</ol>
 										</ul>
 									</li>
-									<li><span class="caret">Python Ref</span>
+									<li><span class="caret">Python cheatsheet</span>
 										<ul class="nested">
-											<li><a href="blog/html/ref/python/lang/python_basics.html">basics</a></li>
-											<li><a href="blog/html/ref/python/lang/python_builtin.html">builtin</a></li>
-											<li><a href="blog/html/ref/python/lang/python_control.html">control</a></li>
-											<li><a href="blog/html/ref/python/lang/python_function_class.html">function,class</a></li>
-											<li><a href="blog/html/ref/python/lang/python_exception.html">exception</a></li>
-											<li><a href="blog/html/ref/python/lang/python_lambda.html">lambda</a></li>
-											<li><a href="blog/html/ref/python/lang/python_regex.html">regex</a></li>
-											<li><a href="blog/html/ref/python/lang/python_thread.html">thread</a></li>
-											<li><a href="blog/html/ref/python/lang/python_network.html">network</a></li>
-											<li><a href="blog/html/ref/python/lang/python_io.html">io</a></li>
-											<li><a href="blog/html/ref/python/lang/python_thread.html">thread</a></li>
-											<li><a href="blog/html/ref/python/lang/python_xml.html">xml</a></li>
-											<li><a href="blog/html/ref/python/lang/python_database.html">database</a></li>
-										</ul>	
+											<ol>
+												<li><a href="blog/html/ref/python/lang/python_basics.html">basics</a></li>
+												<li><a href="blog/html/ref/python/lang/python_builtin.html">builtin</a></li>
+												<li><a href="blog/html/ref/python/lang/python_control.html">control</a></li>
+												<li><a href="blog/html/ref/python/lang/python_function_class.html">function,class</a></li>
+												<li><a href="blog/html/ref/python/lang/python_exception.html">exception</a></li>
+												<li><a href="blog/html/ref/python/lang/python_lambda.html">lambda</a></li>
+												<li><a href="blog/html/ref/python/lang/python_regex.html">regex</a></li>
+												<li><a href="blog/html/ref/python/lang/python_thread.html">thread</a></li>
+												<li><a href="blog/html/ref/python/lang/python_network.html">network</a></li>
+												<li><a href="blog/html/ref/python/lang/python_io.html">io</a></li>
+												<li><a href="blog/html/ref/python/lang/python_thread.html">thread</a></li>
+												<li><a href="blog/html/ref/python/lang/python_xml.html">xml</a></li>
+												<li><a href="blog/html/ref/python/lang/python_database.html">database</a></li>
+											</ol>
+										</ul>
 									</li>
+									<li><a href="blog/html/ref/python/googlemap/googlemap.html">Google Map</a></li>
+									<li><a href="blog/html/ref/python/ocr/tesseract_ocr.html">OCR</a></li>
 								</ul>
 							</li>
 							<li><span class="caret">Java</span>
 								<ul class="nested">
-									<li><a href="blog/html/ref/java/java_stream.html">Java Stream</a></li>
-									<li><a href="blog/html/ref/java/java_optional.html">Java Optional</a></li>
-									<li><a href="blog/html/ref/java/java_lambda.html">Java Lambda</a></li>
-									<li><a href="blog/html/ref/java/java_generics.html">Java Generics</a></li>
-									<li><a href="blog/html/ref/java/java_datastructures.html">Java Data Structures</a></li>
+									<ol>
+										<li><a href="blog/html/ref/java/java_stream.html">Java Stream</a></li>
+										<li><a href="blog/html/ref/java/java_optional.html">Java Optional</a></li>
+										<li><a href="blog/html/ref/java/java_lambda.html">Java Lambda</a></li>
+										<li><a href="blog/html/ref/java/java_generics.html">Java Generics</a></li>
+										<li><a href="blog/html/ref/java/java_datastructures.html">Java Data Structures</a></li>
+									</ol>
 								</ul>
 							</li>
-							<li><a href="blog/html/ref/mobile/flutter.html">Flutter</a></li>
 							<li><a href="blog/html/ref/database/mysql/mysql.html">MySQL</a></li>
 						</ul>
 					</li>
-					<li><span class="caret">Linux</span>
+
+					<li><span class="caret">Scikit-Learn</span>
 						<ul class="nested">
-							<li><a href="blog/html/ref/linux/linux_cmd.html">Linux Commands</a></li>
-							<li><a href="blog/html/ref/linux/linux_distro.html">Linux Distro</a></li>
-							<li><a href="blog/html/ref/linux/linux_window_manager.html">Linux Window Desktop</a></li>
-							<li><a href="blog/html/ref/linux/linux_filesystem.html">Linux Filesystem</a></li>
-							<li><a href="blog/html/ref/linux/linux_shell.html">Linux Shell</a></li>
-							<li><a href="blog/html/ref/linux/git.html">Git</a></li>
-							<li><a href="blog/html/ref/linux/vim.html">vim</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/scikit_learn_intro.html">Scikit-learn Introduction</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/scikit_learn_installation.html">Installation</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/data_representation.html">Data Representation</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/linearmodels.html">Linear Model</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/estimator_api.html">Estimator API</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/decisiontree_ensemblemethods.html">Decision Tree</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/clustering.html">Clustering</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/dimensionality_reduction.html">Dimensionality Reduction</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/anomaly_detection.html">Anomaly Detection</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/casestudies.html">Case Studies</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/advanced_topics.html">Advanced Topics</a></li>
+							<li><a href="blog/html/ref/machine_learning/scikit_learn/resources.html">Resources</a></li>
 						</ul>
 					</li>
-					<li><span class="caret">DevOps</span>
+					<li><span class="caret">Keras</span>
 						<ul class="nested">
-							<li><a href="blog/html/ref/docker/docker.html">Docker</a></li>
-							<li><a href="https://kubernetes.io/docs/reference/kubectl/quick-reference/">K8s</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_intro.html">Keras Intro</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_installation.html">Installation</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_backendConfiguration.html">Backend Configuration</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_module.html">Keras Module</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_layer.html">Keras Layer</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_model.html">Keras Model</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_model_compilation.html">Model Compilation</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_modelEvalAndPrediction.html">Model Evaluation and Prediction</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_ConvolutionNeuralNetwork.html">Convolution Neural Network</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_RegressionPrediction_MPL.html">Regression Prediction using MPL</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_TimeSeriesPrediction_LSTM_RNN.html">Time Series Prediction using LSTM RNN</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_application.html">Applications</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_RealTimePrediction_ResNet_Model.html">RealTimePrediction ResNet Model</a></li>
+							<li><a href="blog/html/ref/machine_learning/keras/keras_Pre-TrainedModels.html">Pre-Trained Models</a></li>
 						</ul>
 					</li>
 				</ul>
-			</li>	
+			</li>
 		</ul>
-		<hr/>	
+		<hr/>
 		<ul id="myUL">
 			<li><span class="caret">Courses Recording</span>
                <ul class="nested">
 					<li><a href="blog/html/courses_list.html">Course List</a></li>
+					<li><a href="blog/html/courses/Trading_Courses/syllabus.html">Trading Course Syllabus</a></li>
 				</ul>
 			</li>	
 		</ul>
+	</div>
+	<div class="sidebar_notice">
+		<h3>Notices</h3>
+		<iframe src="notices.html" title="Notices" width="100%" height="520" frameborder="0"></iframe>
 	</div>
   </div>
 
@@ -186,10 +1013,12 @@
        <nav id="nav_menu">
 		    <ul> 
 		    	<li><a href="index.html">home</a></li>  		
-		  		<li><a href="indicator.html" onclick="load_indicator_menu()">indicator</a></li>
-		    	<li><a href="philosophy.html">philosophy</a></li>
-		    	<li><a href="blog.html">blog</a></li>
-		    	<li><a href="about_me.html">about me</a></li>
+		  		<li><a href="html/indicator.html" onclick="">indicator</a></li>
+				<li><a href="html/news.html">news</a></li>
+		    	<li><a href="html/philosophy.html">philosophy</a></li>
+		    	<li><a href="html/trading_course.html">trading course<span class="hot-badge">HOT</span></a></li>
+		    	<li><a href="blog.html">courses</a></li>
+		    	<li><a href="html/about_me.html">about me</a></li>
 		    </ul>
 	   </nav>
  
@@ -198,23 +1027,17 @@
 			         https://www.tradingview.com/markets/world-economy/countries/united-states/?category=txs
 	  -->
 	  <div class="content">
-		<section class="one_column">
-			<h2> markdown viewer </h2>
-			Most files in my blog are written in markdown file.
-			I do not have backend to convert markdown to html
-			To better read the markdown file of my blog, please install Markdown viewer plugin in your broswer.
-			
-			Here is a link of google chrome plugin,
-			
-			<p>https://github.com/simov/markdown-viewer#table-of-contents</p>
-			
-			<img src="blog/images/markdown/md0.png" />
-			
-			<p>Enable this plugin and show it in your browser tool bar, and configure advanced options.
-				Then it will look like the following,
-			</p>
-			<img src="blog/images/markdown/md1.png" width="915" height="492" />
-			
+		<section class="class-cards-section" id="class-cards-section">
+			<h2>Featured Classes</h2>
+			<div class="class-cards-grid" id="class-cards-grid"></div>
+			<div class="class-cards-controls" id="class-cards-controls" hidden>
+				<button type="button" id="class-cards-load-more">Load more</button>
+			</div>
+		</section>
+
+		<section id="course-viewer-section" style="display:none;">
+			<button type="button" id="course-viewer-back" style="margin:8px 0 10px;padding:6px 14px;cursor:pointer;font-size:14px;">&larr; Back to Courses</button>
+			<iframe id="course-frame" src="" title="Course Content" width="100%" style="height:calc(100vh - 120px);border:none;display:block;"></iframe>
 		</section>
 
 	  </div> <!--end of content div-->
@@ -227,8 +1050,7 @@
 		Copyright@Webbertech.com
 		<p>Disclaimer: All the charts and data are coming from internet. Copyright belongs to their original source.
 		   The information on this website is only used for my personal research not commercial.	
-		</p>
-		
+		</p>		
 	</footer>
 </div>
 
@@ -242,6 +1064,333 @@
 		this.classList.toggle("caret-down");
 	  });
 	}
+
+	// Locks the "Trading Courses" sidebar menu behind the same sha256("stock") code used on its content pages.
+	(function() {
+		var TRADING_UNLOCK_HASH = "08c4242b5f585628bb8cef8ede40e9895b8719eb8070aee2d96613583ee3904a";
+		function isTradingUnlocked() {
+			return document.cookie.split("; ").indexOf("trading_unlocked=true") !== -1;
+		}
+		function applyTradingSidebarLock() {
+			var container = document.getElementById("trading-courses-sidebar");
+			if (!container) return;
+			var nested = container.querySelector(".nested");
+			var lockIcon = document.getElementById("trading-sidebar-lock-icon");
+			if (isTradingUnlocked()) {
+				nested.classList.remove("trading-sidebar-locked");
+				if (lockIcon) lockIcon.style.display = "none";
+			} else {
+				nested.classList.add("trading-sidebar-locked");
+				if (lockIcon) lockIcon.style.display = "inline";
+			}
+		}
+		window.toggleTradingUnlockBox = function() {
+			var box = document.getElementById("trading-unlock-box");
+			var showing = box.style.display !== "none" && box.style.display !== "";
+			box.style.display = showing ? "none" : "inline";
+			if (!showing) document.getElementById("trading-sidebar-unlock-input").focus();
+		};
+		window.submitTradingUnlock = function() {
+			var input = document.getElementById("trading-sidebar-unlock-input");
+			var code = input.value;
+			if (CryptoJS.SHA256(code).toString() === TRADING_UNLOCK_HASH) {
+				document.cookie = "trading_unlocked=true; path=/; max-age=" + (60 * 60 * 24 * 30);
+				applyTradingSidebarLock();
+				document.getElementById("trading-unlock-box").style.display = "none";
+				input.value = "";
+			} else {
+				alert("Incorrect code. Please try again.");
+			}
+		};
+		var tradingUnlockInput = document.getElementById("trading-sidebar-unlock-input");
+		if (tradingUnlockInput) {
+			tradingUnlockInput.addEventListener("keydown", function(event) {
+				if (event.key === "Enter") window.submitTradingUnlock();
+			});
+		}
+		applyTradingSidebarLock();
+	})();
+
+	function buildClassCardsFromCourses() {
+	  var cardsGrid = document.getElementById("class-cards-grid");
+	  var cardsControls = document.getElementById("class-cards-controls");
+	  var loadMoreBtn = document.getElementById("class-cards-load-more");
+	  if (!cardsGrid) {
+		return;
+	  }
+
+	  var allCarets = Array.from(document.querySelectorAll("#sidebar_content .caret"));
+	  var coursesCaret = allCarets.find(function(node) {
+		return node.textContent.trim() === "Courses";
+	  });
+
+	  if (!coursesCaret) {
+		cardsGrid.innerHTML = "<p>Courses menu not found.</p>";
+		return;
+	  }
+
+	  var coursesNested = null;
+	  Array.from(coursesCaret.parentElement.children).forEach(function(child) {
+		if (!coursesNested && child.classList && child.classList.contains("nested")) {
+		  coursesNested = child;
+		}
+	  });
+	  if (!coursesNested) {
+		cardsGrid.innerHTML = "<p>No course categories found.</p>";
+		return;
+	  }
+
+	  var categoryItems = Array.from(coursesNested.children)
+		.filter(function(node) { return node.tagName && node.tagName.toLowerCase() === "li"; });
+
+	  var INITIAL_VISIBLE = 14;
+	  var LOAD_STEP = 6;
+
+	  function getPriorityScore(title) {
+		var normalized = (title || "").toLowerCase().replace(/\s+/g, " ").trim();
+
+		if (normalized.indexOf("ml ops") !== -1 || normalized.indexOf("mlops") !== -1) return 0;
+		if (normalized.indexOf("machine learning") !== -1 || normalized.indexOf("ai / ml") !== -1 || normalized.indexOf("ai/ml") !== -1) return 1;
+		if (normalized.indexOf("dev ops") !== -1 || normalized.indexOf("devops") !== -1) return 2;
+		if (normalized.indexOf("linux") !== -1) return 3;
+		return 99;
+	  }
+
+	  var cardsData = [];
+
+	  categoryItems.forEach(function(categoryLi) {
+		var titleNode = null;
+		Array.from(categoryLi.children).forEach(function(child) {
+		  if (!titleNode && child.classList && child.classList.contains("caret")) {
+			titleNode = child;
+		  }
+		});
+
+		var title = titleNode ? titleNode.textContent.trim() : "";
+		if (!title) {
+		  var directAnchor = categoryLi.querySelector(":scope > a[href], a[href]");
+		  title = directAnchor ? directAnchor.textContent.trim() : "";
+		}
+
+		if (!title) {
+		  return;
+		}
+
+		var courseLinks = Array.from(categoryLi.querySelectorAll("a[href]"));
+		if (courseLinks.length === 0) {
+		  return;
+		}
+
+		var syllabusLink = courseLinks.find(function(link) {
+		  var text = (link.textContent || "").trim().toLowerCase();
+		  var url = (link.getAttribute("href") || "").toLowerCase();
+		  return text.indexOf("syllabus") !== -1 || url.indexOf("syllabus") !== -1;
+		});
+
+		var targetLink = syllabusLink || courseLinks[0];
+		var href = targetLink.getAttribute("href");
+		var linkCount = courseLinks.length;
+		var summary = linkCount + " topics available";
+
+		cardsData.push({
+		  title: title,
+		  href: href,
+		  summary: summary,
+		  priorityScore: getPriorityScore(title)
+		});
+	  });
+
+	  cardsData.sort(function(a, b) {
+		if (a.priorityScore !== b.priorityScore) {
+		  return a.priorityScore - b.priorityScore;
+		}
+		return a.title.localeCompare(b.title);
+	  });
+
+	  var visibleCount = Math.min(INITIAL_VISIBLE, cardsData.length);
+
+	  function buildCardHtml(item) {
+		return (
+		  '<a class="class-card" href="' + item.href + '" data-course-title="' + item.title.replace(/"/g, '&quot;') + '">' +
+			'<h3>' + item.title + '</h3>' +
+			'<p>' + item.summary + '</p>' +
+		  '</a>'
+		);
+	  }
+
+	  function wireCardClicks() {
+		cardsGrid.querySelectorAll(".class-card[href]").forEach(function(card) {
+		  card.addEventListener("click", function(e) {
+			e.preventDefault();
+			openCourseInViewer(this.getAttribute("href"));
+		  });
+		});
+	  }
+
+	  function renderCards() {
+		if (cardsData.length === 0) {
+		  cardsGrid.innerHTML = "<p>No course cards could be generated.</p>";
+		  if (cardsControls) {
+			cardsControls.hidden = true;
+		  }
+		  return;
+		}
+
+		cardsGrid.innerHTML = cardsData.slice(0, visibleCount).map(buildCardHtml).join("");
+		wireCardClicks();
+
+		if (!cardsControls || !loadMoreBtn) {
+		  return;
+		}
+
+		if (cardsData.length <= INITIAL_VISIBLE) {
+		  cardsControls.hidden = true;
+		  return;
+		}
+
+		cardsControls.hidden = false;
+		if (visibleCount < cardsData.length) {
+		  var remaining = cardsData.length - visibleCount;
+		  loadMoreBtn.textContent = "Load more (" + remaining + " remaining)";
+		} else {
+		  loadMoreBtn.textContent = "Show less";
+		}
+	  }
+
+	  if (loadMoreBtn) {
+		loadMoreBtn.onclick = function() {
+		  if (visibleCount < cardsData.length) {
+			visibleCount = Math.min(cardsData.length, visibleCount + LOAD_STEP);
+		  } else {
+			visibleCount = Math.min(INITIAL_VISIBLE, cardsData.length);
+		  }
+		  renderCards();
+		};
+	  }
+
+	  renderCards();
+	}
+
+	function expandCourseMenu(courseTitle) {
+	  // 1. Expand the top-level "Courses" caret
+	  var allCarets = Array.from(document.querySelectorAll("#sidebar_content .caret"));
+	  var coursesCaret = allCarets.find(function(n) {
+		return n.textContent.trim() === "Courses";
+	  });
+	  if (coursesCaret) {
+		var coursesNested = coursesCaret.parentElement.querySelector(".nested");
+		if (coursesNested && !coursesNested.classList.contains("active")) {
+		  coursesNested.classList.add("active");
+		  coursesCaret.classList.add("caret-down");
+		}
+	  }
+
+	  // 2. Find and expand the matching course caret
+	  var targetCaret = allCarets.find(function(n) {
+		return n.textContent.trim() === courseTitle;
+	  });
+	  if (!targetCaret) return;
+
+	  var targetNested = targetCaret.parentElement.querySelector(".nested");
+	  if (targetNested && !targetNested.classList.contains("active")) {
+		targetNested.classList.add("active");
+		targetCaret.classList.add("caret-down");
+	  }
+
+	  // 3. Scroll the caret into view smoothly
+	  targetCaret.scrollIntoView({ behavior: "smooth", block: "start" });
+
+	  // 4. Brief yellow flash highlight
+	  targetCaret.style.transition = "background-color 0.3s ease";
+	  targetCaret.style.backgroundColor = "#fffacd";
+	  setTimeout(function() {
+		targetCaret.style.backgroundColor = "";
+	  }, 1500);
+	}
+
+	buildClassCardsFromCourses();
+
+	// Course viewer: open a course page in the right-column iframe
+	function normalizeUrl(href) {
+		try {
+			var u = new URL(href, document.baseURI);
+			return u.origin + u.pathname.replace(/\/+$/, "");
+		} catch (err) {
+			return href;
+		}
+	}
+
+	function clearSidebarHighlight() {
+		document.querySelectorAll("#sidebar_content a.current-page").forEach(function(a) {
+			a.classList.remove("current-page");
+		});
+	}
+
+	// Highlight the sidebar link for the open page and expand its parent menus
+	function highlightSidebarLink(href, preferredLink) {
+		clearSidebarHighlight();
+		if (!href) return;
+		var target = preferredLink;
+		if (!target) {
+			var wanted = normalizeUrl(href);
+			target = Array.from(document.querySelectorAll("#sidebar_content a[href]")).find(function(a) {
+				return normalizeUrl(a.getAttribute("href")) === wanted;
+			});
+		}
+		if (!target) return;
+		target.classList.add("current-page");
+		var node = target.parentElement;
+		while (node && node.id !== "sidebar_content") {
+			if (node.classList && node.classList.contains("nested")) {
+				node.classList.add("active");
+				var caret = node.parentElement && node.parentElement.querySelector(":scope > .caret");
+				if (caret) caret.classList.add("caret-down");
+			}
+			node = node.parentElement;
+		}
+		target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+	}
+
+	function openCourseInViewer(href, sourceLink) {
+		var cardsSection = document.getElementById("class-cards-section");
+		var viewerSection = document.getElementById("course-viewer-section");
+		var frame = document.getElementById("course-frame");
+		if (!viewerSection || !frame) return;
+		frame.src = href;
+		highlightSidebarLink(href, sourceLink);
+		if (cardsSection) cardsSection.style.display = "none";
+		viewerSection.style.display = "block";
+	}
+
+	document.getElementById("course-viewer-back").addEventListener("click", function() {
+		var cardsSection = document.getElementById("class-cards-section");
+		var viewerSection = document.getElementById("course-viewer-section");
+		var frame = document.getElementById("course-frame");
+		viewerSection.style.display = "none";
+		frame.src = "";
+		clearSidebarHighlight();
+		if (cardsSection) cardsSection.style.display = "";
+	});
+
+	// Keep the highlight in sync when the user navigates inside the course frame
+	document.getElementById("course-frame").addEventListener("load", function() {
+		try {
+			var current = this.contentWindow.location.href;
+			if (current && current !== "about:blank") highlightSidebarLink(current);
+		} catch (err) {
+			// cross-origin page: cannot read its URL
+		}
+	});
+
+	// Intercept all sidebar course links and load them in the viewer
+	document.getElementById("sidebar_content").addEventListener("click", function(e) {
+		var link = e.target.closest("a[href]");
+		if (!link) return;
+		var href = link.getAttribute("href");
+		if (!href || href.indexOf("blog/html/courses/") === -1) return;
+		e.preventDefault();
+		openCourseInViewer(href, link);
+	});
 </script>
 
 </body>

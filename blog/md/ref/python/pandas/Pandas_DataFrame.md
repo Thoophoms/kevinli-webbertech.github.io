@@ -1,6 +1,5 @@
 # Pandas DataFrame
 
-
 ## Introduction to Pandas DataFrame
 A Pandas DataFrame is a two-dimensional, size-mutable, and heterogeneous tabular data structure with labeled axes (rows and columns). It is similar to a spreadsheet or SQL table.
 

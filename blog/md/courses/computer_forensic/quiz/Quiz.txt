@@ -1,0 +1,213 @@
+1. FISMA requires an audit trail that enables computer forensics investigation.
+*a) true
+b) false 
+
+2. An affidavit justifies a warrant.
+*a) true
+b) false
+
+3. Root kit changes the Operating Systems code.
+*a) true
+b) false
+
+4. The total cost of ownership only applies to hardware.
+a) true
+*b) false
+
+5. Each Hex digit is capable of representing eight binary digits.
+a) true
+*b) false
+
+6. Hard drives and USB drives are examples of physical drives.
+*a) true
+b) false
+
+7. BIOS stores a program that loads the hardware drivers.
+*a) true
+b) false
+
+8. MBR is located in the first sector of a data storage device.
+*a) true
+b) false 
+
+9. A mount point is a directory where a partition is made visible after mounting is done.
+*a) true
+b) false
+
+10. Software write blockers do not exist.
+a) true
+*b) false
+
+11. Static acquisition acquires data from a non-volatile source.
+a) true
+*b) false
+
+12. What foundational knowledge is the most essential for computer forensics specialists dealing with cybersecurity incidents?
+*a)	computer networking
+b)	operating systems
+c)	file systems
+d)	encryption
+
+13.	There are some objectives to accomplish to achieve the ultimate computer forensics goal of producing evidence for legal cases. Which of these is not one of those objectives?
+a)	identify evidence and present it
+*b)	work on the original data in the evidence drive
+c)	analyze data
+d)	prepare for an investigation
+
+14.	Which federal agency formed CART?
+a)	NTSB
+*b)	FBI
+c)	NSA
+d)	CIA
+
+15.	What is the driving force behind public investigations?
+a)	Statutes in public law
+b)	Statutes in civil law
+c)	Statutes in private law
+*d)	Statutes in criminal law
+
+16.	Which of these best represents the ability/abilities of computer forensics software suite features?
+a)	acquire and process
+b)	conduct searches
+*c)	all of these answers
+d)	generate reports
+
+17.	What is a positive future trend in computer forensics?
+*a)	automation
+b)	volume of data
+c)	cloud computing
+d)	encryption
+
+18.	Which is an example of non-technical challenges in computer forensics?
+a)	changes in the OS landscape
+b)	diversity in the software and hardware to be handled
+c)	anti-forensics techniques
+*d)	privacy
+
+19.	Which anti-forensic technique relies on data about data?
+a)	encrypting data
+b)	using steganography
+c)	permanently deleting files
+*d)	altering metadata
+
+
+20.	What is one of the most challenging aspects of mobile forensics?
+a)	radios
+b)	sensors
+*c)	diversity of software and hardware
+d)	cameras
+
+21.	Which is an example of email used as a tool to commit a crime?
+*a)	Phishing
+b)	SQL injection
+c)	XSS
+d)	DNS poisoning
+
+22.	What specialization in computer forensics addresses acquiring evidence from tablets and cell phones?
+*a)	mobile forensics
+b)	network forensics
+c)	web forensics
+d)	email forensics
+
+23.	Which of these is a computer forensics certification?
+*a)	ACE
+b)	CISSP
+c)	CAP
+d)	CISA
+
+24.	What is the most fundamental networking software?
+a)	Snort
+b)	Wireshark
+*c)	operating systems
+d)	tcpdump
+
+25.	Which of these is beyond what OS forensics covers?
+*a)	web browsers
+b)	file systems
+c)	log files
+d)	live acquisition
+
+26.	Web forensics excludes _____.
+a)	sensitive information
+*b)	live acquisition
+c)	browsing history
+d)	attack history
+
+27.	Which is an example of SaaS?
+a)	virtual switches
+b)	operating systems
+c)	virtual machines
+*d)	Google Docs
+
+28.	Extra bays or slots fall under which goal?
+a)	efficiency
+*b)	capacity
+c)	mobility
+d)	compatibility
+
+
+29.	Which software is not a commercial type?
+a)	Forensics Toolkit
+b)	ProDiscover
+c)	EnCase
+*d)	Autopsy
+
+30.	Which of these is a computer forensics OS distribution?
+a)	Linux Mint
+*b)	SIFT Workstation
+c)	Redhat
+d)	Ubuntu
+
+31.	Each sector typically contains how many bytes of data?
+*a)	512
+b)	128
+c)	256
+d)	1024
+
+32.	Which is used for addressing purposes?
+a)	Platters
+b)	Tracks
+*c)	Sectors
+d)	Read/write head
+
+33.	Which of these refer to an entire USB drive instead of a partition?
+*a)	/dev/sdb
+b)	/dev/sda2
+c)	/dev/sda5
+d)	/dev/sda1
+
+34.	The most advanced hardware write-blocking solution is _____.
+a)	USB connectors
+*b)	hard drive duplicators
+c)	form factors
+d)	regedit
+
+35.	On Linux, how do you get a hash value of a file named content.txt?
+a)	sha256sum --content.txt
+b)	md5sum content.txt --hash
+*c)	sha256sum content.txt
+d)	md5sum>content.txt
+
+36.	Which algorithm is proven to be most vulnerable?
+a)	SHA-2
+b)	SHA-1
+c)	SHA-3
+*d)	MD5
+
+37.	How do you create a mount point named test?
+a)	mount_point test
+b)	mp test
+*c)	mkdir test
+d)	fdisk -l test
+
+38.	What is the first task to be conducted at a computer crime scene?
+*a)	preserving evidence
+b)	copying data
+c)	turning off a device
+d)	taking photos
+
+39.	To enable write-blocking on a USB drive, which registry key do you use when running regedit?
+a)	HKEY_CURRENT_CONFIG
+b)	HKEY_CURRENT_USER
+*c)	HKEY_LOCAL_MACHINE
+d)	HKEY_CLASSES_ROOT

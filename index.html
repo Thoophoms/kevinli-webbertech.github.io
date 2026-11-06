@@ -5,12 +5,8 @@
 	<title>market watcher</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/index.css">
-	<script type="text/javascript">
-	function load_indicator_menu() {
-		document.getElementById("indicator").style.visibility="hidden";
-		//alert("testing");
-	}
-	</script>
+  <link rel="stylesheet" href="css/latest-changes.css">
+  <script src="js/latest-changes.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +31,7 @@
 			  "isTransparent": false,
 			  "largeChartUrl": "https://www.tradingview.com/widget-docs/widgets/news/top-stories/",
 			  "displayMode": "regular",
-			  "width": "250",
+			  "width": "300",
 			  "height": "550",
 			  "colorTheme": "light",
 			  "locale": "en"
@@ -50,11 +46,13 @@
   <div class="column right">
        <nav id="nav_menu">
 		    <ul> 
-		    	<li><a href="index.html">home</a></li>  		
-		  		<li><a href="indicator.html" onclick="load_indicator_menu()">indicator</a></li>
-		    	<li><a href="philosophy.html">philosophy</a></li>
+		    	<li><a href="index.html">home</a></li>
+		  		<li><a href="html/indicator.html">indicator</a></li>
+				<li><a href="html/news.html">news</a></li>
+		    	<li><a href="html/philosophy.html">philosophy</a></li>
+		    	<li><a href="html/trading_course.html">trading course<span class="hot-badge">HOT</span></a></li>
 		    	<li><a href="blog.html">blog</a></li>
-		    	<li><a href="about_me.html">about me</a></li>
+		    	<li><a href="html/about_me.html">about me</a></li>
 		    </ul>
 	   </nav>
  
@@ -92,7 +90,7 @@
 				  "showSymbolLogo": true,
 				  "colorTheme": "light",
 				  "locale": "en",
-				  "width": 345,
+				  "width": 300,
 				  "height": 200
 				}
 				  </script>
@@ -100,154 +98,254 @@
 				<!-- TradingView Widget END -->
 		  	</section>
 
-			<section class="grid-flow" id="us_eco">
+			<h2> US ETF Overview </h2>
+			<section class="" id="">
 				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USGDPYY",
-				  "width": 345,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
-				
-				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USINTR",
-				  "width": 350,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
-				
-				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USIRYY",
-				  "width": 350,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
-				
-				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USUR",
-				  "width": 350,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
-				
-				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USBOT",
-				  "width": 350,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
-				
-				<!-- TradingView Widget BEGIN -->
-				<div class="tradingview-widget-container rcorners">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-				  {
-				  "symbol": "ECONOMICS:USGDG",
-				  "width": 350,
-				  "height": 200,
-				  "locale": "en",
-				  "dateRange": "ALL",
-				  "colorTheme": "light",
-				  "isTransparent": false,
-				  "autosize": false,
-				  "largeChartUrl": "https://www.tradingview.com/markets/world-economy/countries/united-states/"
-				}
-				  </script>
-				</div>
-				<!-- TradingView Widget END -->
+				   <div class="tradingview-widget-container rcorners">
+					 <div class="tradingview-widget-container__widget"></div>
+					 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+					 {
+					 "symbols": [
+					   {
+						 "description": "Vanguard S&P 500 ETF",
+						 "proName": "AMEX:VOO",
+						 "title": "VOO"
+					   },
+					   { "description": "Schwab US Dividend Equity ETF",
+						 "proName": "AMEX:SCHD",
+						 "title": "SCHD"
+					   }
+					   { "description": "Financial Select Sector SPDR Fund",
+						 "proName": "NASDAQ:QQQ",
+						 "title": "QQQ"
+					   },
+					   { "description": "Invesco S&P 500 Equal Weight ETF",
+						 "proName": "NASDAQ:QQQI",
+						 "title": "QQQI"
+					   }
+					 ],
+					 "isTransparent": false,
+					 "showSymbolLogo": true,
+					 "colorTheme": "light",
+					 "locale": "en",
+					 "width": 300,
+					 "height": 200
+				   }
+					 </script>
+				   </div>
+				   <!-- TradingView Widget END -->
 			</section>
-			
-			<!--
-			<section class="" id="us_stocks_screen">
-			    <h2> Stock Heatmap </h2>
-		
-				<div class="tradingview-widget-container">
-				    <div class="tradingview-widget-container__widget"></div>
-				    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-				    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-				    {
-				        "exchanges": [],
-				        "dataSource": "SPX500",
-				        "grouping": "no_group",
-				        "blockSize": "market_cap_basic",
-				        "blockColor": "Perf.YTD",
-				        "locale": "en",
-				        "symbolUrl": "",
-				        "colorTheme": "light",
-				        "hasTopBar": false,
-				        "isDataSetEnabled": false,
-				        "isZoomEnabled": true,
-				        "hasSymbolTooltip": true,
-				        "width": "100%",
-				        "height": "100%"
-				    }
-				    </script>
-				</div>
 
+			<p>
+            <!---ETF Monitor--->
+			<section class="" id="">
+			<!-- TradingView Widget BEGIN -->
+				<div class="tradingview-widget-container">
+					<div class="tradingview-widget-container__widget"></div>
+					<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+					{
+					"width": 1000,
+					"height": 550,
+					"symbolsGroups": [
+					{
+						"name": "Indices",
+						"originalName": "Indices",
+						"symbols": [
+						{
+							"name": "FOREXCOM:DJI",
+							"displayName": "Dow Jones Industrial Average Index"
+						},
+						{
+							"name": "FRED:SP500",
+							"displayName": "SP500"
+						},
+						{
+							"name": "NASDAQ:NDX",
+							"displayName": "Nasdaq 100"
+						},
+						{
+							"name": "INDEX:NKY",
+							"displayName": "Nikkei 225"
+						},
+						{
+							"name": "INDEX:DEU40",
+							"displayName": "DAX Index"
+						},
+						{
+							"name": "FOREXCOM:UKXGBP",
+							"displayName": "FTSE 100 Index"
+						}
+						]
+					},
+					{
+						"name": "ETF",
+						"symbols": [
+						{
+							"name": "AMEX:IVV",
+							"displayName": "iShares Core S&P500 ETF|IVV"
+						},
+						{
+							"name": "AMEX:VOO",
+							"displayName": "Vanguard S&P500 ETF|VOO"
+						},
+						{
+							"name": "AMEX:SCHD",
+							"displayName": "Schwab US Dividend Equity ETF|SCHD"
+						},
+						{
+							"name": "AMEX:RSP",
+							"displayName": "Invesco S&P500 Equal weighted|RSP"
+						},
+						{
+							"name": "AMEX:IWY",
+							"displayName": "iShares Russell Top 200 Growth ETF|IWY"
+						},
+						{
+							"name": "AMEX:SPLV",
+							"displayName": "Invesco S&P 500 Low Volatility ETF|SPLV"
+						},
+						{
+							"name": "AMEX:USMV",
+							"displayName": "iShares MSCI USA Min Vol Factor ETF|USMV"
+						},
+						{
+							"name": "AMEX:MOAT",
+							"displayName": "VanEck Wide ETF|MOAT"
+						},
+						{
+                            "name": "AMEX:XLK",
+                            "displayName": "SPDR Technology ETF|XLK"
+                        },
+                        {
+                            "name": "AMEX:XLC",
+                            "displayName": "SPDR Communication ETF|XLC"
+                        },
+                       	{
+							"name": "AMEX:XLF",
+							"displayName": "SPDR Financial ETF|XLF"
+						},
+                        {
+                             "name": "AMEX:XLV",
+                             "displayName": "SPDR Healthcare ETF|XLV"
+                        },
+                        {
+                             "name": "AMEX:XLP",
+                             "displayName": "SPDR Consumer Staples ETF| XLP"
+                        },
+                        {
+                             "name": "AMEX:XLY",
+                             "displayName": "SPDR Consumer Discretionary ETF|XLY"
+                        },
+                        {
+                             "name": "AMEX:XLU",
+                             "displayName": "SPDR Utility ETF|XLU"
+                        },
+                        {
+                             "name": "AMEX:XLI",
+                             "displayName": "SPDR Industrial ETF|XLI"
+                        },
+                        {
+                             "name": "AMEX:XLB",
+                             "displayName": "Nyams Material ETF|XLM"
+                        },
+						{
+							"name": "AMEX:VNQ",
+							"displayName": "Vanguard Real Estate ETF|VNQ"
+						},
+						{
+							"name": "AMEX:IWM",
+							"displayName": "iShares Russell 2000 ETF|IWM"
+						},
+						{
+							"name": "AMEX:MINT",
+							"displayName": "PIMCO Enhanced Short Maturity Active ETF|MINT"
+						},
+						{
+							"name": "AMEX:GLD",
+							"displayName": "SPDR Gold Trust|GLD"
+						}
+						]
+					}
+					],
+					"showSymbolLogo": true,
+					"isTransparent": false,
+					"colorTheme": "light",
+					"locale": "en",
+					"backgroundColor": "#ffffff"
+				}
+					</script>
+				</div>
+				<!-- TradingView Widget END -->
 			</section>
-			-->
-			
+
+			<!-- the following are coming from the data from https://fred.stlouisfed.org/ -->
+			<h2>Macro Overview US Market</h2>
+
+			<div class="content grid-container fred-charts">
+				<section class="grid-flow" id="fed_data">
+					<div id="unemployment_rate">
+						<h3>Unemployment Rate</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CbVc&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+
+					<div id="nonfarm_payroll">
+						<h3>Total Nonfarm Payroll</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CFXY&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+				</section>
+
+				<section class="grid-flow" id="fed_data">
+					<div id="GDP per capita">
+						<h3>Real GDP per capita</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CFZt&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+
+					<div id="CPI_all_items">
+						<h3>CPI- All Urban Consumers: All Items U.S. City Avg</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1Ck2m&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+				</section>
+
+				<section class="grid-flow" id="fed_data">
+					<div id="fed_effective_rate">
+						<h3>Federal Funds Effective Rate</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1JasA&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+					
+					<div id="ten_year_interest_rate">
+						<h3>10-Year Real Interest Rate </h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CFZN&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+				</section>
+
+				<section class="grid-flow" id="fed_data">
+					<div id="DRSFRMACBS">
+						<h3>Delinquency Rate- Single-Family Mortgages. All Comm Banks</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1DSkd&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+					
+					<div id="DRALACBN">
+						<h3>Delinquency Rate on All Loans, All Commercial Banks</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1Fcm8&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+				</section>
+
+				<section class="grid-flow" id="fed_data">
+					<div id="M1">
+						<h3>M1 Supply</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CFZ2&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+					
+					<div id="M2">
+						<h3>M2 Supply</h3>
+						<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1CFYJ&width=670&height=475" scrolling="no" frameborder="0" allowTransparency="true" loading="lazy"></iframe>
+					</div>
+				</section>
+			</div>
+
+			<h2> US Stocks</h2>
 			<section class="" id="us_stocks_screen">
-			   <h2> US stocks</h2>
+			  
 				<!-- TradingView Widget BEGIN -->
 			    <div class="tradingview-widget-container one_column">
 			      <div class="tradingview-widget-container__widget"></div>
@@ -266,6 +364,21 @@
     				</div>
    				 <!-- TradingView Widget END -->
 			</section>
+
+		  <section class="" id="Google_analytics">
+			  <h2><!-- Google Analytics --></h2>
+			  <!-- TradingView Widget BEGIN -->
+			  <div class="tradingview-widget-container one_column">
+				  <div class="tradingview-widget-container__widget"></div>
+				  <script type="text/javascript" src="google_analytics.js" async>
+					  {
+                      "width": 1300,
+                      "height": 800
+                    }
+				  </script>
+			  </div>
+			  <!-- TradingView Widget END -->
+		  </section>
 	  </div> <!--end of content div-->
 	 
   </div> <!-- Right column -->
@@ -280,5 +393,6 @@
 		
 	</footer>
 </div>
+<script src="js/bookmark.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://kevinli-webbertech.github.io/css/index.css">
+    <meta charset="UTF-8">
+    <title>Tax Tracking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Tax Tracking App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#test_me").click(function(){
+		  console.log("you click me");
+    $("#data_table").toggle();
+  });
+});
+</script>
+
+</head>
+<body>
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+    <script src="https://kevinli-webbertech.github.io/js/breadcrumb.js" defer></script>
+
+
+    <button id="test_me" >show content</button>	
+   <div id="data_table">
+        <h1>This is the Tax Data Table</h1>
+   </div>
+
+   <div id="filtered_table">
+	<h1>This is the Tax Filtered Table</h1>
+   </div>
+
+    <script src="https://kevinli-webbertech.github.io/js/bookmark.js"></script>
+</body>
+</html>

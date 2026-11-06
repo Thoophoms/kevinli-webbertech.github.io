@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript functions</h1>
+<p id="demo"></p>
+
+<script>
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+document.write(person.fullName.apply(person1, ["Oslo", "Norway"]));
+
+document.write("<br><br><br><br><br>"+Math.max(1,2,3)); 
+
+let data= [1, 2, 3, 100, 200, 300, 1000];
+
+document.write("<br><br><br><br><br>");
+document.write(Math.max.apply(null, data)+"<br>");
+document.write(Math.max.apply("", data)+"<br>");
+
+// the following doesn't work
+document.write(Math.max.apply(data)+"<br>");
+</script>
+</body>
+</html>

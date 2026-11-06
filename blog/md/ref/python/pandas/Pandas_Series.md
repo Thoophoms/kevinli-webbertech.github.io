@@ -1,3 +1,5 @@
+# Pandas Series
+
 Series is a one-dimensional labeled array capable of holding data of any type (integer, string, float, python objects, etc.). The axis labels are collectively called index.
 
 ## pandas.Series

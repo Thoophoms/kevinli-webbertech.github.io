@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+var text = "";
+
+// 0, 1, 2, 3, 4, 5
+for (var i = 0; i < cars.length; i++) {
+
+    if (i % 2 == 0) {
+      text += cars[i] + "<br>";
+    } else {
+        text += cars[i] + "&nbsp&nbsp";
+    }
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

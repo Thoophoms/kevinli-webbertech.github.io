@@ -1,3 +1,5 @@
+# Pandas Installation
+
 Standard Python distribution doesn't come bundled with Pandas module. A lightweight alternative is to install NumPy using popular Python package installer, **pip**.
 
 ```sh

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <rect width="900" height="320" fill="#f8fafc"/>
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#1f2937">Sorting and Filtering Data</text>
+  <rect x="120" y="70" width="260" height="180" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="520" y="70" width="260" height="180" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <rect x="150" y="95" width="70" height="28" fill="#dbeafe"/><rect x="220" y="95" width="80" height="28" fill="#dbeafe"/><rect x="300" y="95" width="50" height="28" fill="#dbeafe"/>
+    <rect x="150" y="123" width="70" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="220" y="123" width="80" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="300" y="123" width="50" height="28" fill="#fff" stroke="#cbd5e1"/>
+    <rect x="150" y="151" width="70" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="220" y="151" width="80" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="300" y="151" width="50" height="28" fill="#fff" stroke="#cbd5e1"/>
+    <rect x="150" y="179" width="70" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="220" y="179" width="80" height="28" fill="#fff" stroke="#cbd5e1"/><rect x="300" y="179" width="50" height="28" fill="#fff" stroke="#cbd5e1"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <rect x="550" y="95" width="70" height="28" fill="#dbeafe"/><rect x="620" y="95" width="80" height="28" fill="#dbeafe"/><rect x="700" y="95" width="50" height="28" fill="#dbeafe"/>
+    <rect x="550" y="123" width="70" height="28" fill="#ecfccb" stroke="#84cc16"/><rect x="620" y="123" width="80" height="28" fill="#ecfccb" stroke="#84cc16"/><rect x="700" y="123" width="50" height="28" fill="#ecfccb" stroke="#84cc16"/>
+    <rect x="550" y="151" width="70" height="28" fill="#ecfccb" stroke="#84cc16"/><rect x="620" y="151" width="80" height="28" fill="#ecfccb" stroke="#84cc16"/><rect x="700" y="151" width="50" height="28" fill="#ecfccb" stroke="#84cc16"/>
+  </g>
+  <path d="M400 160 L500 160" stroke="#64748b" stroke-width="4" marker-end="url(#arrow4)"/>
+  <text x="250" y="270" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Original table</text>
+  <text x="650" y="270" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Filtered result</text>
+  <defs><marker id="arrow4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><polygon points="0 0, 10 3, 0 6" fill="#64748b"/></marker></defs>
+</svg>

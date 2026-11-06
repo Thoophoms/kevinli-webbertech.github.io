@@ -1,0 +1,356 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 9 0 R /F5 10 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+5 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://piotrminkowski.com/2018/06/12/local-continuous-delivery-environment-with-docker-and-jenkins/)
+>> /Border [ 0 0 0 ] /Rect [ 446.9855 606.2703 465.9385 621.6703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=vsEI0HIv8b4)
+>> /Border [ 0 0 0 ] /Rect [ 472.0545 606.2703 491.0075 621.6703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://medium.com/@mai.vly/setup-jenkins-for-your-application-from-the-private-github-repo-with-docker-bac79335ff27)
+>> /Border [ 0 0 0 ] /Rect [ 504.5585 579.8703 523.5115 595.2703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=vsEI0HIv8b4)
+>> /Border [ 0 0 0 ] /Rect [ 529.6275 579.8703 548.5805 595.2703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Symbol /Name /F4 /Subtype /Type1 /Type /Font
+>>
+endobj
+10 0 obj
+<<
+/BaseFont /Courier-Bold /Encoding /WinAnsiEncoding /Name /F5 /Subtype /Type1 /Type /Font
+>>
+endobj
+11 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://piotrminkowski.com/2018/06/12/local-continuous-delivery-environment-with-docker-and-jenkins/)
+>> /Border [ 0 0 0 ] /Rect [ 239.8875 274.9203 258.8405 290.3203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+12 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://piotrminkowski.com/2018/06/12/local-continuous-delivery-environment-with-docker-and-jenkins/)
+>> /Border [ 0 0 0 ] /Rect [ 154.8795 100.1203 173.8325 115.5203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+13 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://tesh.digital/set-up-a-cicd-server-and-configure-for-use-with-private-github-repositories)
+>> /Border [ 0 0 0 ] /Rect [ 179.9485 100.1203 198.9015 115.5203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+14 0 obj
+<<
+/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R 11 0 R 12 0 R 13 0 R ] /Contents 44 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 43 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+15 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=vsEI0HIv8b4)
+>> /Border [ 0 0 0 ] /Rect [ 48.50946 773.4703 67.46246 788.8703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+16 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://tesh.digital/set-up-a-cicd-server-and-configure-for-use-with-private-github-repositories)
+>> /Border [ 0 0 0 ] /Rect [ 73.57846 773.4703 92.53146 788.8703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=Xs6bXpJsGu4&t=150)
+>> /Border [ 0 0 0 ] /Rect [ 268.5215 634.0703 287.4745 649.4703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=t-UAzkZTKZI&t=362)
+>> /Border [ 0 0 0 ] /Rect [ 293.5905 634.0703 312.5435 649.4703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+19 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=t-UAzkZTKZI&t=362)
+>> /Border [ 0 0 0 ] /Rect [ 133.4955 576.8703 152.4485 592.2703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+20 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://medium.com/@mai.vly/setup-jenkins-for-your-application-from-the-private-github-repo-with-docker-bac79335ff27)
+>> /Border [ 0 0 0 ] /Rect [ 421.4535 512.3703 440.4065 527.7703 ] /Subtype /Link /Type /Annot
+>>
+endobj
+21 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://medium.com/@mai.vly/setup-jenkins-for-your-application-from-the-private-github-repo-with-docker-bac79335ff27)
+>> /Border [ 0 0 0 ] /Rect [ 327.5035 438.9203 346.4565 454.3203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+22 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://medium.com/@mai.vly/setup-jenkins-for-your-application-from-the-private-github-repo-with-docker-bac79335ff27)
+>> /Border [ 0 0 0 ] /Rect [ 139.7885 299.5203 158.7415 314.9203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+23 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.youtube.com/watch?v=Xs6bXpJsGu4&t=150)
+>> /Border [ 0 0 0 ] /Rect [ 164.8575 299.5203 183.8105 314.9203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+24 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://medium.com/@mai.vly/setup-jenkins-for-your-application-from-the-private-github-repo-with-docker-bac79335ff27)
+>> /Border [ 0 0 0 ] /Rect [ 487.3225 257.7203 506.2755 273.1203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+25 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://stackoverflow.com/questions/9767919/in-jenkins-how-to-checkout-a-project-into-a-specific-directory-using-git)
+>> /Border [ 0 0 0 ] /Rect [ 170.4685 171.2203 189.4215 186.6203 ] /Subtype /Link /Type /Annot
+>>
+endobj
+26 0 obj
+<<
+/Annots [ 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 
+  25 0 R ] /Contents 45 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 43 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+27 0 obj
+<<
+/Contents 46 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 43 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+28 0 obj
+<<
+/Outlines 30 0 R /PageMode /UseNone /Pages 43 0 R /Type /Catalog
+>>
+endobj
+29 0 obj
+<<
+/Author () /CreationDate (D:20261014011551-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261014011551-04'00') /Producer (xhtml2pdf <https://github.com/xhtml2pdf/xhtml2pdf/>) 
+  /Subject () /Title () /Trapped /False
+>>
+endobj
+30 0 obj
+<<
+/Count 5 /First 31 0 R /Last 31 0 R /Type /Outlines
+>>
+endobj
+31 0 obj
+<<
+/Count -5 /Dest [ 14 0 R /Fit ] /First 32 0 R /Last 42 0 R /Parent 30 0 R /Title (Lab2: Git Private Repo Integration with Jenkins \(Docker\))
+>>
+endobj
+32 0 obj
+<<
+/Count -1 /Dest [ 14 0 R /Fit ] /First 33 0 R /Last 33 0 R /Next 34 0 R /Parent 31 0 R 
+  /Title (Goal)
+>>
+endobj
+33 0 obj
+<<
+/Dest [ 14 0 R /Fit ] /Parent 32 0 R /Title (Knowledge)
+>>
+endobj
+34 0 obj
+<<
+/Count -3 /Dest [ 14 0 R /Fit ] /First 35 0 R /Last 39 0 R /Next 40 0 R /Parent 31 0 R 
+  /Prev 32 0 R /Title (Labs)
+>>
+endobj
+35 0 obj
+<<
+/Dest [ 14 0 R /Fit ] /Next 36 0 R /Parent 34 0 R /Title (Step 1: Run the jenkins/jenkins:lts Container)
+>>
+endobj
+36 0 obj
+<<
+/Count -2 /Dest [ 14 0 R /Fit ] /First 37 0 R /Last 38 0 R /Next 39 0 R /Parent 34 0 R 
+  /Prev 35 0 R /Title (Step 2: Choose Your Authentication Method)
+>>
+endobj
+37 0 obj
+<<
+/Dest [ 14 0 R /Fit ] /Next 38 0 R /Parent 36 0 R /Title (Option A: Authenticate via HTTPS \(Personal Access Token\) - Easiest)
+>>
+endobj
+38 0 obj
+<<
+/Dest [ 26 0 R /Fit ] /Parent 36 0 R /Prev 37 0 R /Title (Option B: Authenticate via SSH \(Deploy Keys\) - More Secure)
+>>
+endobj
+39 0 obj
+<<
+/Dest [ 26 0 R /Fit ] /Parent 34 0 R /Prev 36 0 R /Title (Step 3: Implement Checkout in your Jenkinsfile)
+>>
+endobj
+40 0 obj
+<<
+/Dest [ 27 0 R /Fit ] /Next 41 0 R /Parent 31 0 R /Prev 34 0 R /Title (Troubleshooting)
+>>
+endobj
+41 0 obj
+<<
+/Dest [ 27 0 R /Fit ] /Next 42 0 R /Parent 31 0 R /Prev 40 0 R /Title (Ref)
+>>
+endobj
+42 0 obj
+<<
+/Dest [ 27 0 R /Fit ] /Parent 31 0 R /Prev 41 0 R /Title (Lab Document)
+>>
+endobj
+43 0 obj
+<<
+/Count 3 /Kids [ 14 0 R 26 0 R 27 0 R ] /Type /Pages
+>>
+endobj
+44 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2352
+>>
+stream
+Gb!ku=d.mS&Up?Zd>qJ_#Qb:'HJ:E+,i2MO1O=&k<,GJX,f2n]1.c1Pq=SHP+Ea;lVsMPGU-Jd>Y7L7o"r)QTq+M-G^J/,.OTBN21'?YO(FEMI_rTdcLS++/g"B+k\Egaj";*#Qb;l^g0u8eE$(K!&DYaPD!tX60E8/Vn((hY_/WbkHIItnfLMAr);&8uoi*+B6n0OYeA,%;gpfbd>g^&-;$O-PY)_nPU7]I*XA<Xho7JSFV)I<Vt=37MA?J`AJafdDo6$)k.@H+a$i^!D8oEc[UJ>GP5JB(%:Khd/N*1kE,j*\3&4PqdaSO:[OEOattFdt7kjdbY/K<+/4PD\r6*_sNA]`>g<JOMRTY`=.dJVnL+eBqBdf34$9)lD"\o;f,j10Hsc:E^Hm?FLi?W\$(RWgq3,dV:0_;cm/pTdmD1'IqUA/K7]l#u!)TF6"+d%%<23?5a!XLo[hF_B;cqqIW6&o\54C,qDt2U25q8.^!;Ec%Xh0WJ'-:Y-SVTBX+)i14`N32Da?(PMnirk]rV^IQr`jDjcIC<@o/O:#3.MGp$1hLf2)bWsF\@E[-hHm\QAIM/r$J&<@=qLkEa*3>%*E-,dh)$=WW1mW_F1k@d<c_(u;Z$'9u'&q6;-4n`;1#$PPo8s*_^$AcMhbLjR40sICZ[lZnYD'bfuX9=is/E^[f!j,u['8_#nX#Q.G@kMX]8Wa/E8Gq21`lMK,GuL4.bR'*oFji92[Vhkhk0WdL')7dZ5Silp4Mk8RTbJ^$(/Z_q$-S#gKEg,JZ4rS3FL@:r`]26-fJ55,#?k]=LNn,Kq_pV/L)9#d[HSS9(W$e=c_?6*BM868c=LK,3t@rS=Bea6Ld:HCj<B#*=rBe-"f5s[IL;@_g"NZ?Y\6ZGq2Ct:27*[$/3q%FdRhM)L\XEgQ'a;tI&$U0\?Nd%>HmYJ6ft$LN@]jONg(?!&mXJiFt>TqhIQfg"U1./kd_=*_'5604cF#gX\bZW:tb`cr-:'nqMb"A.]Q[;BV=gX7+=(fe>juLPM:C\LErI`5O/k-(:dVd:L[TO0)OO@jJ!,hpO#5JfTB,U7"=><*J>8h]9(*.8F0fm`pm!,hU#jn-fZBjk+D7N`slH%>fKu-]d-&hh,B@=09.+k>R9VnXW\JK3chX<c0/pbRBC1iOt\q\WOX2Kpui5O,Vt9`Y=;RsZ>;"U/e\oknVE"AC\_q_OO2H1s/_+$RV#EX8#'.jP%?8$DdkaB<?mZcbY@XnU`)sK2'6C(OcL-_XD1UnOu:Ob7C'"*ZaT\N2]E.>U%X>7IC88u7dg:Td1nB^@f2<ZI@JG/k#-[lR<9stLSOZ_I4b1U#^`K>(ZO;Kj$.G5(>&0E]B:1\kEPIWNq2opmBEP&)Rj33ot0LD-mXq1+bI4[Rs>JM[!k,M43@N*nGM't"gB^D/PD9e[L"i\WjGQ"4hL3*6LI_1p/u1?cTnPA9re*Od.,K1Gul>JNZXGBO,8509jBP0>sl"NbCchUbN*qI&<(O'eum?4(s6>u)Q2sf0C'PsN;CK]%:DO<b8h+Jk0k4adtb9)J@<B`%\ZZpBP:IrYXJXQ7t^@%hZ!34dfTof7Z4*?Qt$d@mb(piQ-8Q`_Lf:Q7$!ue@>A./#Q99<id8n)*hbPHo!.VsQZlMtAjo@f*Sc>'6EgUZkT]MHO[*^,,BkXiV##FHBpc_2^b#[^^lC#Ka)'-$:5Sk!Ft6U$mGK>L(4mi?7i-`g*aq%SdJ:bpa?>kDNP$RcNc'Gd6$*h-n03&",K!>:(#4.u]3(#*jI/L6r?g;85eGk_/u$o;=e)ChgkAp=/WIUU*"2m-!cOF\]mOI>4#l;J0CPRPGL340XQ"p!=J]*nXeCPq]2:*71q3a,U`NqAg)1FMS`.bM\XM/DHfCOJ__Nj_c3bNF:Jodr?0k5kBh6;@j48o*`LjF2]Y&?/%-k;1ldkS3;s;X&SVtumAM\WFh9/WtZiXteUQ3YZR*X?aMdeoph\]_nP4,/cbIa!pP6eK2G"6/&2$NEiY3^t:c])%;?</eI'6[)OrJl'rP@uEp<^QOd/!-UWNF.Lj!l*:q(,DnA79nG_W_0blb-n8g:dQU`rMFL[ScK5[)RduJM$E]!PjqAkom;TdodMbZ&G?^q\i@aa4BG+EB<#i-Vj"N;rK+[0IEs`;=kc?Q>h5WP0&TJ'-Z449NT`!3Y!eukXCG1k_BN@4gNRm\R8!J/0Z-pK[M*!pq(`]XVV]tjT'Fp\/Wp"/l-$\'=5+FIdGTuNruQ<N1PQu-V.p%GBWHKpo`@IFn1W1"._WE<p.U8+1gCrP8#rW928uigb4^'_)jtj\s*J0N]cV1Q'X3`T>j/3*&3e%?'QnJ])0kp0'MhK:~>endstream
+endobj
+45 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2752
+>>
+stream
+Gb"/(=`<=[&q801.*P>r#AmYoX^JEd9R8&AF.e_Wk@&oA$UnYI9ltV+3>l?,r"]fKQ7U4&3f="S3G_T(Yupq(l=5[&L-JZ8%q:&2jtQ[h!nC`Y!7W8@b^Y<gk@afY]>6_37dDZ]9\ZqjYoWaS(c]"p=:2qUPZIMr3(ZKJZ!;j;'b$i.'f>HE/VbBA.!Z?p5I`V9BEm!=Gel7nB6ku7rK/\X&hm.3?+5B2`-!Ub1ub3F@cR3A_8H#WV-6^oXe@SZM:KtB>1+IuT6-o?XkXXa=QUD.I(6nX6^kej=F=<0$^L$`:!V]IKd$]N?OE7WZD%VgA\L;Krn\OhOZg$!?*OeJQupTY4AG_Z/qSW83R#r"QLmib4nJ-3;rpicRfnkGk@&?(IX;uab:!dj3f@$.8_=Dg)T?e6oTKF]NsmBPO%]o-4caiJNJ<uWE3)osc.FM2"'f;>jl9ND*hZBg55c/F8QQiSE2bZraQ6"(]rAi%k\?7%h*a@J)Pmq$`a^?uiT\i-B:H.2.\>84r;lUcd'k>MUZ'XWh](NK2`lCZ[tloiVf\JS-i'"`j&<QqTjDWX'eU70\BNTW,t7#f3Citm/9qT7E80I_^\N`$A@lIHTY%JaLs`]$]O:8cJQG]pO"M(S8agYd/H^+-ALnI1F9FW;#nF48!eSf%K^Ig'eegIH?c$>nhD*LJ3Qi%"B(-EKO0HJ\nrdUCd=uU^ik1Bsbh"U<\`KtKrgBoFPoa>87ZB<[AWG'GVjbJK/Q5oToBr%KT3uut1^qg%W('u]GE;j<NHOU13eJ]2EtA]"Ul]c0#'"fbOJ>MHq.&$TU4`"^8ioUdM>juuT@V-:V8V^lVK\4\6S>]QH'!`\,(.BUN\J.n%r[jdVc6%VFL@*VVf+TLkV.!3)g)X$UZ+fZ("I/f2ng"C]hFWFE4O8Y@pOj?(53'arLET.;<3gj.=FX.Q%qesD;b/l^[eJMHU#d<f=189B;(q3Gk?qGabTG/FJ;t[J3=[e.R0QM,g])D`\T>uni-Bl$@!5P4t#_@(""NR',2d]T5?O<XEK/nj?,21&ISrVBk3a]L1bBirosn%%p9hBX]5prLEUs$,"l!qoHf'U-#7N\eAnmXbH`Y"p(&j9U#_7OESM$pGZ8`Y6NG%OZj$g(&.O=1QG6\V0Bgr2:&3`f0%O\HZqeE9qK(l<mHl:Vqa\)PdLH,k2E;\#$GWEnW*:#[YX\(Z_t/2LGhdL+4=[.-[h`ich#5A+Z``25=g:@]X^G9Onr1OB\?,+LM4"=]2S]KdIoA%8Gdm>M^goJQZ+QXj0GLuQY_f6F@%&uL?5eFD*_p#[\AWK'e'*6&U>G+IT0GZ65>KU.BKqk"^_XLm;%KOjnD,2W)DGG&4Rteq_%a^J;\/k]4i1+GHC90s1C[lZ]++>BQ`NO^(Y#iH9t6';:sBhL(<>=[Y1NDmCZbudd=/T1d:-clprj?,a;@'aX@)7j,0o*qNZ!hFQYnN\<&;-$$-=`D%L^^\_!mXWqOjdLK>uEs:?lTPM6)pn3!&9c3%*gBWK-]jI___OC3[.-s(1Ks-"[kDra-0qVB0-tK2MQM<"IodEN:FZ&5kR\(jdAGVJfuUF4>'QZ&,I5.WF]u;h*o`hX6hakcf1rX`!+)AC&`eo=`/_]?8b7q0IaL+lf#g9,t">Y2^)ib1:D4W?0"#bJeWqp^qR?#)b1QLJ]E.#th_-1(b#s=Z[d``7i!j4G4:sPDa.J_e\'1h'P>,mbGN\;-iUu1liJ`O'_Ph@_C+9+&PJC>Q+YNkZ_(bOL%QoF8Ir6gK$pO=.![V!F'Yf+uu&h**"Ca&_*Y4'[4SEOb9YY(iY2lnpH_1.jSV^+c)>3e:j!*^>Q@LJBUE>$a%SkNn7?k;rnJ<nk&,j[:t_a'?R1,ni5DA:5,2:!Lc[:h7u?,9mQ]<F'Wm)>9'+__'=ubkYs*N$ap,s*'VEDLrHlL\E%Q<drb\b\r/(raFi\Y(-ueqBL=hA!Ni41CH:4@5=cV"A2)T.KL+pX3pf329+iY;2p_W?9L7)5(*E;O#lFi*U54FbL7J'Z`:?%ETOIG2_;AuXb?"TDZ7l^Q*3XY4Jm,?&"R;Yu+:AY8'/%a-`EZqrB!3jZ-dd9RkF8::s#d:)1A)VrH6XpGR$'H'U_4t@aO%^hU2%5"%qV,()Sdbtg.6%AT(2i\+@CEN.j\"%$J,:4i8MKuT'\@fi9KMj2YM!;I_@ce_VLYI@fBZbpabtBDC%J:c'NK\V8Z:U.M\0VeWrO>:l)%&b1Bf$nBgG[%XAOIHM\Vl-<FO[;6>JX=%XkIWjPoN(W"CXc:'!"WOc__`5bc1C`K7\;F(UcXhBTRQkjW\FnOcPG;]@_/qo,46)lF]8dVN.=*KR(+Am>V8&hgFgCB!PXG"[G6+SQm8dVN.=*N+;'Z]I(7bhKr[h,6<G:>qg%anW3;+a[0]t,/I\2_cQ*F^+k];b>D9WWogej6kt,t\KD\Q=!t@l.X!00_t]>t9>h0I)7lemT.g.T&f7c*$Id1-gtDHTK$-dfI+mEB:m(<Z0DNYCGi-[o,e&^0[";GOhA<Ml/qE&lO^'J+u[t'^_K&ZR'2'e@`T=q;D*2Ae'4pWHXPMQVG%g5.jQ*m%);mYIN`!5&BoWRlpCS2JY075I?l2a0g6S$c5rr7B:Pi&[-uE-@OW3Q)(Y<72DH'3o5:cpX/Fnr9neloPpN!8as6$K\-eKV/Y`m1bpOpOu*O:H9aHjBJ6!m`ISQ\NI8l_10Q_P<Cje`K<tRZFcf5`~>endstream
+endobj
+46 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1835
+>>
+stream
+Gb!;erK#Yj)#jL5$NIK]WH$pFkG2j0[=6J&>'n<>W]Fi$M#iqSVfi-Q8c.E>g+frpTEMiK#O!ipE?6/cpA;f@jM6uCf5-#bZOsKM&4Bb[RNUU"+-#-MkG*s]([p:CR+ZA94[8R+'F#V=I*[FliA+1+`,SXu&CZP8h\LGk%Uq@`,Y2m5"@\NH4/a<_!bCOs%B$A-Va2F+JbqUk7LAcbN0>sl$3\(+%cJ"n]AqGb$O+(U5sbe]!Ep<S@i"93KCjdM4>n%rDF*+[8E,<*RXKA\+Fjh5"!!k*hiG"BkUR'O*(Sk)0F5ZZ9\oA]U9kFt*1T^Zo5LG3f-nX$NkXJW_(bTA"V?8QR-9_FPEQg@3]L(HBMj_6g]@nF%>M+u/g(1];]@tAS=Ig\M6Nm:5bf1f./nt@)T%jHfuF,:^=RK@+$3gl\$_7UDFgi@N-UM36uW;#,6.:f'0GLX_I.';.-?89!AN(ji^&NO'lM+WRYMLKFgt9cX`5%p6bra>lQC13^dO`Zq".Z%J5H*H.#c_:MR]?f!/u&^\4:KHo>%:&;i1A]NYQPnd2GLe2\Z[NYmuQ0=JmhVEtWCK)N9A.h!!t7g>6l@m@CF>`qI!;^0-dA.[,3=G2Z,U5V<QW.+C<O$]$C=j\Yq9qC/:TJ0(H4VuM+b"O1X`Za>h3r3CD._3EKVAo-"F:<NlL?Q/mUrU'n![bWZf^Zq3(8]PWm/#V5!<R#dAq<1u%\f"a[^Ue^#H_irUI3=#`7AAGkTI9+RiJ]EBDg<S/7T**\$YjHMd#)>#o&.oD=k1f+/CH;Ch-&PXA`Z)<h8=T8SF,j;Iqe]T]@$L!CsBQgJVn6<>kN7.Nlb!*6s%F9Db%b.:#i/>^XE?-fm0Q$^(7!V_:`@Th;'YSYe0.;^Z5jEI";0d=iJ4[Vc&CFg4\Ge:R+^0F?K'F)HDM0$/UUK.VG:'lY$PC[Fq6:%"gOZn[B>r*nb-2aV>_8Q1T[:_:L8'l/oY;"@69ZU+$[)CQ=dH%@)uN2P\qFeMATbGZ!rFYeBBt2fu=>TC-T[?cYNnFqrgB8c+4Vn'^.6%3s+*8F=oXW!9Po'^oZcS$gP:G>hiiU^`+[&LC(MZ9n5$7Eq&S_>rC#?B%EmYE;T(L^O?"$dIr'bsO(#$>#OKI^lk=54h#$Vr6%pG"Y%L":11\SB<G>oS$36Jg0($<E!\D,c)o-"R+C-6FbNP3:Q_lBnb;)_==e"r"*MUU6E<ur<Q$FrN,GQIa@;jP*`U_0j]bA/*D:+k=h.)[d0%-G!_\.G/:MlY[F4Lj>FT4<_a%2UuKt"jcTpV0#56''kCr-kLl@4.kPi.'.rCKP]gsO"!Dp('!>7c%#;T8``2959'^<ebOY1$4s)hhL<Fi.pK#.hY]INN/83=tKbiVR<1J29gtIqB9sm.teq=E((Xm(u'dbV='>YJ#KPIP#Cmil(1?G)W\3#I]S7X6;"I"Z]op-:Qc1$*,XeFai3<M^u6>:.bR&Q@U/@V94=W3>'&"Tq=,H)@pg6PdJ*I:=YF2:O8mj"IbHn4F;GPUt.jp)ca5?+iJbGOsW_,'Gp5:1s1<uWe>k8a?mBiA5c4T0'pEV/#+i>ldJd-[r0kaccgQZWYc$b4dk$>?QeB;hq4[$#SFKi(/LS!BJI2WH<gk17-+!=u:8s$X3I;O'80ZD&5+Yft7XJ<)^$:gI+*lQ7JM8/fF9AnUi@pZqkPrMKhIRrjU<j]SALIp`0d7c<+U*f2m_ZEdlhMN5_Ve23Y'o6V)0p:0$ZH]d&#j>KT+S^Z\m]TRG"__0BBZsU-8D&\S?+:o(,RSJQ3JF?ppCOM@bQ1lmn?0Ei19tcK<rW.ifcbB~>endstream
+endobj
+xref
+0 47
+0000000000 65535 f 
+0000000061 00000 n 
+0000000133 00000 n 
+0000000240 00000 n 
+0000000352 00000 n 
+0000000457 00000 n 
+0000000709 00000 n 
+0000000904 00000 n 
+0000001172 00000 n 
+0000001367 00000 n 
+0000001444 00000 n 
+0000001555 00000 n 
+0000001808 00000 n 
+0000002061 00000 n 
+0000002310 00000 n 
+0000002573 00000 n 
+0000002769 00000 n 
+0000003018 00000 n 
+0000003220 00000 n 
+0000003422 00000 n 
+0000003624 00000 n 
+0000003893 00000 n 
+0000004162 00000 n 
+0000004431 00000 n 
+0000004633 00000 n 
+0000004902 00000 n 
+0000005171 00000 n 
+0000005469 00000 n 
+0000005675 00000 n 
+0000005762 00000 n 
+0000006015 00000 n 
+0000006089 00000 n 
+0000006253 00000 n 
+0000006379 00000 n 
+0000006457 00000 n 
+0000006596 00000 n 
+0000006723 00000 n 
+0000006899 00000 n 
+0000007049 00000 n 
+0000007191 00000 n 
+0000007319 00000 n 
+0000007429 00000 n 
+0000007527 00000 n 
+0000007621 00000 n 
+0000007696 00000 n 
+0000010140 00000 n 
+0000012984 00000 n 
+trailer
+<<
+/ID 
+[<7486530bb85936d26cebccc09f5666a6><7486530bb85936d26cebccc09f5666a6>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 29 0 R
+/Root 28 0 R
+/Size 47
+>>
+startxref
+14911
+%%EOF

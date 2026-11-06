@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript functions</h1>
+
+<p id="demo"></p>
+
+<script>
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+let getCelsiusValue = toCelsius;
+
+// Javascript is a symbolic language, not really an object oriented programming.
+// This is unique and not found in Java and python language
+
+document.write(getCelsiusValue+"<br/><br/><br/><br/><br/>");
+
+// what does this line do?
+document.write(getCelsiusValue(77));
+
+</script>
+
+</body>
+</html>

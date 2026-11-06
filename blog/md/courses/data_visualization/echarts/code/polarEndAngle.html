@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Polar endAngle - Apache ECharts Demo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #chart-container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="chart-container"></div>
+  <script src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
+
+  <script>
+    var dom = document.getElementById('chart-container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+      var app = {};
+
+      var option;
+
+      option = {
+        tooltip: {},
+        angleAxis: [
+          {
+            type: 'category',
+            polarIndex: 0,
+            startAngle: 90,
+            endAngle: 0,
+            data: ['S1', 'S2', 'S3']
+          },
+          {
+            type: 'category',
+            polarIndex: 1,
+            startAngle: -90,
+            endAngle: -180,
+            data: ['T1', 'T2', 'T3']
+          }
+        ],
+        radiusAxis: [{ polarIndex: 0 }, { polarIndex: 1 }],
+        polar: [{}, {}],
+        series: [
+          {
+            type: 'bar',
+            polarIndex: 0,
+            data: [1, 2, 3],
+            coordinateSystem: 'polar'
+          },
+          {
+            type: 'bar',
+            polarIndex: 1,
+            data: [1, 2, 3],
+            coordinateSystem: 'polar'
+          }
+        ]
+      };
+
+
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener('resize', myChart.resize);
+</script>
+</body>
+</html>

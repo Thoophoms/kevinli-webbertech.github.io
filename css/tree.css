@@ -31,10 +31,14 @@ ul, #myUL {
   
   /* Hide the nested list */
   .nested {
-    display: none;
+     display: none;
   }
   
   /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
   .active {
     display: block;
+  }
+
+  ol {
+    list-style-type: circle !important;
   }

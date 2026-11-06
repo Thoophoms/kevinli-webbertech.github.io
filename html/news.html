@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Kevin Li</title>
+		<link rel="stylesheet" href="../css/index.css">
+		<script>
+			var marketWatch = "https://www.marketwatch.com/investing/stock/tcehy";
+			var nasdap = "https://www.nasdaq.com/market-activity/stocks/tcehy";
+			var barron = "https://www.barrons.com/market-data/stocks/tcehy";
+			var wsj = "https://www.wsj.com/market-data/quotes/TCEHY";
+			var cnbc =	"https://www.cnbc.com/quotes/TCEHY";
+			var investing = "https://www.investing.com/equities/tencent-holdings-pk";
+			var morningStar = "https://www.morningstar.com/stocks/pinx/tcehy/quote";
+			
+			function showUrls() {
+			   console.log("debugging");
+			   var urlDiv = document.getElementById('showURL');
+			   var symbol = document.getElementById('symbol').value;
+			   console.log(symbol);
+			   var marketWatchUrl = "https://www.marketwatch.com/investing/stock/" + symbol;
+			   var nasdapUrl = "https://www.nasdaq.com/market-activity/stocks/" + symbol;
+			   var barronUrl = "https://www.barrons.com/market-data/stocks/" + symbol;
+			   var wsjUrl = "https://www.wsj.com/market-data/quotes/" + symbol;
+			   var cnbcUrl =	"https://www.cnbc.com/quotes/" + symbol;
+			   var morningStarUrl = "https://www.morningstar.com/stocks/pinx/" + symbol + "/quote";
+			   var content = "Market Watch: " + "<a target='_blank' href='" + marketWatchUrl + "'>" + marketWatchUrl  +"</a></br>" + 
+							 "Nasdaq: " + "<a target='_blank' href='" +  + "'>"+ nasdapUrl + "</a></br>" + 
+							 "Barron: " + "<a target='_blank' href='" + barronUrl + "'>"+ barronUrl + "</a></br>" + 
+							 "WSJ: " + "<a target='_blank' href='" + wsjUrl + "'>"+ wsjUrl +"</a></br>" + 
+							 "CNBC: " + "<a target='_blank' href='" + cnbcUrl + "'>"+ cnbcUrl + "</a></br>" +
+							 "Morning Star: " + "<a target='_blank' href='" + morningStarUrl + "'>"+ morningStarUrl + "</a></br>"; 
+			   urlDiv.innerHTML =content;
+			}
+		
+			document.onreadystatechange = function () {
+			   if (document.readyState == "interactive") {
+				   // Initialize your application or run some code.
+		
+				   showUrls();
+			   }
+		   }
+		
+		   /*
+		   document.addEventListener('DOMContentLoaded', function() {
+			const inputElement = document.getElementById("symbol");
+			console.log(inputElement.value); // Output: Hello
+		  });*/
+		  </script>
+	</head>
+	<body>
+		
+		<div class="column">
+				<nav id="nav_menu">
+					<ul> 
+						<li><a href="../index.html">home</a></li>
+						<li><a href="indicator.html" onclick="load_indicator_menu()">indicator</a></li>
+						<li><a href="news.html">news</a></li>
+						<li><a href="philosophy.html">philosophy</a></li>
+						<li><a href="trading_course.html">trading course<span class="hot-badge">HOT</span></a></li>
+						<li><a href="../blog.html">blog</a></li>
+						<li><a href="about_me.html">about me</a></li>
+					</ul>
+			</nav>
+			<div class="content rcorners">
+					<p>
+					<form>
+						Symbol: <input type="text" id="symbol" onchange="showUrls();" />
+					</form>
+					</p>
+					<div id="showURL"></div>
+					
+				<h1> ETF Holdings </h1>
+				<p>
+					QQQ: https://www.invesco.com/us/financial-products/etfs/product-detail?productId=ETF-QQQ <br>
+					VOO: https://investor.vanguard.com/investment-products/etfs/profile/voo#portfolio-composition <br>
+					SOXX: https://www.ishares.com/us/products/239705/#/ <br>
+					NLR: https://www.vaneck.com/us/en/investments/uranium-nuclear-energy-etf-nlr/fees/ <br>
+					RSP: https://www.invesco.com/us/financial-products/etfs/holdings?audienceType=Investor&ticker=RSP <br>
+					MOAT: https://www.vaneck.com/us/en/investments/morningstar-wide-moat-etf-moat/performance/ <br>
+				</p>
+			</div> <!--end of content div-->
+	 </div> <!--end of column -->
+	 <div class="row">
+		<footer class="footer" id=""> 
+			Copyright@Webbertech.com
+			<p>Disclaimer: All the charts and data are coming from internet. Copyright belongs to their original source.
+			The information on this website is only used for my personal research not commercial.	
+			</p>
+			
+		</footer>
+    </div>
+
+	</body>
+</html>

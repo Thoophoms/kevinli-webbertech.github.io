@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#f7f9fc"/>
+  <rect x="70" y="110" width="180" height="120" rx="16" fill="#e8f0fe" stroke="#2563eb" stroke-width="4"/>
+  <rect x="360" y="70" width="180" height="90" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+  <rect x="360" y="200" width="180" height="90" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+  <rect x="650" y="110" width="180" height="120" rx="16" fill="#fff4e5" stroke="#f59e0b" stroke-width="4"/>
+  <path d="M250 170 L360 115" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M250 170 L360 245" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M540 115 L650 170" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M540 245 L650 170" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <text x="160" y="160" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#1f2937">OneDrive</text>
+  <text x="160" y="190" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#334155">Cloud file storage</text>
+  <text x="450" y="123" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#1f2937">Excel Web</text>
+  <text x="450" y="148" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#475569">Browser editing</text>
+  <text x="450" y="253" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#1f2937">Excel Desktop</text>
+  <text x="450" y="278" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#475569">Advanced analysis</text>
+  <text x="740" y="160" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#1f2937">Team</text>
+  <text x="740" y="190" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#334155">Sharing and co-authoring</text>
+  <text x="450" y="330" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#475569">Microsoft 365 connects storage, collaboration, and spreadsheet tools</text>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

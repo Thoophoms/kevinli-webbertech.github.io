@@ -1,7 +1,9 @@
-Pandas provide few variants like rolling, expanding and exponentially moving weights for window statistics. Among these are sum, mean, median, variance, covariance, correlation, etc.
+# Pandas Window Functions
+
+Pandas provide few variants like rolling, expanding and exponentially moving weights for window statistics. 
+Among these are sum, mean, median, variance, covariance, correlation, etc.
 
 We will now learn how each of these can be applied on DataFrame objects.
-
 
 ## Rolling Function
 
@@ -37,7 +39,8 @@ print(expanding_mean)
 
 ## Exponentially Weighted Moving Average (ewm)
 
-The `.ewm()` function computes exponentially weighted moving averages on DataFrame objects. It gives more weight to recent observations while calculating the average.
+The `.ewm()` function computes exponentially weighted moving averages on DataFrame objects. 
+It gives more weight to recent observations while calculating the average.
 
 ### Example:
 ```python

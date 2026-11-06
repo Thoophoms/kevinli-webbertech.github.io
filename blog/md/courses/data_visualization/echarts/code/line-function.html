@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECharts Example with Vanilla JS</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  <style>
+    #main {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h2>ECharts Example</h2>
+  <div id="main"></div>
+
+  <script>
+
+    
+    // Initialize the chart
+    var chart = echarts.init(document.getElementById('main'));
+
+    function func(x) {
+      x /= 10;
+      return Math.sin(x) * Math.cos(x * 2 + 1) * Math.sin(x * 3 + 2) * 50;
+    }
+
+    function generateData() {
+      let data = [];
+      for (let i = -200; i <= 200; i += 0.1) {
+        data.push([i, func(i)]);
+      }
+      return data;
+    }
+
+    // Chart options
+     
+    var option = {
+      animation: false,
+      grid: {
+        top: 40,
+        left: 50,
+        right: 40,
+        bottom: 50
+      },
+      xAxis: {
+        name: 'x',
+        minorTick: {
+          show: true
+        },
+        minorSplitLine: {
+          show: true
+        }
+      },
+      yAxis: {
+        name: 'y',
+        min: -100,
+        max: 100,
+        minorTick: {
+          show: true
+        },
+        minorSplitLine: {
+          show: true
+        }
+      },
+      dataZoom: [
+        {
+          show: true,
+          type: 'inside',
+          filterMode: 'none',
+          xAxisIndex: [0],
+          startValue: -20,
+          endValue: 20
+        },
+        {
+          show: true,
+          type: 'inside',
+          filterMode: 'none',
+          yAxisIndex: [0],
+          startValue: -20,
+          endValue: 20
+        }
+      ],
+      series: [
+        {
+          type: 'line',
+          showSymbol: false,
+          clip: true,
+          data: generateData()
+        }
+      ]
+    };
+
+    // Set the options
+    chart.setOption(option);
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Asset Allocation Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        input {
+            width: 200px;
+            padding: 5px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Asset Allocation Calculator</h1>
+    <div>
+        <div class="form-group">
+            <label for="investment">Total Investment Amount ($): </label>
+            <input type="number" id="investment" placeholder="Enter total investment" />
+        </div>
+        <div class="form-group">
+            <label for="stocks">Stocks Allocation (%): </label>
+            <input type="number" id="stocks" placeholder="e.g., 50" />
+        </div>
+        <div class="form-group">
+            <label for="bonds">Bonds Allocation (%): </label>
+            <input type="number" id="bonds" placeholder="e.g., 30" />
+        </div>
+        <div class="form-group">
+            <label for="cash">Cash Allocation (%): </label>
+            <input type="number" id="cash" placeholder="e.g., 20" />
+        </div>
+    </div>
+    <div id="results">
+        <h2>Allocation Results</h2>
+        <p id="stocksResult">Stocks: $0.00</p>
+        <p id="bondsResult">Bonds: $0.00</p>
+        <p id="cashResult">Cash: $0.00</p>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        // Get references to input fields and result elements
+        const investmentInput = document.getElementById("investment");
+        const stocksInput = document.getElementById("stocks");
+        const bondsInput = document.getElementById("bonds");
+        const cashInput = document.getElementById("cash");
+
+        const stocksResult = document.getElementById("stocksResult");
+        const bondsResult = document.getElementById("bondsResult");
+        const cashResult = document.getElementById("cashResult");
+        const errorMessage = document.getElementById("errorMessage");
+
+        // Add event listeners for input fields
+        [investmentInput, stocksInput, bondsInput, cashInput].forEach(input => {
+            input.addEventListener("input", updateAllocation);
+        });
+
+        function updateAllocation() {
+            const investment = parseFloat(investmentInput.value) || 0;
+            const stocksPercent = parseFloat(stocksInput.value) || 0;
+            const bondsPercent = parseFloat(bondsInput.value) || 0;
+            const cashPercent = parseFloat(cashInput.value) || 0;
+
+            // Validate total percentage
+            if (stocksPercent + bondsPercent + cashPercent > 100) {
+                errorMessage.textContent = "Error: Allocations exceed 100%.";
+                clearResults();
+                return;
+            } else if (stocksPercent + bondsPercent + cashPercent < 100) {
+                errorMessage.textContent = "Error: Allocations are less than 100%.";
+                clearResults();
+                return;
+            } else {
+                errorMessage.textContent = "";
+            }
+
+            // Calculate allocations
+            const stocksAmount = (investment * stocksPercent) / 100;
+            const bondsAmount = (investment * bondsPercent) / 100;
+            const cashAmount = (investment * cashPercent) / 100;
+
+            // Update results
+            stocksResult.textContent = `Stocks: $${stocksAmount.toFixed(2)}`;
+            bondsResult.textContent = `Bonds: $${bondsAmount.toFixed(2)}`;
+            cashResult.textContent = `Cash: $${cashAmount.toFixed(2)}`;
+        }
+
+        function clearResults() {
+            stocksResult.textContent = "Stocks: $0.00";
+            bondsResult.textContent = "Bonds: $0.00";
+            cashResult.textContent = "Cash: $0.00";
+        }
+    </script>
+</body>
+</html>
+

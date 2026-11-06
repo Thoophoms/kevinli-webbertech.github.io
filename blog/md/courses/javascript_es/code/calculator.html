@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Allocation Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asset Allocation Calculator</h1>
+    <div>
+        <div class="form-group">
+            <label for="investment">Total Investment Amount ($): </label>
+            <input type="number" id="investment" placeholder="Enter total investment" />
+        </div>
+        <div class="form-group">
+            <label for="stocks">Stocks Allocation (%): </label>
+            <input type="number" id="stocks" placeholder="e.g., 50" />
+        </div>
+        <div class="form-group">
+            <label for="bonds">Bonds Allocation (%): </label>
+            <input type="number" id="bonds" placeholder="e.g., 30" />
+        </div>
+        <div class="form-group">
+            <label for="cash">Cash Allocation (%): </label>
+            <input type="number" id="cash" placeholder="e.g., 20" />
+        </div>
+        <button onclick="calculateAllocation()">Calculate</button>
+    </div>
+    <h2>Allocation Results</h2>
+    <div id="results"></div>
+
+    <script>
+        function calculateAllocation() {
+            // Get input values
+            const investment = parseFloat(document.getElementById("investment").value);
+            const stocksPercent = parseFloat(document.getElementById("stocks").value);
+            const bondsPercent = parseFloat(document.getElementById("bonds").value);
+            const cashPercent = parseFloat(document.getElementById("cash").value);
+
+            // Validate input
+            if (isNaN(investment) || investment <= 0) {
+                alert("Please enter a valid total investment amount.");
+                return;
+            }
+            if (stocksPercent + bondsPercent + cashPercent !== 100) {
+                alert("The allocations must add up to 100%.");
+                return;
+            }
+
+            // Calculate allocations
+            const stocksAmount = (investment * stocksPercent) / 100;
+            const bondsAmount = (investment * bondsPercent) / 100;
+            const cashAmount = (investment * cashPercent) / 100;
+
+            // Display results
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = `
+                <p>Stocks: $${stocksAmount.toFixed(2)}</p>
+                <p>Bonds: $${bondsAmount.toFixed(2)}</p>
+                <p>Cash: $${cashAmount.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

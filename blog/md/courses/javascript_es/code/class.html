@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript functions</h1>
+<p id="demo"></p>
+
+<script>
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+
+// This will return "John Doe":
+document.write(person.fullName());
+</script>
+</body>
+</html>

@@ -1,27 +1,1073 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="../../css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses on YouTube</title>
+  <link rel="stylesheet" href="https://kevinli-webbertech.github.io/css/index.css">
+  <link rel="stylesheet" href="../../css/courses_list.css">
 </head>
 
 <body>
-<!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+  <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+  <script src="https://kevinli-webbertech.github.io/js/breadcrumb.js" defer></script>
 
-<!-- Load the element definition -->
-<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  <!-- Authentication scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  <script src="https://kevinli-webbertech.github.io/dist/js/bundle.min.js"></script>
 
-<script> 
-    function saveAsPDF() { 
-      window.print(); 
-    } 
-</script>
+  <!-- Hero -->
+  <header class="courses-hero">
+    <h1>My Courses on YouTube</h1>
+    <p>Browse all video courses — filter by topic and click to watch on YouTube.</p>
+  </header>
 
-<div class="column content">
-    <!-- Simply set the `src` attribute to your MD file and win -->
-    <zero-md src="../md/courses_list.md"></zero-md>
-    <button onclick="saveAsPDF()">Save as PDF</button> 
-</div>
+  <!-- Catalogue -->
+  <main class="courses-container">
+    <div class="dropdown-bar">
+      <label for="category-select" class="dropdown-label">Browse by category:</label>
+      <select id="category-select" class="category-dropdown">
+        <option value="" disabled selected>— Select a category —</option>
+        <option value="Introduction to IT">Introduction to IT</option>
+        <option value="Data Structures">Data Structures</option>
+        <option value="Springboot">Springboot</option>
+        <option value="Advanced Database">Advanced Database</option>
+        <option value="DevOps">DevOps</option>
+        <option value="Linux Administration">Linux Administration</option>
+      </select>
+    </div>
+    <p id="stats-count" class="stats-bar"></p>
 
+    <div id="cards-grid" class="cards-grid">
+
+      <!-- ── Introduction to IT ─────────────────────────────── -->
+
+      <article class="course-card" data-category="Introduction to IT">
+        <div class="card-body">
+          <span class="card-category" data-cat="Introduction to IT">Introduction to IT</span>
+          <h3 class="card-title">UPC, QR, and SKU Codes</h3>
+          <p class="card-description">Learn product identification, UPC check digits, safe QR code scanning, and SKU design through practical inventory exercises.</p>
+          <a class="card-watch-btn" href="courses/IT_Foundations/upc_qr_sku.html">Read Tutorial</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Introduction to IT">
+        <a href="https://youtu.be/e-cDbv52KMw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/e-cDbv52KMw/hqdefault.jpg" alt="Introduction to AI Tool to Help You Code" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Introduction to IT">Introduction to IT</span>
+          <h3 class="card-title">Introduction to AI Tool to Help You Code</h3>
+          <p class="card-description">Learn how to download, install VS Code and set up GitHub Copilot. Demo of quickly developing web-based software with AI — no expert knowledge required. Targeted at entry-level CS/IT students, UI/UX designers, and technical project managers.</p>
+          <a class="card-watch-btn" href="https://youtu.be/e-cDbv52KMw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Introduction to IT">
+        <a href="https://youtu.be/9miSLGGaea8" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/9miSLGGaea8/hqdefault.jpg" alt="Use AI Tool to Write Python Code" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Introduction to IT">Introduction to IT</span>
+          <h3 class="card-title">Use AI Tool to Write Python Code</h3>
+          <p class="card-description">Use AI assistants to generate, explain, and debug Python code effectively.</p>
+          <a class="card-watch-btn" href="https://youtu.be/9miSLGGaea8" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Introduction to IT">
+        <a href="https://youtu.be/DXW6wwu62WA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/DXW6wwu62WA/hqdefault.jpg" alt="Use AI Tool to Write JavaScript Code" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Introduction to IT">Introduction to IT</span>
+          <h3 class="card-title">Use AI Tool to Write JavaScript Code</h3>
+          <p class="card-description">Use AI assistants to generate and debug JavaScript code effectively.</p>
+          <a class="card-watch-btn" href="https://youtu.be/DXW6wwu62WA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Introduction to IT">
+        <a href="https://youtu.be/mzUct46-NRU" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/mzUct46-NRU/hqdefault.jpg" alt="Use AI Tool to Write Java Code" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Introduction to IT">Introduction to IT</span>
+          <h3 class="card-title">Use AI Tool to Write Java Code</h3>
+          <p class="card-description">Use AI assistants to generate and debug Java code effectively.</p>
+          <a class="card-watch-btn" href="https://youtu.be/mzUct46-NRU" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Data Structures ────────────────────────────────── -->
+
+      <article class="course-card" data-category="Data Structures">
+        <a href="https://youtu.be/CoEXq3Py4W4" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/CoEXq3Py4W4/hqdefault.jpg" alt="Introduction to Leetcode" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Data Structures">Data Structures</span>
+          <h3 class="card-title">Introduction to Leetcode</h3>
+          <p class="card-description">Get started with algorithmic problem-solving on Leetcode and build a strong foundation in data structures.</p>
+          <a class="card-watch-btn" href="https://youtu.be/CoEXq3Py4W4" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Springboot ─────────────────────────────────────── -->
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/2j1UbL3jp2E" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/2j1UbL3jp2E/hqdefault.jpg" alt="Class 1: Springboot Introduction" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Class 1: Springboot Introduction</h3>
+          <p class="card-description">Springboot introduction, history, Servlet, JSP, JSTL and Spring framework history.</p>
+          <a class="card-watch-btn" href="https://youtu.be/2j1UbL3jp2E" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/hVlgJDO9Tdo" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/hVlgJDO9Tdo/hqdefault.jpg" alt="Running Springboot with Gradle" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Running Springboot with Gradle</h3>
+          <p class="card-description">Step-by-step guide to running a Springboot project using Gradle.</p>
+          <a class="card-watch-btn" href="https://youtu.be/hVlgJDO9Tdo" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/KU8GiAz4Cks" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/KU8GiAz4Cks/hqdefault.jpg" alt="Running Springboot with Maven" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Running Springboot with Maven</h3>
+          <p class="card-description">Run Springboot with Maven. Package an executable JAR and deploy to production with <code>java -jar</code>.</p>
+          <a class="card-watch-btn" href="https://youtu.be/KU8GiAz4Cks" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/0fXm_JdAVfY" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/0fXm_JdAVfY/hqdefault.jpg" alt="Running Springboot Inside IntelliJ" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Running Springboot Inside IntelliJ</h3>
+          <p class="card-description">Add DevTools, Actuator and the Maven dashboard. Explore other dashboards and troubleshoot inside IntelliJ.</p>
+          <a class="card-watch-btn" href="https://youtu.be/0fXm_JdAVfY" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/YdxwmpJ_294" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/YdxwmpJ_294/hqdefault.jpg" alt="Class 2: MySQL Installation and Configuration" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Class 2: MySQL Installation &amp; Configuration</h3>
+          <p class="card-description">Install MySQL server locally for Springboot to connect. Create a username and password with the right permissions for the Springboot service to connect to the database.</p>
+          <a class="card-watch-btn" href="https://youtu.be/YdxwmpJ_294" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/fJ_ON7b0QXs" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/fJ_ON7b0QXs/hqdefault.jpg" alt="JDK Version Troubleshooting" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">JDK Version Troubleshooting</h3>
+          <p class="card-description">Fix Java version mismatches in pom.xml or build.gradle. Covers how to download the right JDK directly from IntelliJ for rapid development.</p>
+          <a class="card-watch-btn" href="https://youtu.be/fJ_ON7b0QXs" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/URhT2xrDhzE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/URhT2xrDhzE/hqdefault.jpg" alt="application.properties Configuration" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">application.properties Configuration</h3>
+          <p class="card-description">How to configure database-related attributes in the application.properties file under the resource folder of a Springboot application.</p>
+          <a class="card-watch-btn" href="https://youtu.be/URhT2xrDhzE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/brgtuznYBIA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/brgtuznYBIA/hqdefault.jpg" alt="JPA Code Dive" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">JPA Code Dive</h3>
+          <p class="card-description">Deep dive into how JPA annotations work and how the JPA layer operates inside a Springboot application.</p>
+          <a class="card-watch-btn" href="https://youtu.be/brgtuznYBIA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/YUYaMvw1Tuo" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/YUYaMvw1Tuo/hqdefault.jpg" alt="Class 3: Build Docker Image from Springboot" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Class 3: Build a Docker Image from Springboot</h3>
+          <p class="card-description">Springboot provides a way to quickly build a Docker image without writing a Dockerfile. This video shows you how to do it with just one command.</p>
+          <a class="card-watch-btn" href="https://youtu.be/YUYaMvw1Tuo" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Springboot">
+        <a href="https://youtu.be/bbI3W9RzVEE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/bbI3W9RzVEE/hqdefault.jpg" alt="Deploy Springboot Docker Image to Kubernetes" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Springboot">Springboot</span>
+          <h3 class="card-title">Deploy Springboot Docker Image to Kubernetes</h3>
+          <p class="card-description">A complete walkthrough of deploying your Docker image from Docker Hub into a Kubernetes cluster.</p>
+          <a class="card-watch-btn" href="https://youtu.be/bbI3W9RzVEE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Advanced Database ───────────────────────────────── -->
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/PffS9Sd-biQ" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/PffS9Sd-biQ/hqdefault.jpg" alt="#1 Connect to MySQL From Command Line" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#1 Connect to MySQL From Command Line</h3>
+          <p class="card-description">Learn how to connect and log in to a MySQL server from the command line.</p>
+          <a class="card-watch-btn" href="https://youtu.be/PffS9Sd-biQ" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/MzuLEmGtDAo" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/MzuLEmGtDAo/hqdefault.jpg" alt="#2 Run SQL Commands in Terminal" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#2 Run SQL Commands in Terminal</h3>
+          <p class="card-description">Run SQL commands directly inside a terminal MySQL session.</p>
+          <a class="card-watch-btn" href="https://youtu.be/MzuLEmGtDAo" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/_5LOxnPgM6k" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/_5LOxnPgM6k/hqdefault.jpg" alt="#3 Create Databases and Tables" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#3 Create Databases and Tables</h3>
+          <p class="card-description">Create databases and tables in MySQL. Covers several handy DDL commands you'll use regularly.</p>
+          <a class="card-watch-btn" href="https://youtu.be/_5LOxnPgM6k" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/3v4b8mytGfY" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/3v4b8mytGfY/hqdefault.jpg" alt="#4 Connect to MySQL From DBeaver" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#4 Connect to MySQL From DBeaver</h3>
+          <p class="card-description">DBeaver is an open-source GUI to connect to MySQL with advanced features: ER diagram visualisation, DDL/DML code generation, and more.</p>
+          <a class="card-watch-btn" href="https://youtu.be/3v4b8mytGfY" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/JhsDWNYEOEw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/JhsDWNYEOEw/hqdefault.jpg" alt="#5 Cassandra Part I: Introduction" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#5 Cassandra — Part I: Introduction</h3>
+          <p class="card-description">Introduction to Apache Cassandra, a wide-column NoSQL database built for high availability at scale.</p>
+          <a class="card-watch-btn" href="https://youtu.be/JhsDWNYEOEw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/x5b_fXANe2M" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/x5b_fXANe2M/hqdefault.jpg" alt="#6 Cassandra Part II: Mac Installation via Homebrew" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#6 Cassandra — Part II: Mac Installation via Homebrew</h3>
+          <p class="card-description">Install Apache Cassandra on macOS using Homebrew in a few simple steps.</p>
+          <a class="card-watch-btn" href="https://youtu.be/x5b_fXANe2M" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Advanced Database">
+        <a href="https://youtu.be/SMg3Sq60rVg" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/SMg3Sq60rVg/hqdefault.jpg" alt="#7 Cassandra Part III: Installation Continued" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Advanced Database">Advanced Database</span>
+          <h3 class="card-title">#7 Cassandra — Part III: Installation Continued</h3>
+          <p class="card-description">Continue the Cassandra installation and complete the initial configuration.</p>
+          <a class="card-watch-btn" href="https://youtu.be/SMg3Sq60rVg" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── DevOps ──────────────────────────────────────────── -->
+      <!-- ── Docker ──────────────────────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/W8OsT-SbatU" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/W8OsT-SbatU/hqdefault.jpg" alt="Introduction to Docker" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Introduction to Docker</h3>
+          <p class="card-description">Basic concepts of Docker image, container, and engine. Runs a couple of simple Docker containers using an NGINX web server image.</p>
+          <a class="card-watch-btn" href="https://youtu.be/W8OsT-SbatU" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/ilFiaUmI4eA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/ilFiaUmI4eA/hqdefault.jpg" alt="Docker Desktop" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Docker Desktop</h3>
+          <p class="card-description">Docker Desktop installation and using its built-in terminal to manage images and containers.</p>
+          <a class="card-watch-btn" href="https://youtu.be/ilFiaUmI4eA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/sQTVyFY0mcc" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/sQTVyFY0mcc/hqdefault.jpg" alt="Debug Python Deployment with Docker" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Debug Python Deployment with Docker</h3>
+          <p class="card-description">When deploying a software app in a container, port conflicts can arise. Learn how to troubleshoot whether a port is occupied by another container or a native OS app.</p>
+          <a class="card-watch-btn" href="https://youtu.be/sQTVyFY0mcc" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/TeSx--011WQ" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/TeSx--011WQ/hqdefault.jpg" alt="How to Write a Dockerfile" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">How to Write a Dockerfile</h3>
+          <p class="card-description">Explains how to write a Dockerfile to build a custom Docker image from scratch.</p>
+          <a class="card-watch-btn" href="https://youtu.be/TeSx--011WQ" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/zTLDYTwvC14" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/zTLDYTwvC14/hqdefault.jpg" alt="Docker MySQL Database" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Docker MySQL Database</h3>
+          <p class="card-description">Run a MySQL server inside a Docker container with its data directory mounted as a volume — a popular pattern in production environments.</p>
+          <a class="card-watch-btn" href="https://youtu.be/zTLDYTwvC14" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/k8LgA0iiNJc" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/k8LgA0iiNJc/hqdefault.jpg" alt="Docker Registry / Docker Hub Part I" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Docker Registry / Docker Hub — Part I</h3>
+          <p class="card-description">Introduction to Docker Registry and Docker Hub: core concepts and account setup.</p>
+          <a class="card-watch-btn" href="https://youtu.be/k8LgA0iiNJc" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/cfihDv9FeIA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/cfihDv9FeIA/hqdefault.jpg" alt="Docker Registry / Docker Hub Part II" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Docker Registry / Docker Hub — Part II</h3>
+          <p class="card-description">Push and manage Docker images on Docker Hub.</p>
+          <a class="card-watch-btn" href="https://youtu.be/cfihDv9FeIA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/HSbDxOzgs2o" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/HSbDxOzgs2o/hqdefault.jpg" alt="Docker Registry / Docker Hub Part III" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Docker Registry / Docker Hub — Part III</h3>
+          <p class="card-description">Advanced Docker Hub workflows including private repositories and pulling images in production.</p>
+          <a class="card-watch-btn" href="https://youtu.be/HSbDxOzgs2o" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Podman (under DevOps) ───────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/sUTmkxHFP_w" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/sUTmkxHFP_w/hqdefault.jpg" alt="Podman Part I Intro to Podman" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Podman Part I Intro to Podman</h3>
+          <p class="card-description">Podman is a next-gen Docker? Let us take a look.</p>
+          <a class="card-watch-btn" href="https://youtu.be/sUTmkxHFP_w" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/ZFJD0_tYNGE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/ZFJD0_tYNGE/hqdefault.jpg" alt="Podman Installation" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Podman Installation</h3>
+          <p class="card-description">Podman Part II Podman Installation.</p>
+          <a class="card-watch-btn" href="https://youtu.be/ZFJD0_tYNGE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/11AWfSwMDWI" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/11AWfSwMDWI/hqdefault.jpg" alt="Podman Part III Handson Lab" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Podman Part III Handson Lab</h3>
+          <p class="card-description">Run a http server container and host a website with podman.</p>
+          <a class="card-watch-btn" href="https://youtu.be/11AWfSwMDWI" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Github (under DevOps) ────────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/gora5FxB6Fo" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/gora5FxB6Fo/hqdefault.jpg" alt="Introduction to Git History" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Introduction to Git History</h3>
+          <p class="card-description">This video is an introduction to Git client and Git server.</p>
+          <a class="card-watch-btn" href="https://youtu.be/gora5FxB6Fo" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/S7kc-7CXUp8" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/S7kc-7CXUp8/hqdefault.jpg" alt="Introduction to Github Server" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Introduction to Github Server</h3>
+          <p class="card-description">This is an introduction to Github Repo.</p>
+          <a class="card-watch-btn" href="https://youtu.be/S7kc-7CXUp8" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/y2PRIVXVE6M" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/y2PRIVXVE6M/hqdefault.jpg" alt="GIT branches and Pull Request" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">GIT branches and Pull Request</h3>
+          <p class="card-description">This is a short intro to the web UI of github Repo about checking branches and PR.</p>
+          <a class="card-watch-btn" href="https://youtu.be/y2PRIVXVE6M" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/shp7E1hbLJQ" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/shp7E1hbLJQ/hqdefault.jpg" alt="Generate Github Developer Token" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Generate Github Developer Token</h3>
+          <p class="card-description">Github token can be used for accessing the github repo as a password and used for connecting to Jenkins for CICD. In this video, we will see how to generate it.</p>
+          <a class="card-watch-btn" href="https://youtu.be/shp7E1hbLJQ" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/cfgqrfxmNGU" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/cfgqrfxmNGU/hqdefault.jpg" alt="Git Authentication with SSH Key" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Git Authentication with SSH Key</h3>
+          <p class="card-description">Use Public/Private Key to authenticate with Github.</p>
+          <a class="card-watch-btn" href="https://youtu.be/cfgqrfxmNGU" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Jenkins (under DevOps) ───────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/3lGB6_xsbkE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/3lGB6_xsbkE/hqdefault.jpg" alt="Intro to Jenkins CICD Pipeline" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Intro to Jenkins CICD Pipeline</h3>
+          <p class="card-description">Jenkins introduction, installation with the WAR file, and the fundamentals of CI/CD pipelines.</p>
+          <a class="card-watch-btn" href="https://youtu.be/3lGB6_xsbkE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/6FG_l76cjns" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/6FG_l76cjns/hqdefault.jpg" alt="Jenkins Docker Installation" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Jenkins Docker Installation</h3>
+          <p class="card-description">Run Jenkins inside a Docker container and configure a Freestyle Project.</p>
+          <a class="card-watch-btn" href="https://youtu.be/6FG_l76cjns" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/IJ_eWhA39Ls" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/IJ_eWhA39Ls/hqdefault.jpg" alt="Jenkins Pipeline GitHub Integration" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Jenkins Pipeline GitHub Integration</h3>
+          <p class="card-description">Set up a Pipeline Project, write a Jenkinsfile, and integrate Jenkins with a public GitHub repository.</p>
+          <a class="card-watch-btn" href="https://youtu.be/IJ_eWhA39Ls" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/n-HaC1XaEy0" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/n-HaC1XaEy0/hqdefault.jpg" alt="Jenkins Private GitHub Repo Lab2 Tutorial" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Jenkins Private GitHub Repo Lab2 Tutorial</h3>
+          <p class="card-description">Configure a Jenkins pipeline to check out code from a private GitHub repository using credentials.</p>
+          <a class="card-watch-btn" href="https://youtu.be/n-HaC1XaEy0" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Nexus (under DevOps) ───────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/LZfwn81gNgk" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/LZfwn81gNgk/hqdefault.jpg" alt="Intro to Nexus Repository Manager" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Intro to Nexus Repository Manager</h3>
+          <p class="card-description">An introduction to what Nexus Repository Manager is and how to install it.</p>
+          <a class="card-watch-btn" href="https://youtu.be/LZfwn81gNgk" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/eFl1FKTUYuA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/eFl1FKTUYuA/hqdefault.jpg" alt="Run Dockerized Nexus" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Run Dockerized Nexus</h3>
+          <p class="card-description">Spin up Nexus in a Docker container and upload an artifact to Nexus storage.</p>
+          <a class="card-watch-btn" href="https://youtu.be/eFl1FKTUYuA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/LhXtcpHsPrU" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/LhXtcpHsPrU/hqdefault.jpg" alt="Nexus Lab 2: Jenkins Integration" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Nexus Lab 2: Jenkins Integration</h3>
+          <p class="card-description">A Jenkins pipeline builds a jar with Maven and deploys it straight to Nexus — connecting the two containers on a shared Docker network and storing deploy credentials safely in Jenkins.</p>
+          <a class="card-watch-btn" href="https://youtu.be/LhXtcpHsPrU" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── K8s (under DevOps) ───────────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/o-TrmPxE8bc" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/o-TrmPxE8bc/hqdefault.jpg" alt="Introduction to K8s" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Introduction to K8s</h3>
+          <p class="card-description">Introduction to Kubernetes.</p>
+          <a class="card-watch-btn" href="https://youtu.be/o-TrmPxE8bc" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/mloKRLJ0sTw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/mloKRLJ0sTw/hqdefault.jpg" alt="K8s Installation" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Installation</h3>
+          <p class="card-description">This video shows you how to quickly install K8s on your local machine and start a quick learning journey.</p>
+          <a class="card-watch-btn" href="https://youtu.be/mloKRLJ0sTw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/oOh_H8BjVY8" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/oOh_H8BjVY8/hqdefault.jpg" alt="K8s Portforwarding" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Portforwarding</h3>
+          <p class="card-description">In this video, we deploy an app using an existing image and deploy it using NodeType. We will use portforwarding to make the random port stick to a fixed port so ease other network management.</p>
+          <a class="card-watch-btn" href="https://youtu.be/oOh_H8BjVY8" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/5v5-maocw_E" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/5v5-maocw_E/hqdefault.jpg" alt="K8s Load Balancer" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Load Balancer</h3>
+          <p class="card-description">In this video, I will show you how to use a load balancer to deploy an app and we can easily scale up the app instances to more than 1 pod.</p>
+          <a class="card-watch-btn" href="https://youtu.be/5v5-maocw_E" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/ENz_Pd-91yk" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/ENz_Pd-91yk/hqdefault.jpg" alt="Deployment with LoadBalancer and Tunnel in K8s" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Deployment with LoadBalancer and Tunnel in K8s</h3>
+          <p class="card-description">Tunnel will a fixed port and access load balancer with the fixed port.</p>
+          <a class="card-watch-btn" href="https://youtu.be/ENz_Pd-91yk" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/qG1BSvBvzrk" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/qG1BSvBvzrk/hqdefault.jpg" alt="Create a LoadBalancer Deployment with yaml file" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">Create a LoadBalancer Deployment with yaml file</h3>
+          <p class="card-description">In K8s, we gradually need to create a yaml file to create a deployment and service. In this example, I would show you one example we can do the deployment with a yaml file and in the conf file, we can write more detailed configuration to finely control the deployment.</p>
+          <a class="card-watch-btn" href="https://youtu.be/qG1BSvBvzrk" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── K8s Helm series ─────────────────────────────────── -->
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/gax79P0YEkE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/gax79P0YEkE/hqdefault.jpg" alt="K8s Helm Introduction" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Introduction</h3>
+          <p class="card-description">Introduction to Helm, the package manager for Kubernetes — what it is and why it simplifies K8s deployments.</p>
+          <a class="card-watch-btn" href="https://youtu.be/gax79P0YEkE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/udSMH5OvU1c" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/udSMH5OvU1c/hqdefault.jpg" alt="K8s Helm Installation" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Installation</h3>
+          <p class="card-description">Install Helm on your local machine and set it up to work with your K8s cluster.</p>
+          <a class="card-watch-btn" href="https://youtu.be/udSMH5OvU1c" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/NfxiGGV9u6E" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/NfxiGGV9u6E/hqdefault.jpg" alt="K8s Helm Nginx Deployment" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Nginx Deployment</h3>
+          <p class="card-description">Deploy an Nginx server using a Helm chart — configure a values.yml file to drive the Helm deployment.</p>
+          <a class="card-watch-btn" href="https://youtu.be/NfxiGGV9u6E" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/oQMri2bbXjw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/oQMri2bbXjw/hqdefault.jpg" alt="K8s Helm Deployment with Custom Values" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Deployment with Custom Values</h3>
+          <p class="card-description">Override default chart values with a custom values file to tailor a Helm deployment to your environment.</p>
+          <a class="card-watch-btn" href="https://youtu.be/oQMri2bbXjw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/3zoIYWMsAhI" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/3zoIYWMsAhI/hqdefault.jpg" alt="K8s Helm Upgrade and Rollback Release" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Upgrade and Rollback Release</h3>
+          <p class="card-description">Upgrade a Helm release using a modified or specified values file, and roll back to a previous deployment revision.</p>
+          <a class="card-watch-btn" href="https://youtu.be/3zoIYWMsAhI" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/Wlvtzai4dsk" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/Wlvtzai4dsk/hqdefault.jpg" alt="K8s Helm Lint DryRun Preview" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Lint DryRun Preview</h3>
+          <p class="card-description">Use <code>helm lint</code> and <code>--dry-run</code> to validate a chart and preview the rendered manifests before deploying.</p>
+          <a class="card-watch-btn" href="https://youtu.be/Wlvtzai4dsk" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/2P_xtPW2Wtw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/2P_xtPW2Wtw/hqdefault.jpg" alt="K8s Helm Chart Dependencies" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Chart Dependencies</h3>
+          <p class="card-description">Define and manage sub-chart dependencies in a Helm chart and download them with <code>helm dependency update</code>.</p>
+          <a class="card-watch-btn" href="https://youtu.be/2P_xtPW2Wtw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/ieheNh5TTjA" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/ieheNh5TTjA/hqdefault.jpg" alt="K8s Helm Namespace" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Namespace</h3>
+          <p class="card-description">Scope Helm deployments to specific Kubernetes namespaces to keep environments isolated and organised.</p>
+          <a class="card-watch-btn" href="https://youtu.be/ieheNh5TTjA" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/zr7g2GcY_QU" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/zr7g2GcY_QU/hqdefault.jpg" alt="K8s Helm Template Debugging" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Helm Template Debugging</h3>
+          <p class="card-description">Use <code>helm template</code> to render and debug chart templates locally without connecting to a cluster.</p>
+          <a class="card-watch-btn" href="https://youtu.be/zr7g2GcY_QU" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="DevOps">
+        <a href="https://youtu.be/Gl_nCgFKiTw" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/Gl_nCgFKiTw/hqdefault.jpg" alt="K8s Create Certificates and Ingress Configuration of TLS" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="DevOps">DevOps</span>
+          <h3 class="card-title">K8s Create Certificates and Ingress Configuration of TLS</h3>
+          <p class="card-description">Generate TLS certificates and configure them in the Kubernetes Ingress file to enable HTTPS for your services.</p>
+          <a class="card-watch-btn" href="https://youtu.be/Gl_nCgFKiTw" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <!-- ── Linux Administration ───────────────────────────── -->
+
+      <article class="course-card" data-category="Linux Administration">
+        <a href="https://youtu.be/Zg9VGBk-cDQ" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/Zg9VGBk-cDQ/hqdefault.jpg" alt="Linux Commands - sed command" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Linux Administration">Linux Administration</span>
+          <h3 class="card-title">Linux Commands — sed</h3>
+          <p class="card-description">Introduction to <code>sed</code>, the stream editor for filtering and transforming text in Linux pipelines.</p>
+          <a class="card-watch-btn" href="https://youtu.be/Zg9VGBk-cDQ" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Linux Administration">
+        <a href="https://youtu.be/CmoWjAKJico" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/CmoWjAKJico/hqdefault.jpg" alt="Linux Commands - tr command" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Linux Administration">Linux Administration</span>
+          <h3 class="card-title">Linux Commands — tr</h3>
+          <p class="card-description">Use the <code>tr</code> command to translate, squeeze, or delete characters from standard input.</p>
+          <a class="card-watch-btn" href="https://youtu.be/CmoWjAKJico" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Linux Administration">
+        <a href="https://youtu.be/0OIgBrWfXMM" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/0OIgBrWfXMM/hqdefault.jpg" alt="Linux Commands - awk command" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Linux Administration">Linux Administration</span>
+          <h3 class="card-title">Linux Commands — awk</h3>
+          <p class="card-description"><code>awk</code> is a powerful text-processing tool in Linux. A quick introduction to what it can do and how to use it.</p>
+          <a class="card-watch-btn" href="https://youtu.be/0OIgBrWfXMM" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Linux Administration">
+        <a href="https://youtu.be/B97Q5Ed1D9U" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/B97Q5Ed1D9U/hqdefault.jpg" alt="Linux Commands - Hardware Commands Part II" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Linux Administration">Linux Administration</span>
+          <h3 class="card-title">Linux Commands — Hardware Commands Part II</h3>
+          <p class="card-description">Explore hardware inspection commands including <code>/proc/cpuinfo</code>, <code>/proc/meminfo</code>, <code>dmidecode</code>, and <code>hdparm</code>.</p>
+          <a class="card-watch-btn" href="https://youtu.be/B97Q5Ed1D9U" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="Linux Administration">
+        <a href="https://youtu.be/PxvxpWq8YtE" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <div class="card-thumbnail">
+            <img src="https://img.youtube.com/vi/PxvxpWq8YtE/hqdefault.jpg" alt="Linux Commands - Disk Usage" loading="lazy"
+                 onerror="this.src='https://placehold.co/480x270/1a1a2e/ffffff?text=Course+Video'">
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="card-category" data-cat="Linux Administration">Linux Administration</span>
+          <h3 class="card-title">Linux Commands — Disk Usage</h3>
+          <p class="card-description">Monitor disk usage in Linux using commands such as <code>du</code>, <code>df</code>, <code>fdisk</code>, <code>free</code>, and more.</p>
+          <a class="card-watch-btn" href="https://youtu.be/PxvxpWq8YtE" target="_blank" rel="noopener noreferrer">&#9654; Watch on YouTube</a>
+        </div>
+      </article>
+
+    </div><!-- /#cards-grid -->
+  </main>
+
+  <script src="../../js/courses_list.js" defer></script>
 </body>
 </html>

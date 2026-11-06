@@ -1,12 +1,12 @@
-### Handling Missing Values in Pandas
+# Handling Missing Values in Pandas
 
 Missing data is a common issue in real-life datasets, affecting the accuracy and reliability of analyses and models. Pandas provides powerful tools to handle missing values effectively. Let's explore various techniques to deal with missing data along with examples.
 
-#### When and Why Data Is Missed?
+## When and Why Data Is Missed?
 
 Data can be missing due to various reasons such as incomplete surveys, user omission, or technical issues. Addressing missing data is crucial to maintain data quality and ensure accurate analysis.
 
-#### Check for Missing Values
+## Check for Missing Values
 
 Pandas offers `isnull()` and `notnull()` functions to detect missing values.
 

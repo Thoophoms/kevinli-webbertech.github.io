@@ -16,3 +16,21 @@ https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
 
 https://www.markdownguide.org/cheat-sheet/
 
+<h2> markdown viewer </h2>
+			Most files in my blog are written in markdown file.
+			I do not have backend to convert markdown to html
+			To better read the markdown file of my blog, please install Markdown viewer plugin in your broswer.
+
+
+Here is a link of google chrome plugin,
+			
+<p>https://github.com/simov/markdown-viewer#table-of-contents</p>
+			
+<img src="../blog/images/markdown/md0.png" />
+			
+<p>Enable this plugin and show it in your browser tool bar, and configure advanced options.
+Then it will look like the following,
+</p>
+
+<img src="../blog/images/markdown/md1.png" width="915" height="492" />
+

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#fbfbfd"/>
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#1f2937">Common Spreadsheet Chart Types</text>
+  <rect x="60" y="80" width="180" height="210" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="110" y="210" width="20" height="50" fill="#60a5fa"/>
+  <rect x="140" y="180" width="20" height="80" fill="#3b82f6"/>
+  <rect x="170" y="140" width="20" height="120" fill="#2563eb"/>
+  <text x="150" y="285" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Column</text>
+  <rect x="270" y="80" width="180" height="210" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <polyline points="300,230 340,180 380,190 420,130" fill="none" stroke="#10b981" stroke-width="5"/>
+  <circle cx="300" cy="230" r="5" fill="#10b981"/><circle cx="340" cy="180" r="5" fill="#10b981"/><circle cx="380" cy="190" r="5" fill="#10b981"/><circle cx="420" cy="130" r="5" fill="#10b981"/>
+  <text x="360" y="285" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Line</text>
+  <rect x="480" y="80" width="180" height="210" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <path d="M570 170 L570 110 A60 60 0 0 1 622 200 Z" fill="#f59e0b"/>
+  <path d="M570 170 L622 200 A60 60 0 0 1 520 218 Z" fill="#f97316"/>
+  <path d="M570 170 L520 218 A60 60 0 1 1 570 110 Z" fill="#fcd34d"/>
+  <text x="570" y="285" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Pie</text>
+  <rect x="690" y="80" width="150" height="210" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <circle cx="730" cy="220" r="6" fill="#ef4444"/>
+  <circle cx="760" cy="180" r="6" fill="#ef4444"/>
+  <circle cx="790" cy="145" r="6" fill="#ef4444"/>
+  <circle cx="805" cy="120" r="6" fill="#ef4444"/>
+  <text x="765" y="285" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Scatter</text>
+</svg>

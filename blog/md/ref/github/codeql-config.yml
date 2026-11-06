@@ -1,0 +1,14 @@
+name: "Custom CodeQL Configuration"
+
+queries:
+  - uses: security-and-quality
+
+paths:
+  - include: src/
+  - exclude: src/webapp/assets/
+  - exclude: target/
+  - exclude: test/
+  - exclude: node_modules/
+  - exclude: .github/
+  - exclude: .run
+  - exclude: .idea

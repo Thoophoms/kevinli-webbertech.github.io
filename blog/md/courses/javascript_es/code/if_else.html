@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript if(){}_else{}/else_if(){}/else{}</h2>
+
+<p>This program is to test our if else logics</p>
+
+<p id="demo">Good Evening!</p>
+
+
+<script>
+    var currentTime = new Date().getHours(); // based in 24 hrs format
+    document.write("<h2>This is an complete example of using, only if</h2>");
+    if (currentTime < 16) { // fasting at 4 PM
+        document.getElementById("demo").innerHTML = "Reminder to eat your brunch!!";
+    } else {
+        document.getElementById("demo").innerHTML = "Reminder to eat your dinner!!";
+    }
+</script>
+
+
+
+
+</body>
+</html>

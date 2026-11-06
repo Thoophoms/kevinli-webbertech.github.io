@@ -1,3 +1,5 @@
+# Pandas Aggregation
+
 Once the rolling, expanding and ewm objects are created, several methods are available to perform aggregations on data.
 
 ### Apply Aggregation on a Whole DataFrame
