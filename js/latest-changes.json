@@ -1,5 +1,15 @@
 [
   {
+    "sha": "b992b989",
+    "date": "2026-11-06T13:19:24-05:00",
+    "message": "Retry GitHub Pages deployment"
+  },
+  {
+    "sha": "a4b9fa7a",
+    "date": "2026-11-06T12:41:37-05:00",
+    "message": "Consolidate trading syllabus into Trading Course page"
+  },
+  {
     "sha": "f834e95d",
     "date": "2026-11-06T12:38:08-05:00",
     "message": "Show 14 featured classes and latest commit notices with confirmation popup"
@@ -13,15 +23,5 @@
     "sha": "4ed69b9b",
     "date": "2026-11-05T18:02:07-05:00",
     "message": "new changes"
-  },
-  {
-    "sha": "6cdcf3bf",
-    "date": "2026-11-05T15:59:34-05:00",
-    "message": "website css update"
-  },
-  {
-    "sha": "1718e62a",
-    "date": "2026-11-04T12:33:14-05:00",
-    "message": "updated images"
   }
 ]
