@@ -17,6 +17,17 @@ This tutorial demonstrates updating Pod configurations using ConfigMaps in Kuber
 - Update configuration via a ConfigMap in a Pod possessing a Sidecar Container.
 - Update configuration via an immutable ConfigMap that is mounted as a volume.
 
+## Quick ConfigMap creation and inspection
+
+A minimal ConfigMap can be created directly from the command line without a manifest:
+
+```shell
+kubectl create configmap app-config --from-literal=APP_ENV=development
+kubectl get configmap app-config -o yaml
+```
+
+A ConfigMap alone does not configure a container: reference it through environment variables or volumes in the workload manifest, as shown in the scenarios below. Use Secrets for sensitive configuration, and never commit real credentials. Base64 encoding in a Secret manifest is not encryption.
+
 ## Update configuration via a ConfigMap mounted as a Volume
 
 1.  **Create ConfigMap:**
@@ -684,6 +695,7 @@ kubectl delete deployment configmap-volume configmap-env-var configmap-two-conta
 kubectl delete service configmap-service configmap-sidecar-service
 kubectl delete configmap sport fruits color company-name-20240312
 kubectl delete configmap company-name-20150801 # In case it was not handled during the task execution
+kubectl delete configmap app-config
 ```
 
 ## Ref

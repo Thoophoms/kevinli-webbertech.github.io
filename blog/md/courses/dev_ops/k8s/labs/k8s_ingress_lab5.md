@@ -1,5 +1,5 @@
 
-# K8s Ingress Lab1 Setup
+# K8s Ingress Lab5 Setup
 
 ## Install Prerequisites
 

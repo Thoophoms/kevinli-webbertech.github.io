@@ -301,23 +301,7 @@ Check that the Service selector matches Pod labels, the Pods are ready, and `tar
 
 ## Work with YAML manifests
 
-This optional example creates a separate `web` Deployment. Generating YAML makes it easier to review and reuse configuration:
-
-```shell
-kubectl create deployment web --image=nginx:stable --replicas=2 --dry-run=client -o yaml > web-deployment.yaml
-kubectl apply --dry-run=server -f web-deployment.yaml
-kubectl diff -f web-deployment.yaml
-kubectl apply -f web-deployment.yaml
-kubectl rollout status deployment/web --timeout=120s
-```
-
-- `--dry-run=client` generates the manifest without creating a resource.
-- `--dry-run=server` asks the API server to validate the request without persisting it; it requires cluster access and permissions.
-- `diff` previews changes. Exit code 1 means differences were found, not that validation failed; codes greater than 1 indicate errors.
-- `apply` creates or updates resources declaratively. You can also use `kubectl apply -f ./manifests/` for a directory of manifests.
-- Shell redirection with `>` overwrites an existing local file. Review generated manifests before applying them.
-
-`nginx:stable` is convenient for a lab but is a moving tag. Pin a tested version or image digest for reproducible deployments.
+See [K8s YAML Manifests](k8s_yaml_manifests.md) for generating, reviewing, and applying a Deployment from YAML. That page creates an optional `web` Deployment that is reused below and in [K8s Update and Roll Back Your App](k8s_rollout.md).
 
 ## Scale your app
 
@@ -332,142 +316,19 @@ Scaling changes the desired replica count. If you also manage replicas in a YAML
 
 ## Update and roll back your app
 
-For the optional `web` Deployment created from YAML above:
-
-```shell
-kubectl set image deployment/web nginx=nginx:alpine
-kubectl rollout status deployment/web --timeout=120s
-kubectl rollout history deployment/web
-kubectl rollout undo deployment/web
-kubectl rollout status deployment/web --timeout=120s
-```
-
-In `nginx=nginx:alpine`, the left side is the container name, not the Deployment name. This switches image variants for demonstration, not necessarily to a newer version. A rollback restores the previous Pod template and requires a retained earlier revision; it does not restore databases or external configuration. Use `--to-revision=<revision>` with `rollout undo` to select a revision shown by `rollout history`.
-
-Other useful rollout commands:
-
-```shell
-kubectl rollout restart deployment/hello-node
-kubectl rollout status deployment/hello-node --timeout=120s
-kubectl rollout pause deployment/web
-kubectl rollout resume deployment/web
-```
-
-`restart` replaces Pods through a rolling update; it does not restart the cluster. `pause` suspends rollout of Pod-template changes, not application traffic; resume before expecting updates or rollback. Keep your YAML in sync with any desired imperative changes.
+See [K8s Update and Roll Back Your App](k8s_rollout.md) for rolling updates, rollout history, and rollbacks, including how to pause and resume a rollout.
 
 ## ConfigMaps and storage inspection
 
-Create a non-sensitive configuration value:
-
-```shell
-kubectl create configmap app-config --from-literal=APP_ENV=development
-kubectl get configmap app-config -o yaml
-```
-
-A ConfigMap alone does not configure a container: reference it through environment variables or volumes in the workload manifest. Use Secrets for sensitive configuration, and never commit real credentials. Base64 encoding in a Secret manifest is not encryption.
-
-To inspect storage resources:
-
-```shell
-kubectl get pvc
-kubectl get pv
-kubectl get storageclass
-```
-
-PersistentVolumeClaims are namespaced; PersistentVolumes and StorageClasses are cluster-scoped. Deleting a claim can delete its backing storage depending on the reclaim policy.
+See [K8s ConfigMap](k8s_configmap.md) for creating and consuming ConfigMaps (including a quick imperative creation example), and [K8s Storage Inspection](k8s_storage.md) for inspecting PersistentVolumeClaims, PersistentVolumes, and StorageClasses.
 
 ## Manage Add-ons
 
-- show addons
-
-`minikube addons list`
-
-Available add-ons and their default status vary by Minikube version and driver. Use the actual command output rather than assuming an add-on is installed.
-
-- Enable an addon, for example, metrics-server:
-
-  - `minikube addons enable metrics-server`
-
-- View the Pod and Service you created by installing that addon:
-
-  - `kubectl get pod,svc -n kube-system`
-
-- Check the output from metrics-server:
-
-  - `kubectl top pods`
-
-  - `kubectl top pods --containers`
-
-  - `kubectl top pods --sort-by=memory`
-
-  - `kubectl top nodes`
-
-Metrics may take a short time to appear after enabling the add-on. `top` requires a working Metrics Server and shows current usage, not historical monitoring.
-
-- Disable metrics-server:
-
-  - `minikube addons disable metrics-server`
+See [K8s Manage Add-ons](k8s_addons.md) for enabling, inspecting, and disabling Minikube add-ons such as `metrics-server`.
 
 ## Clean up
 
-Check `kubectl config current-context` and the namespace before deleting resources. The following commands remove the tutorial application:
-
-- `kubectl delete service hello-node`
-
-- `kubectl delete deployment hello-node`
-
-If you ran the optional examples, remove their resources as well:
-
-```shell
-kubectl delete -f web-deployment.yaml
-kubectl delete configmap app-config
-kubectl delete namespace k8s-lab
-```
-
-Deleting a namespace deletes all namespaced resources inside it, not just this tutorial's examples. Only delete the lab namespace if it is disposable.
-
-Stop the local cluster while preserving it for later:
-
-```shell
-minikube stop
-```
-
-Optionally, delete the default Minikube cluster and its local cluster data:
-
-- `minikube delete`
-
-If you created the separate named profile, use `minikube stop -p k8s-lab` or `minikube delete -p k8s-lab` instead. A Minikube profile and a Kubernetes namespace are different things.
-
-## Troubleshooting and deep cleaning
-
-Start with non-destructive diagnostics:
-
-```shell
-minikube status
-minikube logs --problems
-kubectl get pods -A
-kubectl get events -A --sort-by=.metadata.creationTimestamp
-kubectl auth can-i create deployments -n default
-```
-
-| Symptom | First checks |
-| --- | --- |
-| Cannot connect to the API server | Check Minikube status, current context, and kubeconfig. |
-| Pod remains `Pending` | Use `describe pod` to check scheduling events, resource availability, and volume claims. |
-| `ImagePullBackOff` | Check the image name/tag, registry credentials, and network access. |
-| `CrashLoopBackOff` | Read current and `--previous` container logs; inspect command arguments and probes. |
-| Service has no ready endpoints | Check selectors, Pod readiness, and EndpointSlices. |
-| `Forbidden` | Use `kubectl auth can-i` to check permissions for the action and namespace. |
-
-**Destructive last resort:** the following are independent cleanup options, not routine troubleshooting steps.
-
-- `minikube delete --all --purge`
-
-  Deletes all Minikube profiles and removes the local `.minikube` directory. This can destroy local cluster data for unrelated labs.
-
-- `docker system prune`
-
-  Removes unused Docker data, including stopped containers, unused networks, dangling images, and build cache. It affects Docker resources outside Minikube too; volumes are not removed by default. Review Docker's confirmation prompt and avoid adding `--volumes` unless you intend to delete unused volumes.
+See [K8s Clean Up](k8s_cleanup.md) for the teardown commands for this tutorial and its optional examples, as well as troubleshooting and deep-cleaning guidance.
 
 ## Revisit
 
