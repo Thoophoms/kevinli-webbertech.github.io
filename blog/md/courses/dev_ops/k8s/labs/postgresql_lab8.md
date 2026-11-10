@@ -1,4 +1,4 @@
-# Time Series Database
+# Lab 8 Time Series Database on Kubernetes (PostgreSQL)
 
 ## Introduction
 

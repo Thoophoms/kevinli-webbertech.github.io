@@ -1,4 +1,4 @@
-# Keep the Pod Running
+# Lab 11 Keep the Pod Running
 
 By default, a Kubernetes pod running an Nginx container should not exit because Nginx runs as a web server. However, if you're running a simple container like `alpine` or `busybox` that executes a command and then exits, you need to ensure the container keeps running.
 

@@ -1,4 +1,4 @@
-# NGINX Deployment
+# Lab 9 NGINX Deployment
 
 Here's a basic Kubernetes (k8s) Deployment YAML file to create a pod running a simple container. This example deploys an Nginx container.
 

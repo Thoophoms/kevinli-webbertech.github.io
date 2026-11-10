@@ -1,4 +1,4 @@
-# Time Series Database
+# Lab 7 Time Series Database (TimescaleDB)
 
 This is a lab to introduce you a new type of database, which is time-series database and it is built on top of relational database "Postgresql".
 

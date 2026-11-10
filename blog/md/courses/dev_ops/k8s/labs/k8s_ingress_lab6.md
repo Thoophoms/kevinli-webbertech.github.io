@@ -1,4 +1,4 @@
-## K8s Ingress Lab6: Deploy Sample Apps
+# Lab 6 K8s Ingress: Deploy Sample Apps
 
 **Why?**
 

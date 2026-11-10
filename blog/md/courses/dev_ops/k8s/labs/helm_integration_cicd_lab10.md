@@ -1,4 +1,4 @@
-# Helm Chart
+# Lab 10 Helm Chart
 
 Let’s take this a step further and package your application using **Helm** for a more structured and reusable deployment approach. Here’s a step-by-step guide to integrating Helm charts into your **Kubernetes + Nexus + GitHub Actions** pipeline.
 
