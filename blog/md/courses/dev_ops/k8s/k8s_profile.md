@@ -13,15 +13,35 @@ minikube start -p dev \
   --container-runtime=containerd
 ```
 
+If Docker Desktop has less memory than requested (for example, `--memory=8192` when Docker Desktop only has 7936MB), minikube exits with `MK_USAGE`. Lower the value (for example `--memory=2000`) or increase Docker Desktop's memory, then run the command again.
+
+![minikube_profile_start](../../../../images/dev_ops/k8s/minikube_profile_start.png)
+
 ## Use the profile
 
+Set `dev` as the active profile:
+
+```commandline
 minikube profile dev
+```
 
-Stop + delete (if needed)
+List all profiles:
 
-`minikube stop -p dev`
+```commandline
+minikube profile list
+```
 
-`minikube delete -p dev`
+![minikube_profile_list](../../../../images/dev_ops/k8s/minikube_profile_list.png)
+
+Stop + delete (if needed):
+
+```commandline
+minikube stop -p dev
+```
+
+```commandline
+minikube delete -p dev
+```
 
 ## 2. Sample App Deployment (Nginx demo)
 
@@ -68,42 +88,66 @@ spec:
 
 * Deploy it:
 
-`kubectl apply -f nginx-demo.yaml`
+```commandline
+kubectl apply -f nginx-demo.yaml
+```
 
 * Check pods:
 
-`kubectl get pods`
+```commandline
+kubectl get pods
+```
 
 * Get service URL:
 
-`minikube service nginx-demo --url -p dev`
+```commandline
+minikube service nginx-demo --url -p dev
+```
 
 ### 3. Mini kubectl Cheat Sheet (Minikube-friendly)
 
 * Pods / Deployments
 
-`kubectl get pods`
+```commandline
+kubectl get pods
+```
 
-`kubectl get deploy`
+```commandline
+kubectl get deploy
+```
 
-`kubectl describe pod <podname>`
+```commandline
+kubectl describe pod <podname>
+```
 
 * Logs
 
-`kubectl logs <podname>`
+```commandline
+kubectl logs <podname>
+```
 
-`kubectl logs -f <podname>`
+```commandline
+kubectl logs -f <podname>
+```
 
 * Port-forward
 
-`kubectl port-forward deployment/nginx-demo 8080:80`
+```commandline
+kubectl port-forward deployment/nginx-demo 8080:80
+```
 
 * Apply / Delete
 
-`kubectl apply -f file.yaml`
+```commandline
+kubectl apply -f file.yaml
+```
 
-`kubectl delete -f file.yaml`
+```commandline
+kubectl delete -f file.yaml
+```
 
 * Quick shell into a pod
 
-`kubectl exec -it <podname> -- bash`
+```commandline
+kubectl exec -it <podname> -- bash
+```
